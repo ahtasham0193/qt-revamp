@@ -23,8 +23,8 @@ module.exports = {
       screens: {
         sm: '100%',
         md: '100%',
-        lg: '800px',
-        xl: '800px',
+        lg: '1200px',
+        xl: '1300px',
         '2xl': '1400px',
       },
     },
