@@ -1,6 +1,16 @@
 import Layout from "@/components/Layout";
 import Image from "next/image";
+import { useState } from "react";
 function HomePage() {
+
+
+  const [clientAreas, setClientAreas] = useState([
+    {image: '/images/area1.png'},
+    {image: '/images/area2.png'},
+    {image: '/images/area3.png'},
+    {image: '/images/area4.png'},
+  ])
+
   return (
     <Layout>
       <section>
@@ -103,15 +113,22 @@ function HomePage() {
 
             <div className="flex flex-wrap -m-2 mt-14">
   <div className="w-full sm:w-1/2 md:w-1/2 lg:w-1/4 p-2">
-    <div className="bg-gray-400 h-24">
-    <Image
+  {
+    clientAreas?.map(item => {
+      return <div className="bg-gray-400 h-24">
+      <Image
                         src='/images/area1.png'
                         className="w-auto h-[150px]"
                         width="200"
                         height="200"
                         alt="Description of the image"
-                      />
-    </div> 
+                        />
+      </div>
+    })
+  }
+    
+    
+                      
                       
   </div>
   <div className="w-full sm:w-1/2 md:w-1/2 lg:w-1/4 p-2">
