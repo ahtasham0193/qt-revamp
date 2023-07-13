@@ -57,8 +57,8 @@ function HomePage() {
     },
   ]);
   return (
-    
-      <Layout>
+
+    <Layout>
       <div className="w-full  px-6">
         <div className="container py-12 bg-[url('/images/hero-bg.png')] bg-no-repeat bg-[center_50px] sm:bg-[length:100%_100%] bg-[length:115%] ">
           <div className="hero-section-content-wrapper max-w-[900px] mt-12 p-1">
@@ -97,7 +97,7 @@ function HomePage() {
       </div>
 
       <section>
-      <Slider itemsInMobileView={6} itemsInDesktopView={6}>
+        <Slider itemsInMobileView={6} itemsInDesktopView={6}>
           <Image
             src="/images/client1.png"
             className="h-[70px] w-auto"
@@ -156,11 +156,11 @@ function HomePage() {
               pharetra sem vel. Nulla sed mauris convallis metus.
             </p>
 
-            <div className="flex flex-wrap justify-around p-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 p-4">
               {servicesCard?.map((card) => {
                 return (
-                  <div className="card md:mx-0 md:w-1/3 w- overflow-hidden  max-w-sm mx-2 my-4 border border-slate-200 rounded">
-                    <div className="w-full h-fit p-3 bg-white flex items-center justify-center">
+                  <div className="overflow-hidden max-w-sm mx-auto my-4 border border-slate-200 rounded">
+                    <div className="w-full p-3 bg-white flex items-center justify-center">
                       <Image
                         src={card.image}
                         className="w-auto h-[150px]"
@@ -195,7 +195,7 @@ function HomePage() {
               pharetra sem vel. Nulla sed mauris convallis metus.
             </p>
 
-            <div className="flex flex-wrap justify-around p-4">
+            <div className="flex gap-3 justify-around p-4">
               {portfolioCard?.map((card) => {
                 return (
                   <div className="card md:mx-0 md:w-1/3 w- overflow-hidden  max-w-sm mx-2 my-4 border border-slate-200 rounded">
@@ -206,7 +206,7 @@ function HomePage() {
                         width="200"
                         height="200"
                         alt="Description of the image"
-                        quality= '100'
+                        quality='100'
                       />
                     </div>
                     <div className="p-5">
@@ -250,11 +250,11 @@ function HomePage() {
               })}
             </Carousel>
           </div>
-          <ContactUsForm/>
+          <ContactUsForm />
         </div>
       </section>
-      </Layout>
-    
+    </Layout>
+
   );
 }
 
