@@ -10,6 +10,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      width: {
+        '1/5': '20%',
+      },
       colors: {
         'primary-color': '#FF6C0E',
         'light-primary-color': 'rgba(255, 108, 14,.08)',
