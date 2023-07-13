@@ -61,6 +61,7 @@ function Header() {
           <li><Link href="/services"><span>Services</span></Link></li>
           <li><Link href="/about"><span>Team</span></Link></li>
           <li><Link href="/about"><span>Careers</span></Link></li>
+          <li><Link href="/blog"><span>Blogs</span></Link></li>
           <li><Link href="/about"><span>About</span></Link></li>
           <Button variant="primary">Contact Us</Button>
         </ul>
