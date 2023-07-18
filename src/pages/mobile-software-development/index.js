@@ -32,9 +32,9 @@ const MobileSoftwareDevelopment = () => {
             <section>
                 <div className="w-full mt-24">
                     <div className="container">
-                        <h1 className="section-heading text-4xl font-bold text-center mt-8">
+                        <h2 className="section-heading text-4xl font-bold text-center mt-8">
                             Mobile software development
-                        </h1>
+                        </h2>
                         <Image
                             src="/images/Mobile Software Development/mobSoftwareImg2.png"
                             className="w-full max-w-[1100px] m-auto mt-8"
