@@ -49,13 +49,13 @@ const SecurityCompliance = () => {
                     <Accordion title="Networks">Content 5</Accordion>
                     <Accordion title="Devices">Content 6</Accordion>
                     <Accordion title="Users">Content 7</Accordion>
-                    <Accordion title="SAST">Content 7</Accordion>
-                    <Accordion title="DAST">Content 7</Accordion>
-                    <Accordion title="SCA">Content 7</Accordion>
-                    <Accordion title="IAST and Hybrid Tools">Content 7</Accordion>
-                    <Accordion title="MAST">Content 7</Accordion>
-                    <Accordion title="ASTaaS">Content 7</Accordion>
-                    <Accordion title="ASTO">Content 7</Accordion>
+                    <Accordion title="SAST">Content 8</Accordion>
+                    <Accordion title="DAST">Content 9</Accordion>
+                    <Accordion title="SCA">Content 10</Accordion>
+                    <Accordion title="IAST and Hybrid Tools">Content 11</Accordion>
+                    <Accordion title="MAST">Content 12</Accordion>
+                    <Accordion title="ASTaaS">Content 13</Accordion>
+                    <Accordion title="ASTO">Content 14</Accordion>
                 </div>
             </section>
             <section className="mt-24"> 
