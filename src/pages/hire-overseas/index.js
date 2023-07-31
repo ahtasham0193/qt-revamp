@@ -20,8 +20,8 @@ const HireOverseas = () => {
                                             src="/images/Hire Overseas/hireOverseasImg.png"
                                             alt="Image"
                                             className="w-full max-w-[320px] m-auto object-contain"
-                                            width={180}
-                                            height={180}
+                                            width={500}
+                                            height={300}
                                         />
                                     </div>
                                     <div className="w-full mt-7">
@@ -43,8 +43,8 @@ const HireOverseas = () => {
                                         src="/images/Hire Overseas/processImg.png"
                                         alt="Image"
                                         className="w-full max-w-[850px] m-auto object-contain"
-                                        width={180}
-                                        height={180}
+                                        width={500}
+                                        height={300}
                                         quality={100}
                                     />
                                 </div>

@@ -100,42 +100,42 @@ function HomePage() {
         <Slider itemsInMobileView={6} itemsInDesktopView={6}>
           <Image
             src="/images/client1.png"
-            className="h-[70px] w-auto"
+            className="sm:h-[70px] h-[30px] w-auto"
             width="100"
             height="100"
             alt="Description of the image"
           />
           <Image
             src="/images/client2.png"
-            className="h-[70px] w-auto"
+            className="sm:h-[70px] h-[30px] w-auto"
             width="100"
             height="100"
             alt="Description of the image"
           />
           <Image
             src="/images/client3.png"
-            className="h-[70px] w-auto"
+            className="sm:h-[70px] h-[30px] w-auto"
             width="100"
             height="100"
             alt="Description of the image"
           />
           <Image
             src="/images/client4.png"
-            className="h-[70px] w-auto"
+            className="sm:h-[70px] h-[30px] w-auto"
             width="100"
             height="100"
             alt="Description of the image"
           />
           <Image
             src="/images/client5.png"
-            className="h-[70px] w-auto"
+            className="sm:h-[70px] h-[30px] w-auto"
             width="100"
             height="100"
             alt="Description of the image"
           />
           <Image
             src="/images/client6.png"
-            className="h-[70px] w-auto"
+            className="sm:h-[70px] h-[30px] w-auto"
             width="100"
             height="100"
             alt="Description of the image"
@@ -143,7 +143,7 @@ function HomePage() {
         </Slider>
       </section>
 
-      <section className="section mt-10 bg-light-primary-color" id="services-section">
+      <section className="sm:rounded sm:p-10 mt-10 bg-light-primary-color" id="services-section">
         <div className="container">
           <div className="py-12 px-6 w-full h-[500] ">
             <h1 className="section-heading  text-4xl leading-normal font-bold text-center ">
@@ -182,7 +182,7 @@ function HomePage() {
         </div>
       </section>
 
-      <section className="section" id="services-section">
+      <section className="sm:rounded sm:p-10" id="services-section">
         <div className="container">
           <div className="py-12 px-6 w-full">
             <h1 className="section-heading  text-4xl leading-normal font-bold text-center ">
@@ -195,14 +195,14 @@ function HomePage() {
               pharetra sem vel. Nulla sed mauris convallis metus.
             </p>
 
-            <div className="flex gap-3 justify-around p-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4">
               {portfolioCard?.map((card) => {
                 return (
-                  <div className="card md:mx-0 md:w-1/3 w- overflow-hidden  max-w-sm mx-2 my-4 border border-slate-200 rounded">
-                    <div className="w-full h-fit p-3 bg-white flex items-center justify-center">
+                  <div className="overflow-hidden max-w-sm mx-auto my-4 border border-slate-200 rounded">
+                    <div className="w-full p-3 bg-white flex items-center justify-center">
                       <Image
                         src={card.image}
-                        className="w-auto h-[250px]"
+                        className="w-auto h-[250px] md:h-[150px]"
                         width="200"
                         height="200"
                         alt="Description of the image"
@@ -221,7 +221,7 @@ function HomePage() {
         </div>
       </section>
 
-      <section className="section bg-light-primary-color">
+      <section className="sm:rounded sm:p-10 bg-light-primary-color">
         <div className="container">
           <div className="py-12 px-6 w-full">
             <h1 className="section-heading  text-4xl leading-normal font-bold text-center ">
@@ -237,7 +237,7 @@ function HomePage() {
             <Carousel itemsToShowDesktop={1.7} itemsToShowMobile={1} margin={30} speed={5000}>
               {clients?.map((item) => {
                 return (
-                  <div className="w-full h-[500px] rounded-lg overflow-hidden shadow-md">
+                  <div className="w-full sm:h-[500px] h-[250px] rounded-lg overflow-hidden shadow-md">
                     <Video
                       videoSrc={item.video}
                       controls

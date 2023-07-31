@@ -14,8 +14,8 @@ const MobileSoftwareDevelopment = () => {
                             <Image
                                 src="/images/Mobile Software Development/mobileSoftwaredevelopmentImg.png"
                                 className="w-full max-w-[600px] m-auto mt-8"
-                                width="300"
-                                height="300"
+                                width={500}
+                                height={300}
                                 alt="Illustration of services content"
                             />
                             <h1 className="section-heading text-4xl font-bold text-center mt-8">
@@ -38,8 +38,8 @@ const MobileSoftwareDevelopment = () => {
                         <Image
                             src="/images/Mobile Software Development/mobSoftwareImg2.png"
                             className="w-full max-w-[1100px] m-auto mt-8"
-                            width="300"
-                            height="300"
+                            width={500}
+                            height={300}
                             alt="Illustration of services content"
                         />
                     </div>
@@ -59,8 +59,8 @@ const MobileSoftwareDevelopment = () => {
                                     src="/images/Mobile Software Development/NativeAppImg.png"
                                     alt="Image"
                                     className="w-full object-contain"
-                                    width={180}
-                                    height={180}
+                                    width={500}
+                                    height={300}
                                 />
                             </div>
                         </div>
@@ -70,8 +70,8 @@ const MobileSoftwareDevelopment = () => {
                                     src="/images/Mobile Software Development/HybridAppImg.png"
                                     alt="Image"
                                     className="w-full object-contain"
-                                    width={180}
-                                    height={180}
+                                    width={500}
+                                    height={300}
                                 />
                             </div>
                             <div className="md:col-span-1 px-5 sm:px-[74px] py-4">
@@ -90,8 +90,8 @@ const MobileSoftwareDevelopment = () => {
                                     src="/images/Mobile Software Development/WebAppImg.png"
                                     alt="Image"
                                     className="w-full object-contain h-full"
-                                    width={180}
-                                    height={180}
+                                    width={500}
+                                    height={300}
                                 />
                             </div>
                         </div>

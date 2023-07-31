@@ -16,8 +16,8 @@ const DigitalMarketing = () => {
                         <Image
                                 src="/images/Digital Marketing/digitalMarketingImg.png"
                                 className="w-full max-w-[1000px] m-auto mt-8"
-                                width="300"
-                                height="300"
+                                width={500}
+                                height={300}
                                 alt="Illustration of services content"
                             />
                         </div>
@@ -467,8 +467,8 @@ const DigitalMarketing = () => {
                                 <Image
                                  src="/images/Digital Marketing/dupas.png"
                                  className="w-full max-w-[150px] m-auto mt-3 mb-5"
-                                 width="300"
-                                 height="300"
+                                 width={300}
+                                 height={150}
                                  alt="our client img content"
                                 />
                             A trademark of Roxim Lomac (Pvt) Ltd UK; Dupas is a Pakistan based FMCG brand established in 2003. Offering one of the best toiletries products and skincare solutions in Pakistan. Helping them optimizing their website against the keywords such as best hand wash collection in Pakistan, Best Liquid Soap in Pakistan, team Quaid Technologies helped this brand getting noticed within online community too.

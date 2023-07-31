@@ -15,8 +15,8 @@ const ItStaffAugmented = ({ processCards, clients }) => {
             <Image
               src="/images/books.svg"
               className="w-full max-w-[600px] m-auto mt-8"
-              width="300"
-              height="300"
+              width={500}
+              height={300}
               alt="Illustration of services content"
             />
             <h1 className="section-heading text-4xl font-bold text-center mt-8">
@@ -32,8 +32,8 @@ const ItStaffAugmented = ({ processCards, clients }) => {
             <Image
               src="/images/team.svg"
               className="w-full max-w-[600px] m-auto mt-12"
-              width="300"
-              height="300"
+              width={500}
+              height={300}
               alt="Illustration of services content"
             />
 

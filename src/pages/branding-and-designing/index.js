@@ -1,4 +1,5 @@
 import Accordion from "@/components/Accordian"
+import ImageAccordion from "@/components/ImageAccordian"
 import Layout from "@/components/Layout"
 import OtherServices from "@/components/OtherServices"
 import Image from "next/image"
@@ -6,12 +7,12 @@ import React from 'react'
 
 
 
-const BrandingAndDesigning = () => 
-{
-    return(
+const BrandingAndDesigning = () => {
+
+    return (
         <Layout>
             <section>
-            <div className="w-full">
+                <div className="w-full">
                     <div className="container">
                         <div className="w-full mt-24">
                             <div className="w-full">
@@ -20,10 +21,10 @@ const BrandingAndDesigning = () =>
                                         src="/images/Branding And Designing/brandingImg.png"
                                         alt="Image"
                                         className="w-full max-w-[850px] m-auto object-contain"
-                                        width={180}
-                                        height={180}
+                                        width={850}
+                                        height={300}
                                     />
-                               
+
                                 </div>
                                 <div className="w-full mt-7">
                                     <h1 className="text-xl sm:text-3xl font-semibold text-center">Branding and Designing</h1>
@@ -35,7 +36,7 @@ const BrandingAndDesigning = () =>
                 </div>
             </section>
             <section className="mt-7">
-            <div className="mt-10 max-w-[600px] mx-auto">
+                <div className="mt-10 max-w-[600px] mx-auto">
                     <Accordion title="Web Desigining">
                         Content 1 Lorem ipsum dolor sit amet consectetur adipisicing
                         elit. Sunt dicta harum quibusdam cumque nesciunt perferendis
@@ -55,17 +56,11 @@ const BrandingAndDesigning = () =>
             </section>
             <section className="mt-24">
                 <div className="w-full">
-                <Image
-                                        src="/images/Branding And Designing/brandingImg2.png"
-                                        alt="Image"
-                                        className="w-full m-auto object-contain"
-                                        width={180}
-                                        height={180}
-                                    />
+                   <ImageAccordion/>
                 </div>
                 <OtherServices />
             </section>
-            
+
         </Layout>
     )
 }

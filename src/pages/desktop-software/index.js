@@ -16,8 +16,8 @@ const DesktopSoftware = () => {
                                         src="/images/Desktop Software/desktopSoftwareImg.png"
                                         alt="Image"
                                         className="w-full max-w-[320px] m-auto object-contain"
-                                        width={180}
-                                        height={180}
+                                        width={500}
+                                        height={300}
                                     />
                                 </div>
                                 <div className="w-full mt-7">
@@ -38,8 +38,8 @@ const DesktopSoftware = () => {
                                 src="/images/Desktop Software/ourProcess.png"
                                 alt="Image"
                                 className="w-full object-contain"
-                                width={180}
-                                height={180}
+                                width={500}
+                                height={300}
                             />
                         </div>
                     </div>
@@ -59,8 +59,8 @@ const DesktopSoftware = () => {
                                     src="/images/Desktop Software/softwareAppImg1.png"
                                     alt="Image"
                                     className="w-full object-contain"
-                                    width={180}
-                                    height={180}
+                                    width={500}
+                                    height={300}
                                 />
                             </div>
                         </div> 
@@ -70,8 +70,8 @@ const DesktopSoftware = () => {
                                     src="/images/Desktop Software/softwareAppImg2.png"
                                     alt="Image"
                                     className="w-full object-contain"
-                                    width={180}
-                                    height={180}
+                                    width={500}
+                                    height={300}
                                 />
                             </div>
                             <div className="md:col-span-1 px-5 sm:px-[74px] py-4">
@@ -90,8 +90,8 @@ const DesktopSoftware = () => {
                                     src="/images/Desktop Software/softwareAppImg3.png"
                                     alt="Image"
                                     className="w-full object-contain"
-                                    width={180}
-                                    height={180}
+                                    width={500}
+                                    height={300}
                                 />
                             </div>
                         </div>

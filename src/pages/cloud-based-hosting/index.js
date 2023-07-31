@@ -17,8 +17,8 @@ const CloudBasedHosting = () => {
                                         src="/images/Cloud Based hosting/cloudBasedImg.png"
                                         alt="Image"
                                         className="w-full max-w-[600px] m-auto object-contain"
-                                        width={180}
-                                        height={180}
+                                        width={500}
+                                        height={300}
                                     />
                                 </div>
                                 <div className="w-full mt-7">

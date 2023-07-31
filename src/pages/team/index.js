@@ -27,8 +27,8 @@ const Team = ({ founders, management, team, solutionArchitects, uiuxExpert, seo,
                                             founders?.map((data, index) => {
                                                 return <div className="mt-5" key={index}>
                                                     <div className="w-full h-[150px]">
-                                                        <Image src={data?.image} alt="Profile Picture" width="150"
-                                                            height="150" className=' w-full h-full object-contain' />
+                                                        <Image src={data?.image} alt="Profile Picture" width={500}
+                                                            height={300} className=' w-full h-full object-contain' />
                                                     </div>
                                                     <div className="w-full h-auto">
                                                     <h2 className="mt-4 font-bold text-lg text-center">{data?.name}</h2>
@@ -53,8 +53,8 @@ const Team = ({ founders, management, team, solutionArchitects, uiuxExpert, seo,
                                             management?.map((data, index) => {
                                                 return <div className="mt-5" key={index}>
                                                     <div className="w-full h-[150px]">
-                                                        <Image src={data?.image} alt="Profile Picture" width="150"
-                                                            height="150" className=' w-full h-full object-contain' />
+                                                        <Image src={data?.image} alt="Profile Picture" width={500}
+                                                            height={300} className=' w-full h-full object-contain' />
                                                     </div>
                                                     <div className="w-full h-auto">
                                                     <h2 className="mt-4 font-bold text-lg text-center">{data?.name}</h2>
@@ -79,8 +79,8 @@ const Team = ({ founders, management, team, solutionArchitects, uiuxExpert, seo,
                                             team?.map((data, index) => {
                                                 return <div className="mt-5" key={index}>
                                                     <div className="w-full h-[150px]">
-                                                        <Image src={data?.image} alt="Profile Picture" width="150"
-                                                            height="150" className=' w-full h-full object-contain' />
+                                                        <Image src={data?.image} alt="Profile Picture" width={500}
+                                                            height={300} className=' w-full h-full object-contain' />
                                                     </div>
                                                     <div className="w-full h-auto">
                                                     <h2 className="mt-4 font-bold text-lg text-center">{data?.name}</h2>
@@ -105,8 +105,8 @@ const Team = ({ founders, management, team, solutionArchitects, uiuxExpert, seo,
                                             solutionArchitects?.map((data, index) => {
                                                 return <div className="mt-5" key={index}>
                                                     <div className="w-full h-[150px]">
-                                                        <Image src={data?.image} alt="Profile Picture" width="150"
-                                                            height="150" className=' w-full h-full object-contain' />
+                                                        <Image src={data?.image} alt="Profile Picture" width={500}
+                                                            height={300} className=' w-full h-full object-contain' />
                                                     </div>
                                                     <div className="w-full h-auto">
                                                     <h2 className="mt-4 font-bold text-lg text-center">{data?.name}</h2>
@@ -131,8 +131,8 @@ const Team = ({ founders, management, team, solutionArchitects, uiuxExpert, seo,
                                             uiuxExpert?.map((data, index) => {
                                                 return <div className="mt-5" key={index}>
                                                     <div className="w-full h-[150px]">
-                                                        <Image src={data?.image} alt="Profile Picture" width="150"
-                                                            height="150" className=' w-full h-full object-contain' />
+                                                        <Image src={data?.image} alt="Profile Picture" width={500}
+                                                            height={300} className=' w-full h-full object-contain' />
                                                     </div>
                                                     <div className="w-full h-auto">
                                                     <h2 className="mt-4 font-bold text-lg text-center">{data?.name}</h2>
@@ -157,8 +157,8 @@ const Team = ({ founders, management, team, solutionArchitects, uiuxExpert, seo,
                                             seo?.map((data, index) => {
                                                 return <div className="mt-5" key={index}>
                                                     <div className="w-full h-[150px]">
-                                                        <Image src={data?.image} alt="Profile Picture" width="150"
-                                                            height="150" className=' w-full h-full object-contain' />
+                                                        <Image src={data?.image} alt="Profile Picture" width={500}
+                                                            height={300} className=' w-full h-full object-contain' />
                                                     </div>
                                                     <div className="w-full h-auto">
                                                     <h2 className="mt-4 font-bold text-lg text-center">{data?.name}</h2>
@@ -183,8 +183,8 @@ const Team = ({ founders, management, team, solutionArchitects, uiuxExpert, seo,
                                             qaAutomation?.map((data, index) => {
                                                 return <div className="mt-5" key={index}>
                                                     <div className="w-full h-[150px]">
-                                                        <Image src={data?.image} alt="Profile Picture" width="150"
-                                                            height="150" className=' w-full h-full object-contain' />
+                                                        <Image src={data?.image} alt="Profile Picture" width={500}
+                                                            height={300} className=' w-full h-full object-contain' />
                                                     </div>
                                                     <div className="w-full h-auto">
                                                     <h2 className="mt-4 font-bold text-lg text-center">{data?.name}</h2>
@@ -209,8 +209,8 @@ const Team = ({ founders, management, team, solutionArchitects, uiuxExpert, seo,
                                             adminTeam?.map((data, index) => {
                                                 return <div className="mt-5" key={index}>
                                                     <div className="w-full h-[150px]">
-                                                        <Image src={data?.image} alt="Profile Picture" width="150"
-                                                            height="150" className=' w-full h-full object-contain' />
+                                                        <Image src={data?.image} alt="Profile Picture" width={500}
+                                                            height={300} className=' w-full h-full object-contain' />
                                                     </div>
                                                     <div className="w-full h-auto">
                                                     <h2 className="mt-4 font-bold text-lg text-center">{data?.name}</h2>
@@ -247,17 +247,17 @@ export async function getServerSideProps(context) {
 
     const founders = [
         {
-            image: "/images/Team/imtiaz.png",
+            image: "/images/teamImages/imtiaz.png",
             name: "Imtiaz Jafri",
             title: "Chief Executive Officer(Partner)",
         },
         {
-            image: "/images/Team/Atta.png",
+            image: "/images/teamImages/Atta.png",
             name: "Atta ur Rehman",
             title: "Chief Executive Officer(Partner)",
         },
         {
-            image: "/images/Team/walter.png",
+            image: "/images/teamImages/walter.png",
             name: "Walter Hayes",
             title: "Chief Executive Officer(Partner)",
         },
@@ -265,22 +265,22 @@ export async function getServerSideProps(context) {
 
     const management = [
         {
-            image: "/images/Team/fatima.png",
+            image: "/images/teamImages/fatima.png",
             name: "Fatima Chughtai",
             title: "Head HR",
         },
         {
-            image: "/images/Team/Dr Naeem.png",
+            image: "/images/teamImages/Dr Naeem.png",
             name: "Dr Naeem Janjua",
             title: "DO Australia",
         },
         {
-            image: "/images/Team/abbas.png",
+            image: "/images/teamImages/abbas.png",
             name: "Muhammad Abbas",
             title: "Project Manager / SE",
         },
         {
-            image: "/images/Team/rabbiya.png",
+            image: "/images/teamImages/rabbiya.png",
             name: "Rabbiya Malik",
             title: "Assistant HR / SE",
         },
@@ -288,82 +288,82 @@ export async function getServerSideProps(context) {
 
     const team = [
         {
-            image: "/images/Team/ansar.png",
+            image: "/images/teamImages/ansar.png",
             name: "Muhammad Ansaar",
             title: "Product Owner ",
         },
         {
-            image: "/images/Team/fida.png",
+            image: "/images/teamImages/fida.png",
             name: "Fida Ur Rehman",
             title: "Product Owner",
         },
         {
-            image: "/images/Team/rameen.png",
+            image: "/images/teamImages/rameen.png",
             name: "Rameen Mubarik",
             title: "Software Engineer",
         },
         {
-            image: "/images/Team/umer.png",
+            image: "/images/teamImages/umer.png",
             name: "Muhammad Umer",
             title: "Software Engineer",
         },
         {
-            image: "/images/Team/tabish.png",
+            image: "/images/teamImages/tabish.png",
             name: "Tabish Irfan",
             title: "Front End Developer",
         },
         {
-            image: "/images/Team/ahtasham.png",
+            image: "/images/teamImages/ahtasham.png",
             name: "Ahtasham Arshad",
             title: "Front End Developer",
         },
         {
-            image: "/images/Team/fahad.png",
+            image: "/images/teamImages/fahad.png",
             name: "Fahad Ul Abideen",
             title: "Software Engineer",
         },
         {
-            image: "/images/Team/anas.png",
+            image: "/images/teamImages/anas.png",
             name: "Anas Abdullah",
             title: "Software Engineer",
         },
         {
-            image: "/images/Team/mudassar.png",
+            image: "/images/teamImages/mudassar.png",
             name: "Mudassar Muneer",
             title: "DevOps Engineer",
         },
         {
-            image: "/images/Team/mohid.png",
+            image: "/images/teamImages/mohid.png",
             name: "Muhammad Mohid Dastgeer",
             title: "Angular Developer",
         },
         {
-            image: "/images/Team/hassam.png",
+            image: "/images/teamImages/hassam.png",
             name: "Hassam ul Haq",
             title: "DevOps Engineer.",
         },
         {
-            image: "/images/Team/sheryar.png",
+            image: "/images/teamImages/sheryar.png",
             name: "Sheryar Qazi",
             title: "Business Development Manager",
         },
         {
-            image: "/images/Team/imran.png",
+            image: "/images/teamImages/imran.png",
             name: "Imran Noor",
             title: "Software Engineer",
         },
         {
-            image: "/images/Team/uzair.png",
+            image: "/images/teamImages/uzair.png",
             name: "Uzair Ali",
             title: "Backend Developer",
         },
         {
-            image: "/images/Team/shahid.png",
+            image: "/images/teamImages/shahid.png",
             name: "Shahid Abbas",
             title: "Node JS Developer",
         },
         {
-            image: "/images/Team/aezaz.png",
+            image: "/images/teamImages/aezaz.png",
             name: "Aezaz Ali",
             title: "Software Engineer",
         },
@@ -371,47 +371,47 @@ export async function getServerSideProps(context) {
 
     const solutionArchitects = [
         {
-            image: "/images/Team/qasim.png",
+            image: "/images/teamImages/qasim.png",
             name: "Muhammad Qasim",
             title: "Software Engineer",
         },
         {
-            image: "/images/Team/muneeb.png",
+            image: "/images/teamImages/muneeb.png",
             name: "Muneeb Ur Rehman",
             title: "Software Engineer",
         },
         {
-            image: "/images/Team/hammas.png",
+            image: "/images/teamImages/hammas.png",
             name: "Hammas Ali",
             title: "Software Engineer",
         },
         {
-            image: "/images/Team/M_umar.png",
+            image: "/images/teamImages/M_umar.png",
             name: "Muhammad Umar",
             title: "Software Engineer",
         },
         {
-            image: "/images/Team/muneem.png",
+            image: "/images/teamImages/muneem.png",
             name: "Munem Habib",
             title: "Software Engineer",
         },
         {
-            image: "/images/Team/faisal.png",
+            image: "/images/teamImages/faisal.png",
             name: "Faisal Raza",
             title: "Software Engineer",
         },
         {
-            image: "/images/Team/adnan.png",
+            image: "/images/teamImages/adnan.png",
             name: "Muhammad Adnan",
             title: "Software Engineer",
         },
         {
-            image: "/images/Team/mudassarHusan.png",
+            image: "/images/teamImages/mudassarHusan.png",
             name: "Mudasser Hassan",
             title: "Software Engineer",
         },
         {
-            image: "/images/Team/vajeeha.png",
+            image: "/images/teamImages/vajeeha.webp",
             name: "Vajeeha",
             title: "Software Engineer",
         },
@@ -419,32 +419,32 @@ export async function getServerSideProps(context) {
 
     const uiuxExpert = [
         {
-            image: "/images/Team/usman.png",
+            image: "/images/teamImages/usman.png",
             name: "Usman Hussain",
             title: "UI/UX Designer",
         },
         {
-            image: "/images/Team/zahid.png",
+            image: "/images/teamImages/zahid.png",
             name: "Zaid Hayat",
             title: "UI/UX Designer",
         },
         {
-            image: "/images/Team/wajahat.png",
+            image: "/images/teamImages/wajahat.webp",
             name: "Wajahat",
             title: "UI/UX Designer",
         },
         {
-            image: "/images/Team/khurram.png",
+            image: "/images/teamImages/khurram.png",
             name: "Muhammad Khurram",
             title: "Concept Designer",
         },
         {
-            image: "/images/Team/raffay.png",
+            image: "/images/teamImages/raffay.png",
             name: "Rafay Khurshid",
             title: "UI/UX Designer",
         },
         {
-            image: "/images/Team/zinnira.png",
+            image: "/images/teamImages/zinnira.png",
             name: "Zinnira Munir",
             title: "Concept Designer",
         },
@@ -452,37 +452,37 @@ export async function getServerSideProps(context) {
 
     const seo = [
         {
-            image: "/images/Team/amir.png",
+            image: "/images/teamImages/amir.png",
             name: "Aamir Mirza",
             title: "SEO & Digital Marketing Manager",
         },
         {
-            image: "/images/Team/waqas.png",
+            image: "/images/teamImages/waqas.png",
             name: "Sardar Waqas",
             title: "Digital Marketing Strategist",
         },
         {
-            image: "/images/Team/zainab.png",
+            image: "/images/teamImages/zainab.png",
             name: "Zainab Iqbal",
             title: "Content Writer",
         },
         {
-            image: "/images/Team/irsa.png",
+            image: "/images/teamImages/irsa.png",
             name: "Irsa Shahid",
             title: "Content Writer",
         },
         {
-            image: "/images/Team/hamid.png",
+            image: "/images/teamImages/hamid.png",
             name: "Hamid Farooq",
             title: "Content Writer",
         },
         {
-            image: "/images/Team/sabahat.png",
+            image: "/images/teamImages/sabahat.png",
             name: "Sabahat Tanveer",
             title: "SEO Expert & Strategist",
         },
         {
-            image: "/images/Team/zeeshan.png",
+            image: "/images/teamImages/zeeshan.png",
             name: "Zeeshan Awan",
             title: "Digital Marketing Strategist",
         },
@@ -490,22 +490,22 @@ export async function getServerSideProps(context) {
 
     const qaAutomation = [
         {
-            image: "/images/Team/faiza.png",
+            image: "/images/teamImages/faiza.png",
             name: "Faiza Siddiqui",
             title: "Quality Assurance/QC",
         },
         {
-            image: "/images/Team/saqib.png",
+            image: "/images/teamImages/saqib.png",
             name: "Saqib Hussain",
             title: "Quality Assurance/QC",
         },
         {
-            image: "/images/Team/saad.png",
+            image: "/images/teamImages/saad.png",
             name: "Muhammad Saad",
             title: "Automation SQA Engineer.",
         },
         {
-            image: "/images/Team/waheed.png",
+            image: "/images/teamImages/waheed.png",
             name: "Waheed Iqbal",
             title: "SQA Engineer",
         }
@@ -513,22 +513,22 @@ export async function getServerSideProps(context) {
 
     const adminTeam = [
         {
-            image: "/images/Team/usama.png",
+            image: "/images/teamImages/usama.png",
             name: "Muhammad Usama Khan",
             title: "Admin Officer",
         },
         {
-            image: "/images/Team/ibrar.png",
+            image: "/images/teamImages/ibrar.png",
             name: "Malik Ibrar Anjum",
             title: "Head Accounts",
         },
         {
-            image: "/images/Team/firdous.png",
+            image: "/images/teamImages/firdous.webp",
             name: "Firdous Jabeen",
             title: "Account Manager",
         },
         {
-            image: "/images/Team/awais.png",
+            image: "/images/teamImages/awais.webp",
             name: "Muahmmad Awais",
             title: "Advocate / Attorney",
         }

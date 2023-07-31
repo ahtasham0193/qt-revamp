@@ -19,8 +19,8 @@ const SecurityCompliance = () => {
                                         src="/images/Security Compliance/security-complianceImg.png"
                                         alt="Image"
                                         className="w-full max-w-[1200px] m-auto object-contain"
-                                        width={180}
-                                        height={180}
+                                        width={500}
+                                        height={300}
                                     />
                                 </div>
                                 <div className="w-full mt-7">
