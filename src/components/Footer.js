@@ -131,22 +131,31 @@ function Footer() {
             </div>
             <div className="col-span-12 md:col-span-6">
               <div className="flex justify-end space-x-4">
+                <a href="https://www.facebook.com/QuaidTech/">
                 <div className="flex items-center justify-center w-12 h-12 rounded-full border">
                   <FaFacebookF />
-
                 </div>
+                </a>
+                <a href="https://twitter.com/i/flow/login?redirect_after_login=%2Fquaidtech">
                 <div className="flex items-center justify-center w-12 h-12 rounded-full border">
                   <FaTwitter />
                 </div>
+                </a>
+                <a href="">
                 <div className="flex items-center justify-center w-12 h-12 rounded-full border">
                   <FaYoutube />
                 </div>
+                </a>
+                <a href="https://www.instagram.com/quaidtech/">
                 <div className="flex items-center justify-center w-12 h-12 rounded-full border">
                   <FaInstagram />
                 </div>
+                </a>
+                <a href="https://www.linkedin.com/company/quaidtech/mycompany/">
                 <div className="flex items-center justify-center w-12 h-12 rounded-full border">
                   <FaLinkedinIn />
                 </div>
+                </a>
               </div>
 
             </div>

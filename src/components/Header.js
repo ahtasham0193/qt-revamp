@@ -75,9 +75,7 @@ const Header = () => {
             </Link>
           </li>
           <li className="group relative">
-            <Link href="/services">
               <p className="cursor-pointer">Services</p>
-            </Link>
             <div className="absolute left-0 mt-2 w-72 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 overflow-hidden z-50 transition-all duration-200 ease-in-out opacity-0 invisible group-hover:opacity-100 group-hover:visible">
               <div className="py-1">
                 <Link href="/it-staff-augmented">

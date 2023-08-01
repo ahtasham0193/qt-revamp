@@ -37,10 +37,10 @@ const ContactUsForm = () => {
           </div>
         </div>
         <div className="w-full">
-          <input type="text" placeholder="Name" className="mb-6 bg-light-gray-color  h-fit text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"/>
-          <input type="text" placeholder="Email" className="mb-6 bg-light-gray-color  h-fit text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white" />
-          <input type="text" placeholder="Phone" className="mb-6 bg-light-gray-color  h-fit text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white" />
-          <textarea name="" id="" cols="30" rows="10" className="mb-6 bg-light-gray-color  h-fit text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"></textarea>
+          <input type="text" placeholder="Name" className="mb-6 bg-light-gray-color  h-fit text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"/>
+          <input type="text" placeholder="Email" className="mb-6 bg-light-gray-color  h-fit text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white" />
+          <input type="text" placeholder="Phone" className="mb-6 bg-light-gray-color  h-fit text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white" />
+          <textarea name="" placeholder="Message" id="" cols="30" rows="10" className="p-3.5 mb-6 bg-light-gray-color  h-fit text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"></textarea>
           <Button variant="primary" classes="w-full">
             Submit
           </Button>

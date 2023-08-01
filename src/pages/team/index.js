@@ -25,8 +25,8 @@ const Team = ({ founders, management, team, solutionArchitects, uiuxExpert, seo,
                                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-7">
                                         {
                                             founders?.map((data, index) => {
-                                                return <div className="mt-5" key={index}>
-                                                    <div className="w-full h-[150px]">
+                                                return <div className="mt-5" key={index} >
+                                                    <div className="w-full h-[120px] sm:h-[150px]">
                                                         <Image src={data?.image} alt="Profile Picture" width={500}
                                                             height={300} className=' w-full h-full object-contain' />
                                                     </div>
@@ -52,7 +52,7 @@ const Team = ({ founders, management, team, solutionArchitects, uiuxExpert, seo,
                                         {
                                             management?.map((data, index) => {
                                                 return <div className="mt-5" key={index}>
-                                                    <div className="w-full h-[150px]">
+                                                    <div className="w-full h-[120px] sm:h-[150px]">
                                                         <Image src={data?.image} alt="Profile Picture" width={500}
                                                             height={300} className=' w-full h-full object-contain' />
                                                     </div>
@@ -78,7 +78,7 @@ const Team = ({ founders, management, team, solutionArchitects, uiuxExpert, seo,
                                         {
                                             team?.map((data, index) => {
                                                 return <div className="mt-5" key={index}>
-                                                    <div className="w-full h-[150px]">
+                                                    <div className="w-full h-[120px] sm:h-[150px]">
                                                         <Image src={data?.image} alt="Profile Picture" width={500}
                                                             height={300} className=' w-full h-full object-contain' />
                                                     </div>
@@ -104,7 +104,7 @@ const Team = ({ founders, management, team, solutionArchitects, uiuxExpert, seo,
                                         {
                                             solutionArchitects?.map((data, index) => {
                                                 return <div className="mt-5" key={index}>
-                                                    <div className="w-full h-[150px]">
+                                                    <div className="w-full h-[120px] sm:h-[150px]">
                                                         <Image src={data?.image} alt="Profile Picture" width={500}
                                                             height={300} className=' w-full h-full object-contain' />
                                                     </div>
@@ -130,7 +130,7 @@ const Team = ({ founders, management, team, solutionArchitects, uiuxExpert, seo,
                                         {
                                             uiuxExpert?.map((data, index) => {
                                                 return <div className="mt-5" key={index}>
-                                                    <div className="w-full h-[150px]">
+                                                    <div className="w-full h-[120px] sm:h-[150px]">
                                                         <Image src={data?.image} alt="Profile Picture" width={500}
                                                             height={300} className=' w-full h-full object-contain' />
                                                     </div>
@@ -156,7 +156,7 @@ const Team = ({ founders, management, team, solutionArchitects, uiuxExpert, seo,
                                         {
                                             seo?.map((data, index) => {
                                                 return <div className="mt-5" key={index}>
-                                                    <div className="w-full h-[150px]">
+                                                    <div className="w-full h-[120px] sm:h-[150px]">
                                                         <Image src={data?.image} alt="Profile Picture" width={500}
                                                             height={300} className=' w-full h-full object-contain' />
                                                     </div>
@@ -182,7 +182,7 @@ const Team = ({ founders, management, team, solutionArchitects, uiuxExpert, seo,
                                         {
                                             qaAutomation?.map((data, index) => {
                                                 return <div className="mt-5" key={index}>
-                                                    <div className="w-full h-[150px]">
+                                                    <div className="w-full h-[120px] sm:h-[150px]">
                                                         <Image src={data?.image} alt="Profile Picture" width={500}
                                                             height={300} className=' w-full h-full object-contain' />
                                                     </div>
@@ -208,7 +208,7 @@ const Team = ({ founders, management, team, solutionArchitects, uiuxExpert, seo,
                                         {
                                             adminTeam?.map((data, index) => {
                                                 return <div className="mt-5" key={index}>
-                                                    <div className="w-full h-[150px]">
+                                                    <div className="w-full h-[120px] sm:h-[150px]">
                                                         <Image src={data?.image} alt="Profile Picture" width={500}
                                                             height={300} className=' w-full h-full object-contain' />
                                                     </div>

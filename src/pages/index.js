@@ -8,6 +8,7 @@ import Video from "@/components/Video";
 import Footer from "@/components/Footer";
 import ContactUsForm from "@/components/ContactUsForm";
 import Layout from "@/components/Layout";
+import Link from "next/link";
 function HomePage() {
   const [servicesCard, setServicesCard] = useState([
     {
@@ -87,10 +88,14 @@ function HomePage() {
             </ul>
 
             <div className="flex mb-12">
+              <Link href="/portfolio">
               <Button variant="primary">View Projects</Button>
+              </Link>
+              <Link href="/contact">
               <Button variant="secondary" classes="ml-5">
                 Contact Us
               </Button>
+              </Link>
             </div>
           </div>
         </div>
