@@ -12,37 +12,38 @@ import Link from "next/link";
 function HomePage() {
   const [servicesCard, setServicesCard] = useState([
     {
-      image: "/images/service1.png",
-      title: "Everything you need to grow your business",
-      text: "Lorem ipsum dolor sit amet consectetur. Tempus volutpat tempus faucibus pharetra sem vel.",
+      route: "it-staff-augmented",
+      image: "/images/books.svg",
+      title: "IT Staff Augmented Services",
+      text: "With so many technologies to work upon, hiring gets difficult when you are looking for a specialty. Why worrying when you can simply go for IT Staff Augmentation? Don't have the right person to do the job in-house? You don't need to hire a permanent resource.",
     },
     {
-      image: "/images/service1.png",
-      title: "Everything you need to grow your business",
-      text: "Lorem ipsum dolor sit amet consectetur. Tempus volutpat tempus faucibus pharetra sem vel.",
+      image: "/images/website development/website-developmentImg.png",
+      title: "Website Development Services",
+      text: "Want to Turn Your Website into a Lead Magnet? Want to Turn every Visitor into a Buyer? Let us take things into our hands and revolutionize your digital journey like never before. Quaid Technologies offers a full range of custom Web Application development services that help design, build, and evolve web-based software.",
     },
     {
-      image: "/images/service1.png",
-      title: "Everything you need to grow your business",
-      text: "Lorem ipsum dolor sit amet consectetur. Tempus volutpat tempus faucibus pharetra sem vel.",
+      image: "/images/Mobile Software Development/mobileSoftwaredevelopmentImg.png",
+      title: "Mobile Software Development Services",
+      text: "Our elite in-house team specializes in software engineering, product development, cloud architecture, and digital transformation. We rapidly and reliably deliver software that meets the needs of the world’s most demanding organizations.",
     },
   ]);
 
   const [portfolioCard, setPortfolioCard] = useState([
     {
-      image: "/images/project1.webp",
-      title: "Everything you need to grow your business",
-      text: "Lorem ipsum dolor sit amet consectetur. Tempus volutpat tempus faucibus pharetra sem vel.",
+      image: "/images/Portfolio/NewsConnectImg.png",
+      title: "News Connect",
+      text: "Get latest news from United States to UK to Japan, around the world including but not limited to India, Pakistan, Philippines, Sweden, Germany, France, Italy, United Arab Emirates, Saudi Arabia and other without annoying Advertisements. ",
     },
     {
-      image: "/images/project1.webp",
-      title: "Everything you need to grow your business",
-      text: "Lorem ipsum dolor sit amet consectetur. Tempus volutpat tempus faucibus pharetra sem vel.",
+      image: "/images/Portfolio/playTravelImg.png",
+      title: "Play Travel",
+      text: "Play Travel is a web app for people who love to travel without being worried about making payments upfront. Through this app travelling is made accessible to more Australians, by offering them flexible payment plans, and has given globetrotters rejoice.",
     },
     {
-      image: "/images/project1.webp",
-      title: "Everything you need to grow your business",
-      text: "Lorem ipsum dolor sit amet consectetur. Tempus volutpat tempus faucibus pharetra sem vel.",
+      image: "/images/Portfolio/DAEPImg.png",
+      title: "DAEP",
+      text: "DAEP (Dubai Aviation Engineering Projects) is a leading engineering organization responsible for the design, master planning, infrastructure development and construction of Dubai’s dynamic aviation sector. Under the leadership of Mr. Jonathan Ali Khan, team QuaidTech uplifted the design of DAEP.",
     },
   ]);
 
@@ -51,10 +52,13 @@ function HomePage() {
       video: "/videos/client1.mp4",
     },
     {
-      video: "/videos/client1.mp4",
+      video: "/videos/ahsan.mp4",
     },
     {
-      video: "/videos/client1.mp4",
+      video: "/videos/maria.mp4",
+    },
+    {
+      video: "/videos/saima.mp4",
     },
   ]);
   return (
@@ -155,10 +159,7 @@ function HomePage() {
               Everything you need to grow your business
             </h1>
             <p className="max-w-[700px] my-[1rem] w-fit block m-auto leading-relaxed text-center">
-              Lorem ipsum dolor sit amet consectetur. Tempus volutpat tempus
-              faucibus pharetra sem vel. Nulla sed mauris convallis metus.Lorem
-              ipsum dolor sit amet consectetur. Tempus volutpat tempus faucibus
-              pharetra sem vel. Nulla sed mauris convallis metus.
+             M/S Quaid Technologies has been providing Software Development & IT Services since 1998 with the merger of M/S PakCyber Group in 2013. We have been the technical solution provider to many industries and moved them from manual procedures to paperless fully Automated Solutions. 
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 p-4">
@@ -176,7 +177,9 @@ function HomePage() {
                     </div>
                     <div className="p-5">
                       <h2 className="text-xl font-bold">{card.title}</h2>
+                     
                       <p className="my-5">{card.text}</p>
+                      
                       <span className="font-semibold">Learn more</span>
                     </div>
                   </div>
@@ -194,10 +197,7 @@ function HomePage() {
               Showcasing our cutting-edge projects
             </h1>
             <p className="max-w-[700px] my-[1rem] w-fit block m-auto leading-relaxed text-center">
-              Lorem ipsum dolor sit amet consectetur. Tempus volutpat tempus
-              faucibus pharetra sem vel. Nulla sed mauris convallis metus.Lorem
-              ipsum dolor sit amet consectetur. Tempus volutpat tempus faucibus
-              pharetra sem vel. Nulla sed mauris convallis metus.
+            Being the Development & Technical partner, Quaid Technologies is part of various organisations and projects around the globe. We have given services to many enterprises & organisations in Public & Private sectors. Below is the snippet of work done by us.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4">
@@ -230,13 +230,10 @@ function HomePage() {
         <div className="container">
           <div className="py-12 px-6 w-full">
             <h1 className="section-heading  text-4xl leading-normal font-bold text-center ">
-              Make a catchy line for clients
+              Happy Clients
             </h1>
             <p className="max-w-[700px] my-[1rem] w-fit block m-auto leading-relaxed text-center">
-              Lorem ipsum dolor sit amet consectetur. Tempus volutpat tempus
-              faucibus pharetra sem vel. Nulla sed mauris convallis metus.Lorem
-              ipsum dolor sit amet consectetur. Tempus volutpat tempus faucibus
-              pharetra sem vel. Nulla sed mauris convallis metus.
+            Our satisfied clients are a testament to our commitment to excellence. Their success is our greatest achievement.
             </p>
 
             <Carousel itemsToShowDesktop={1.7} itemsToShowMobile={1} margin={30} speed={5000}>

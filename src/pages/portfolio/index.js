@@ -72,7 +72,9 @@ const Portfolio = () => {
                                     <span className="bg-light-primary-color text-black py-[13px] px-[23px] rounded-full text-sm">Year 2020 - 2021</span>
                                 </div>
                                 <button className="mt-5 bg-primary-color hover:bg-primary-color text-white font-light py-2 px-4 rounded-lg">
-                                    View Website
+                                <a href="https://askaribank.com/" target="_blank">
+                                   View Website
+                                   </a>   
                                 </button>
                             </div>
 
@@ -112,7 +114,9 @@ const Portfolio = () => {
                                     <span className=" bg-light-primary-color text-black py-[13px] px-[23px] rounded-full text-sm mt-4">Website Design and Development</span>
                                 </div>
                                 <button className="mt-5 bg-primary-color hover:bg-primary-color text-white font-light py-2 px-4 rounded-lg">
-                                    View Website
+                                   <a href="https://www.playtravel.com.au/" target="_blank">
+                                   View Website
+                                   </a>   
                                 </button>
                             </div>
 
@@ -126,7 +130,9 @@ const Portfolio = () => {
                                     <span className="bg-light-primary-color text-black py-[13px] px-[23px] rounded-full text-sm mt-4">Year 2018 - 2019</span>
                                 </div>
                                 <button className="mt-5 bg-primary-color hover:bg-primary-color text-white font-light py-2 px-4 rounded-lg">
-                                    View Website
+                                <a href="https://www.daep.gov.ae/" target="_blank">
+                                   View Website
+                                   </a>  
                                 </button>
                             </div>
                             <div className="md:col-span-1 px-5 sm:px-[74px] py-4">

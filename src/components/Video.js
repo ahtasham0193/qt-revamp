@@ -13,7 +13,7 @@ const Video = ({ videoSrc, ...props }) => {
         } 
         // If video is not in viewport
         else {
-          videoRef.current.src = '';
+          // videoRef.current.src = '';
         }
       });
     });

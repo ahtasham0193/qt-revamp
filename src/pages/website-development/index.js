@@ -1,4 +1,5 @@
 import Accordion from "@/components/Accordian"
+import ContactUsForm from "@/components/ContactUsForm"
 import Layout from "@/components/Layout"
 import OtherServices from "@/components/OtherServices"
 import Image from "next/image"
@@ -6,7 +7,7 @@ import React from 'react'
 
 
 
-const WebsiteDevelopment = () => {
+const WebsiteDevelopment = ({servicesCard}) => {
     return (
         <Layout>
             <section>
@@ -44,17 +45,13 @@ const WebsiteDevelopment = () => {
                             </p>
                             <div className="mt-10 max-w-[600px] mx-auto">
                                 <Accordion title="We Provide You with a Secure Website">
-                                    Content 1 Lorem ipsum dolor sit amet consectetur adipisicing
-                                    elit. Sunt dicta harum quibusdam cumque nesciunt perferendis
-                                    earum! Nemo nulla eaque quod deleniti adipisci neque aspernatur?
-                                    Eum reiciendis sint quia aspernatur. Pariatur non odit, odio
-                                    necessitatibus sint in vero ipsa enim consequatur, eaque officia
-                                    ea perferendis autem nesciunt blanditiis explicabo suscipit.
+                                With an amazing website comes a fear of data leaks or hacking. But not when it is crafted at the hands of our team! Trust us when we say our experts make sure no data leak or security breach happens at your irresistible website.
                                 </Accordion>
-                                <Accordion title="We Won't Let You be Obsolete">Content 2</Accordion>
-                                <Accordion title="We Let You Be You">Content 3</Accordion>
-                                <Accordion title="We Make Sure You Boost Your Product Performance">Content 4</Accordion>
-                                <Accordion title="We Provide a Safe & User-Friendly Experience">Content 5</Accordion>
+                                <Accordion title="We Won't Let You be Obsolete">Our team gives you timely updates on evolving patterns in the market. This way, you stay ahead of the Game and don't become obsolete, which is the need of the hour.</Accordion>
+                                <Accordion title="We Let You Be You">Every brand/product is different, and no template fits all. Hence, we believe in letting you be you and putting your best step forward with our customized web development services. This way, you get to greet your audience with your authentic brand spirit, giving a nice and instant boost to your product.</Accordion>
+                                <Accordion title="We Make Sure You Boost Your Product Performance">Staying relevant in your business world is very important. When businesses don't revise their product according to industry trends, they quickly become obsolete. We help you stay updated and hence boost product performance per the industry trends.</Accordion>
+                                <Accordion title="We Provide a Safe & User-Friendly Experience">Trust us when we say your website will be a memorable experience for your clients. Our web development experts make sure there is adequate security on the website as well as post-purchase care. This way, they get a safe and user-friendly experience and keep coming back!</Accordion>
+                               
                             </div>
                         </div>
                     </div>
@@ -131,10 +128,76 @@ const WebsiteDevelopment = () => {
                 </div>
             </section>
             <section className="mt-24">
-                <OtherServices/>
+            <div className="w-full px-4 py-12 bg-light-primary-color">
+                <div className="container">
+                    <h2 className="section-heading font-bold text-4xl text-center">
+                        Other Services
+                    </h2>
+                    <p className="text-center max-w-[600px] block m-auto mt-4">
+                    Quaid Technologies: Your gateway to exceptional IT solutions.
+                    Crafting excellence in every service we deliver.
+                    </p>
+
+                    <div className="flex flex-wrap justify-around p-4">
+                        {servicesCard?.map((card) => {
+                            return (
+                                <div className="card md:mx-0 md:w-1/3 w- overflow-hidden  max-w-sm mx-2 my-4 border border-slate-200 rounded">
+                                    <div className="w-full h-fit p-3 bg-white flex items-center justify-center">
+                                        <Image
+                                            src={card.image}
+                                            className="w-auto h-[150px]"
+                                            width="200"
+                                            height="200"
+                                            alt="Description of the image"
+                                        />
+                                    </div>
+                                    <div className="p-5">
+                                        <h2 className="text-xl font-bold">{card.title}</h2>
+                                        <p className="my-5">{card.text}</p>
+                                        <span className="font-semibold">Learn more</span>
+                                    </div>
+                                </div>
+                            );
+                        })}
+                    </div>
+
+                    <div className="w-full mt-10">
+                        <ContactUsForm/>
+                    </div>
+                </div>
+            </div>
             </section>
         </Layout>
     )
 }
 
 export default WebsiteDevelopment
+
+export async function getServerSideProps(context) {
+    // Fetch data from an API, database or just hard code it.
+    // The data should come as props to the Services component.
+
+    const servicesCard = [
+      {
+        image: "/images/service1.png",
+        title: "Everything you need to grow your business",
+        text: "Lorem ipsum dolor sit amet consectetur. Tempus volutpat tempus faucibus pharetra sem vel.",
+      },
+      {
+        image: "/images/service1.png",
+        title: "Everything you need to grow your business",
+        text: "Lorem ipsum dolor sit amet consectetur. Tempus volutpat tempus faucibus pharetra sem vel.",
+      },
+      {
+        image: "/images/service1.png",
+        title: "Everything you need to grow your business",
+        text: "Lorem ipsum dolor sit amet consectetur. Tempus volutpat tempus faucibus pharetra sem vel.",
+      },
+    ];
+  
+    // By returning { props: servicesCard }, the Services component
+    // will receive `servicesCard` as a prop at build time
+    return {
+      props: { servicesCard },
+    }
+  }

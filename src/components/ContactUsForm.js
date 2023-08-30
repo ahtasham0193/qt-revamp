@@ -12,27 +12,27 @@ const ContactUsForm = () => {
           <div className="grid gap-6">
             <div className="mt-10">
               <b className="block">Contact Us</b>
-              <span>+92 51 8448182</span> | <span>+92-51-5411474</span> 
+              <span>+92 51 8448182</span> | <span>+92 51 2715101</span> 
             </div>
 
             <div>
               <b className="block">Email</b>
-              <span> irfantabish719@gmail.com</span> 
+              <span>hr@quaidtech.com</span> 
             </div>
 
             <div>
               <b className="block">Whatsapp at</b>
-              <span>+923225135120</span> 
+              <span>+92300 0662512</span> 
             </div>
 
             <div>
               <b className="block">Viber</b>
-              <span>+923225135120</span> 
+              <span>+92300 0662512</span> 
             </div>
 
             <div>
               <b className="block">Address</b>
-              <span>House# 72, Khursheed Alam Road, Westridge I, Opposite McDonald's, 46000, Rawalpindi</span> 
+              <span>72, Khursheed Alam Road, Westridge I, Opposite McDonald's, 46000, Rawalpindi</span> 
             </div>
           </div>
         </div>

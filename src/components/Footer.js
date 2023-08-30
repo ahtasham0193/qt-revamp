@@ -19,9 +19,8 @@ function Footer() {
                   alt="Description of the image"
                 />
                 <p className="mt-4 leading-relaxed">
-                  Lorem ipsum dolor sit amet consectetu. Tempus volutpat tempus
-                  faucibus pharetra sem vel. Nulla sed mauris convallis
-                  metus.Lorem ipsum dolor sit amet consectetu
+                M/S Quaid Technologies: Your Trusted IT Solutions Provider Since 1998 <br />
+                Quaid Technologies is a leading IT company that has been delivering top-notch Software Development and IT Infrastructure Consultancy services since 1998. With an unwavering commitment to excellence, we have established ourselves as a reliable partner for businesses worldwide.
                 </p>
               </div>
               <div className="col-span-2 sm:col-span-2 p-4">

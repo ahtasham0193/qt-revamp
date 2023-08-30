@@ -11,7 +11,7 @@ const Team = ({ founders, management, team, solutionArchitects, uiuxExpert, seo,
                         <div className="container">
                             <div className="w-full p-4">
                                 <h1 className="hero-heading text-4xl text-center sm:text-7xl leading-normal mt-2 sm:mt-12">Meet our team</h1>
-                                <p className=' max-w-[700px] m-auto text-sm sm:text-lg text-center mt-5'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor.</p>
+                                <p className=' max-w-[700px] m-auto text-sm sm:text-lg text-center mt-5'>Our team at Quaid Technologies is a tightly-knit group of IT professionals with a wealth of experience. We're united by our passion for innovation and a commitment to delivering top-notch solutions. With diverse skills and expertise, we collaborate seamlessly to exceed client expectations.</p>
                             </div>
                         </div>
                     </div>
