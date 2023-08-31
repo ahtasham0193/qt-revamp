@@ -4,7 +4,7 @@ import Accordion from "@/components/Accordian";
 import { useState } from "react";
 import ContactUsForm from "@/components/ContactUsForm";
 
-function AboutUs({servicesCard, globalPresence, clientAreas}) {
+function AboutUs({ servicesCard, globalPresence, clientAreas }) {
 
   return (
     <Layout>
@@ -199,69 +199,66 @@ function AboutUs({servicesCard, globalPresence, clientAreas}) {
 
           <div className="mt-10 max-w-[600px] mx-auto">
             <Accordion title="IT Staff Augmentation Service">
-              Content 1 Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Sunt dicta harum quibusdam cumque nesciunt perferendis earum! Nemo
-              nulla eaque quod deleniti adipisci neque aspernatur? Eum
-              reiciendis sint quia aspernatur. Pariatur non odit, odio
-              necessitatibus sint in vero ipsa enim consequatur, eaque officia
-              ea perferendis autem nesciunt blanditiis explicabo suscipit.
+              With so many technologies to work upon, hiring gets difficult when you are looking for a specialty. Why worrying when you can simply go for IT Staff Augmentation? Don't have the right person to do the job in-house? You don't need to hire a permanent resource.
             </Accordion>
             <Accordion title="Hire Overseas Development Team">
-              Content 2
+              Quaid Technologies holds more than 20 years of experience in various fields of Information Technology. From simple to complex projects, we bespoke each project requirement whilst keeping abreast with advanced technologies and frameworks.
             </Accordion>
             <Accordion title="Desktop Software Development">
-              Content 3
+              Quaid Technologies offers custom software development with technology & subject matter expertise combined. We venture with an array of software companies in the industry, starting from fresh names to the established ones.
             </Accordion>
-            <Accordion title="Web Development">Content 4</Accordion>
-            <Accordion title="Software Development">Content 5</Accordion>
-            <Accordion title="Mobile Software Development">Content 6</Accordion>
+            <Accordion title="Web Development">Quaid Technologies offers a full range of custom Web Application development services that help design, build, and evolve web-based software. We provide client focused and customer centric website solutions that deliver tangible business results. We add the latest features, enhanced settings, and custom considerations. </Accordion>
+            <Accordion title="Software Development">Fancy a timely project completion, fewer error rates, and software development expertise? Get bespoke software and manifest all that and much more in a blink of an eye!
+              Gone are the days when you and your brand relied on the manual workforce. This is the digital transformation era, and you must jump on the bandwagon if you haven't already. With our impeccable software development services, the journey is going to be an unforgettable one.</Accordion>
+            <Accordion title="Mobile Software Development">Our elite in-house team specializes in software engineering, product development, cloud architecture, and digital transformation. We rapidly and reliably deliver software that meets the needs of the world’s most demanding organizations. Our diverse team is united to create some extraordinary apps for your business.</Accordion>
             <Accordion title="Digital/Search Engine Marketing">
-              Content 7
+            Want Higher Ranks, Greater Leads, And Increased Return On Investment (ROI)? You’re at the right spot! It’s high time to switch to the newer marketing tactics for maximizing conversion rates.
             </Accordion>
-            <Accordion title="Managed Hosting Services">Content 8</Accordion>
+            <Accordion title="Managed Hosting Services">Servers are the life-line of business’ technology infrastructure. Every time a server stops, and so does your business. We have a knowledgeable and experienced team who make sure that your servers are in good hands. The fundamental layer of protection is much needed before upsetting your company’s crucial data on web. </Accordion>
+            <Accordion title="Branding and Designing">We offer a full-service branding and design strategy that helps you bring your ideas to life. We offer a complete range of creative services tailored around your immediate and on-going branding requirements. From logos to website design, to print and digital, we've got you covered! </Accordion>
           </div>
         </div>
       </section>
 
       <section>
-        <div className="w-full px-4 py-12 bg-light-primary-color">
-          <div className="container">
-            <h2 className="section-heading font-bold text-4xl text-center">
-              Other Services
-            </h2>
-            <p className="text-center max-w-[600px] block m-auto mt-4">
-              Lorem ipsum dolor sit amet consectetur. Tempus volutpat tempus
-              faucibus pharetra sem vel. Nulla sed mauris convallis metus.L
-            </p>
+      <div className="w-full px-4 py-12 bg-light-primary-color">
+                <div className="container">
+                    <h2 className="section-heading font-bold text-4xl text-center">
+                        Other Services
+                    </h2>
+                    <p className="text-center max-w-[600px] block m-auto mt-4">
+                    Quaid Technologies: Your gateway to exceptional IT solutions.
+                    Crafting excellence in every service we deliver.
+                    </p>
 
-            <div className="flex flex-wrap justify-around p-4">
-              {servicesCard?.map((card) => {
-                return (
-                  <div className="card md:mx-0 md:w-1/3 w- overflow-hidden  max-w-sm mx-2 my-4 border border-slate-200 rounded">
-                    <div className="w-full h-fit p-3 bg-white flex items-center justify-center">
-                      <Image
-                        src={card.image}
-                        className="w-auto h-[150px]"
-                        width="200"
-                        height="200"
-                        alt="Description of the image"
-                      />
+                    <div className="flex flex-wrap justify-around p-4">
+                        {servicesCard?.map((card) => {
+                            return (
+                                <div className="card md:mx-0 md:w-1/3 w- overflow-hidden  max-w-sm mx-2 my-4 border border-slate-200 rounded">
+                                    <div className="w-full h-fit p-3 bg-white flex items-center justify-center">
+                                        <Image
+                                            src={card.image}
+                                            className="w-auto h-[150px]"
+                                            width="200"
+                                            height="200"
+                                            alt="Description of the image"
+                                        />
+                                    </div>
+                                    <div className="p-5">
+                                        <h2 className="text-xl font-bold">{card.title}</h2>
+                                        <p className="my-5">{card.text}</p>
+                                        <span className="font-semibold">Learn more</span>
+                                    </div>
+                                </div>
+                            );
+                        })}
                     </div>
-                    <div className="p-5">
-                      <h2 className="text-xl font-bold">{card.title}</h2>
-                      <p className="my-5">{card.text}</p>
-                      <span className="font-semibold">Learn more</span>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
 
-            <div className="w-full mt-10">
-              <ContactUsForm />
+                    <div className="w-full mt-10">
+                        <ContactUsForm/>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
       </section>
     </Layout>
   );
@@ -274,7 +271,7 @@ export default AboutUs;
 export async function getServerSideProps(context) {
   // Fetch data from an API, database or just hard code it.
   // The data should come as props to the Services component.
-  
+
   const clientAreas = [
     { image: "/images/area1.png", title: "Government" },
     { image: "/images/area2.png", title: "World Bank" },

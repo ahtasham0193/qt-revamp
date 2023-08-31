@@ -1,4 +1,5 @@
 import Accordion from "@/components/Accordian"
+import ContactUsForm from "@/components/ContactUsForm"
 import Layout from "@/components/Layout"
 import OtherServices from "@/components/OtherServices"
 import Image from "next/image"
@@ -6,7 +7,7 @@ import React from 'react'
 
 
 
-const SecurityCompliance = () => {
+const SecurityCompliance = ({servicesCard}) => {
     return (
         <Layout>
             <section>
@@ -33,22 +34,35 @@ const SecurityCompliance = () => {
                 </div>
             </section>
             <section className="mt-24">
-            <h1 className="text-xl sm:text-3xl font-semibold text-center">Compliance Frameworks We Work With</h1>
+                <h1 className="text-xl sm:text-3xl font-semibold text-center">Compliance Frameworks We Work With</h1>
                 <div className="mt-10 max-w-[600px] mx-auto">
                     <Accordion title="HIPAA">
-                        Content 1 Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. Sunt dicta harum quibusdam cumque nesciunt perferendis
-                        earum! Nemo nulla eaque quod deleniti adipisci neque aspernatur?
-                        Eum reiciendis sint quia aspernatur. Pariatur non odit, odio
-                        necessitatibus sint in vero ipsa enim consequatur, eaque officia
-                        ea perferendis autem nesciunt blanditiis explicabo suscipit.
+                        HIPAA (Health Insurance Portability and Accountability Act) applies to companies in the Health Insurance industry. It legislates how companies should handle and secure patient's personal medical information. HIPAA compliance requires companies who manage this kind of information, to do so safely. The act has five sections, which it calls Titles. Title 2 is the section that applies to information privacy and security.
                     </Accordion>
-                    <Accordion title="SOX">Content 2</Accordion>
-                    <Accordion title="PCI DSS">Content 3</Accordion>
-                    <Accordion title="SOC Reports">Content 4</Accordion>
-                    <Accordion title="Networks">Content 5</Accordion>
-                    <Accordion title="Devices">Content 6</Accordion>
-                    <Accordion title="Users">Content 7</Accordion>
+                    <Accordion title="SOX">The Sarbanes-Oxley Act (also called SOX) applies to the corporate care and maintenance of financial data of public companies. It defines what data must be kept and for how long it needs to be held. It also outlines controls for the destruction, falsification, and alteration of data. SOX attempts to improve corporate responsibility and add culpability. The act states that upper management has to certify the accuracy of their data.</Accordion>
+                    <Accordion title="PCI DSS">PCI DSS compliance is the Payment Card Industry Data Security Standard created by a group of companies. Requirements that are part of the standard are:
+                        <ul className="list-disc px-6 mt-3">
+                            <li>
+                              A secured network
+                            </li>
+                            <li>
+                            Protected user data
+                            </li>
+                            <li>
+                            Strong access controls and management
+                            </li>
+                            <li>
+                            Network tests
+                            </li>
+                            <li>
+                            Regular reviews of Information Security Policies
+                            </li>
+                        </ul>
+                        </Accordion>
+                    <Accordion title="SOC Reports">SOC Reports are Service Organization Control Reports that deal with managing financial or personal information at a company. There are three different SOC Reports. SOC 1 and SOC 2 are different types with SOC 1 applying to financial information controls, while SOC 2 compliance and certification covers personal user information. SOC 3 Reports are publicly accessible, so they do not include confidential information about the company.</Accordion>
+                    <Accordion title="Networks">Networks allow us to share information quickly over vast distances. This also makes them a risk. A breached network can do untold amounts of damage to a company.Personal information damage the company’s image</Accordion>
+                    <Accordion title="Devices">A user’s personal device that connects to a company network can inject unknown code into the system. Similarly, clicking on the wrong email attachment can quickly spread malicious software.</Accordion>
+                    <Accordion title="Users">Careless users are a significant risk for any company. They don’t know they have been compromised and don’t know they are enabling an online attack. Phishing emails now responsible for 91% successful cyber-attacks.</Accordion>
                     <Accordion title="SAST">Content 8</Accordion>
                     <Accordion title="DAST">Content 9</Accordion>
                     <Accordion title="SCA">Content 10</Accordion>
@@ -58,8 +72,45 @@ const SecurityCompliance = () => {
                     <Accordion title="ASTO">Content 14</Accordion>
                 </div>
             </section>
-            <section className="mt-24"> 
-                <OtherServices />
+            <section className="mt-24">
+            <div className="w-full px-4 py-12 bg-light-primary-color">
+                <div className="container">
+                    <h2 className="section-heading font-bold text-4xl text-center">
+                        Other Services
+                    </h2>
+                    <p className="text-center max-w-[600px] block m-auto mt-4">
+                    Quaid Technologies: Your gateway to exceptional IT solutions.
+                    Crafting excellence in every service we deliver.
+                    </p>
+
+                    <div className="flex flex-wrap justify-around p-4">
+                        {servicesCard?.map((card) => {
+                            return (
+                                <div className="card md:mx-0 md:w-1/3 w- overflow-hidden  max-w-sm mx-2 my-4 border border-slate-200 rounded">
+                                    <div className="w-full h-fit p-3 bg-white flex items-center justify-center">
+                                        <Image
+                                            src={card.image}
+                                            className="w-auto h-[150px]"
+                                            width="200"
+                                            height="200"
+                                            alt="Description of the image"
+                                        />
+                                    </div>
+                                    <div className="p-5">
+                                        <h2 className="text-xl font-bold">{card.title}</h2>
+                                        <p className="my-5">{card.text}</p>
+                                        <span className="font-semibold">Learn more</span>
+                                    </div>
+                                </div>
+                            );
+                        })}
+                    </div>
+
+                    <div className="w-full mt-10">
+                        <ContactUsForm/>
+                    </div>
+                </div>
+            </div>
             </section>
         </Layout>
     )
@@ -67,3 +118,32 @@ const SecurityCompliance = () => {
 
 
 export default SecurityCompliance
+
+export async function getServerSideProps(context) {
+    // Fetch data from an API, database or just hard code it.
+    // The data should come as props to the Services component.
+
+    const servicesCard = [
+      {
+        image: "/images/service1.png",
+        title: "Everything you need to grow your business",
+        text: "Lorem ipsum dolor sit amet consectetur. Tempus volutpat tempus faucibus pharetra sem vel.",
+      },
+      {
+        image: "/images/service1.png",
+        title: "Everything you need to grow your business",
+        text: "Lorem ipsum dolor sit amet consectetur. Tempus volutpat tempus faucibus pharetra sem vel.",
+      },
+      {
+        image: "/images/service1.png",
+        title: "Everything you need to grow your business",
+        text: "Lorem ipsum dolor sit amet consectetur. Tempus volutpat tempus faucibus pharetra sem vel.",
+      },
+    ];
+  
+    // By returning { props: servicesCard }, the Services component
+    // will receive `servicesCard` as a prop at build time
+    return {
+      props: { servicesCard },
+    }
+  }

@@ -89,7 +89,8 @@ const HireOverseas = ({servicesCard}) => {
                         <div className="container">
                             <div className="w-full">
                                 <h2 className="text-xl sm:text-3xl font-semibold text-center">Our prestigious clients</h2>
-                                <p className=' max-w-[850px] m-auto text-sm sm:text-lg text-center mt-5'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor.</p>
+                                <p className=' max-w-[850px] m-auto text-sm sm:text-lg text-center mt-5'>Our clients inspire us to push boundaries and achieve greatness together. <br />
+                                    Proudly partnering with clients to transform visions into reality.</p>
                             </div>
                             <div className="w-full mt-6">
                                 <OurClients />

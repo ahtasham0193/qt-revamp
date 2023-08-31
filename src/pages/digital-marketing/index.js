@@ -1,4 +1,5 @@
 import Accordion from "@/components/Accordian"
+import ContactUsForm from "@/components/ContactUsForm"
 import Layout from "@/components/Layout"
 import OtherServices from "@/components/OtherServices"
 import Image from "next/image"
@@ -6,7 +7,7 @@ import React from 'react'
 
 
 
-const DigitalMarketing = () => {
+const DigitalMarketing = ({servicesCard}) => {
     return (
         <Layout>
             <section>
@@ -215,19 +216,14 @@ const DigitalMarketing = () => {
             <section>
                 <div className="mt-10 max-w-[600px] mx-auto">
                     <Accordion title="Excellence Of Years:">
-                        Content 1 Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. Sunt dicta harum quibusdam cumque nesciunt perferendis
-                        earum! Nemo nulla eaque quod deleniti adipisci neque aspernatur?
-                        Eum reiciendis sint quia aspernatur. Pariatur non odit, odio
-                        necessitatibus sint in vero ipsa enim consequatur, eaque officia
-                        ea perferendis autem nesciunt blanditiis explicabo suscipit.
+                    We have been delivering excellent and effective digital marketing services for over a decade. Our enriched experience speaks for our quality services that actually generate more and more leads.
                     </Accordion>
-                    <Accordion title="Bespoke Digital Marketing Campaigns:">Content 2</Accordion>
-                    <Accordion title="Seasoned Digital Marketers:">Content 3</Accordion>
-                    <Accordion title="A Large Number Of Satisfied Clients:">Content 4</Accordion>
-                    <Accordion title="Budget-Friendly Rates:">Content 5</Accordion>
-                    <Accordion title="Best Customer Support:">Content 6</Accordion>
-                    <Accordion title="Wide-Ranging Services:">Content 7</Accordion>
+                    <Accordion title="Bespoke Digital Marketing Campaigns:">We know very well that every business has different goals and target customers that's why we don't use the cookie-cutter approach. Instead, we design bespoke digital marketing campaigns that could actually voice your concerns and drive more traffic to your sites.</Accordion>
+                    <Accordion title="Seasoned Digital Marketers:">Our seasoned team of expert digital marketers is our pride. Knowing the nuts and bolts of the digital marketing industry, our certified marketing specialists design and execute a digital marketing strategy that is aligning with your business's needs.</Accordion>
+                    <Accordion title="A Large Number Of Satisfied Clients:">We have never failed to impress a large number of businesses with our quality services. That’s why our valued clients have always provided us with positive feedback. You can check our portfolio to know more about that.</Accordion>
+                    <Accordion title="Budget-Friendly Rates:">One of the biggest reasons for choosing us is our market competitive services charges. We have always succeeded to give our clients cost-effective services that could give their businesses a greater boost.</Accordion>
+                    <Accordion title="Best Customer Support:">Our 24/7 customer support is readily available to listen to all your relevant concerns and serve you in the best possible manner. Dealing professionally with clients, our excellent customer support team goes above and beyond to meet their requirements and surpass their expectations.</Accordion>
+                    <Accordion title="Wide-Ranging Services:">Our unrivaled and wide-ranging digital marketing services encompass the following.</Accordion>
                 </div>
                 <div className="w-full p-6">
                     <div className="w-full">
@@ -471,19 +467,91 @@ const DigitalMarketing = () => {
                                  height={150}
                                  alt="our client img content"
                                 />
-                            A trademark of Roxim Lomac (Pvt) Ltd UK; Dupas is a Pakistan based FMCG brand established in 2003. Offering one of the best toiletries products and skincare solutions in Pakistan. Helping them optimizing their website against the keywords such as best hand wash collection in Pakistan, Best Liquid Soap in Pakistan, team Quaid Technologies helped this brand getting noticed within online community too.
+                           A trademark of Roxim Lomac (Pvt) Ltd UK; Dupas is a Pakistan based FMCG brand established in 2003. Offering one of the best toiletries products and skincare solutions in Pakistan. Helping them optimizing their website against the keywords such as best hand wash collection in Pakistan, Best Liquid Soap in Pakistan, team Quaid Technologies helped this brand getting noticed within online community too.
                             </Accordion>
-                            <Accordion title="Pay-Per-Click Services">Content 2</Accordion>
-                            <Accordion title="Social Media Marketing">Content 3</Accordion>
-                            <Accordion title="Email Marketing">Content 4</Accordion>
-                            <Accordion title="Content Marketing">Content 5</Accordion>
-                            <Accordion title="Affiliate Influencer Marketing">Content 6</Accordion>
+                            <Accordion title="Aesthetic Shapes">
+                                <Image
+                                 src="/images/Digital Marketing/aestheticImg.png"
+                                 className="w-full max-w-[150px] m-auto mt-3 mb-5"
+                                 width={300}
+                                 height={150}
+                                 alt="our client img content"
+                                />
+                          Cosmetic surgeon, owned by Dr. Arif Hussain - the only CASP member of Canadian plastic surgery association has been with us for more than 4 years. Quaid Technologies team digital marketing team helped his business in generating hot leads from different platforms. We not only helped them outrank the web presence of cosmetic surgeon, at the same time we also uplifted their business as well with our strategic SEO strategies.
+                            </Accordion>
+                            <Accordion title="MILE">
+                                <Image
+                                 src="/images/Digital Marketing/mileImg.png"
+                                 className="w-full max-w-[150px] m-auto mt-3 mb-5"
+                                 width={300}
+                                 height={150}
+                                 alt="our client img content"
+                                />
+                          MILE is focused on building leadership and entrepreneurial excellence in the Arab and Muslim world. The non-profit organisation is building local intellectual capital and leveraging a business model that ensures sustainability and relevant development opportunities to our present and future business leaders. This MILE Digital Marketing Project was the first one of its kind that was delivered while catering 360 Degree Digital Marketing Needs. From Email Marketing to off-site SEO and from Content Distribution to Paid Campaigns, we helped this Madina based Learning institute in establishing better student base. We worked as MILE's overseas IT team for more than five years till they shifted whole operations in-house.
+                            </Accordion>
+                            <Accordion title="AEO Pakistan">
+                                <Image
+                                 src="/images/Digital Marketing/AEOImg.png"
+                                 className="w-full max-w-[150px] m-auto mt-3 mb-5"
+                                 width={300}
+                                 height={150}
+                                 alt="our client img content"
+                                />
+                           AEO Pakistan provides a full spectrum of services for Studying Abroad. This includes Student Counseling/Placement services, IELTS Testing and IELTS Preparation. AEO Pakistan operates in Pakistan as the official liaison office for 26 leading Australian Universities / Institutions. We are working on the following things: Lead Generation, Search Engine Optimization And Search Engine Marketing. Getting their traffic up from 200 daily users to 1000 daily users, team Quaid Technologies not only helped them increased their website traffic to 500X but also help them in managing and optimizing their digital campaigns too.
+                            </Accordion>
+                            <Accordion title="Zobia Hospital">
+                                <Image
+                                 src="/images/Digital Marketing/ZobiaImg.webp"
+                                 className="w-full max-w-[150px] m-auto mt-3 mb-5"
+                                 width={300}
+                                 height={150}
+                                 alt="our client img content"
+                                />
+                           Zobia Hospital - Locally Owned and Managed Hospital In The Suburbs of Islamabad, grew their patient count from few to many. By Using Legit Local SEO Practices, team Quaid Technologies helped them gaining position from nowhere to some of the most prominent positions within Islamabad. In addition to it, we also helped them increased their calls volume from 50 a month to 400 a month in the time span of 8 months only.
+                            </Accordion>
                         </div>
                     </div>
                 </div>
             </section>
             <section className="mt-24">
-                <OtherServices />
+            <div className="w-full px-4 py-12 bg-light-primary-color">
+                <div className="container">
+                    <h2 className="section-heading font-bold text-4xl text-center">
+                        Other Services
+                    </h2>
+                    <p className="text-center max-w-[600px] block m-auto mt-4">
+                    Quaid Technologies: Your gateway to exceptional IT solutions.
+                    Crafting excellence in every service we deliver.
+                    </p>
+
+                    <div className="flex flex-wrap justify-around p-4">
+                        {servicesCard?.map((card) => {
+                            return (
+                                <div className="card md:mx-0 md:w-1/3 w- overflow-hidden  max-w-sm mx-2 my-4 border border-slate-200 rounded">
+                                    <div className="w-full h-fit p-3 bg-white flex items-center justify-center">
+                                        <Image
+                                            src={card.image}
+                                            className="w-auto h-[150px]"
+                                            width="200"
+                                            height="200"
+                                            alt="Description of the image"
+                                        />
+                                    </div>
+                                    <div className="p-5">
+                                        <h2 className="text-xl font-bold">{card.title}</h2>
+                                        <p className="my-5">{card.text}</p>
+                                        <span className="font-semibold">Learn more</span>
+                                    </div>
+                                </div>
+                            );
+                        })}
+                    </div>
+
+                    <div className="w-full mt-10">
+                        <ContactUsForm/>
+                    </div>
+                </div>
+            </div>
             </section>
 
         </Layout>
@@ -491,3 +559,33 @@ const DigitalMarketing = () => {
 }
 
 export default DigitalMarketing
+
+
+export async function getServerSideProps(context) {
+    // Fetch data from an API, database or just hard code it.
+    // The data should come as props to the Services component.
+
+    const servicesCard = [
+      {
+        image: "/images/service1.png",
+        title: "Everything you need to grow your business",
+        text: "Lorem ipsum dolor sit amet consectetur. Tempus volutpat tempus faucibus pharetra sem vel.",
+      },
+      {
+        image: "/images/service1.png",
+        title: "Everything you need to grow your business",
+        text: "Lorem ipsum dolor sit amet consectetur. Tempus volutpat tempus faucibus pharetra sem vel.",
+      },
+      {
+        image: "/images/service1.png",
+        title: "Everything you need to grow your business",
+        text: "Lorem ipsum dolor sit amet consectetur. Tempus volutpat tempus faucibus pharetra sem vel.",
+      },
+    ];
+  
+    // By returning { props: servicesCard }, the Services component
+    // will receive `servicesCard` as a prop at build time
+    return {
+      props: { servicesCard },
+    }
+  }
