@@ -6,6 +6,7 @@ import Button from "@/components/Button";
 import Carousel from "@/components/Carousel";
 import Accordion from "@/components/Accordian";
 import ContactUsForm from "@/components/ContactUsForm";
+import Link from "next/link";
 
 const ItStaffAugmented = ({ processCards, clients, servicesCard }) => {
     return(
@@ -145,13 +146,14 @@ const ItStaffAugmented = ({ processCards, clients, servicesCard }) => {
                     </p>
 
                     <div className="flex flex-wrap justify-around p-4">
-                        {servicesCard?.map((card) => {
+                        {servicesCard?.map((card, index) => {
+                          
                             return (
-                                <div className="card md:mx-0 md:w-1/3 w- overflow-hidden  max-w-sm mx-2 my-4 border border-slate-200 rounded">
+                                <div className="card md:mx-0 md:w-1/3 w- overflow-hidden  max-w-sm mx-2 my-4 border border-slate-200 rounded" key={index}>
                                     <div className="w-full h-fit p-3 bg-white flex items-center justify-center">
                                         <Image
                                             src={card.image}
-                                            className="w-auto h-[150px]"
+                                            className="w-auto h-[150px] object-contain"
                                             width="200"
                                             height="200"
                                             alt="Description of the image"
@@ -160,7 +162,9 @@ const ItStaffAugmented = ({ processCards, clients, servicesCard }) => {
                                     <div className="p-5">
                                         <h2 className="text-xl font-bold">{card.title}</h2>
                                         <p className="my-5">{card.text}</p>
-                                        <span className="font-semibold">Learn more</span>
+                                        <Link href={card.slug}>
+                                                <span className="font-semibold cursor-pointer">Learn more</span>
+                                            </Link>
                                     </div>
                                 </div>
                             );
@@ -234,19 +238,22 @@ export async function getServerSideProps(context) {
 
     const servicesCard = [
       {
-        image: "/images/service1.png",
-        title: "Everything you need to grow your business",
-        text: "Lorem ipsum dolor sit amet consectetur. Tempus volutpat tempus faucibus pharetra sem vel.",
+        image: "/images/software development/software-developmentImg.png",
+        title: "Software Development",
+        text: "We provide client-focused, customer-centric, Web Application Development Solutions that deliver tangible business results.",
+        slug: "/software-development"
       },
       {
-        image: "/images/service1.png",
-        title: "Everything you need to grow your business",
-        text: "Lorem ipsum dolor sit amet consectetur. Tempus volutpat tempus faucibus pharetra sem vel.",
+        image: "/images/Hire Overseas/hireOverseasImg.png",
+        title: "Hire Overseas Development Team",
+        text: "Our Cloud Team service allows you to hire on-site or offshore technical resources without being constrained by distance or international borders.",
+        slug: "/hire-overseas"
       },
       {
-        image: "/images/service1.png",
-        title: "Everything you need to grow your business",
-        text: "Lorem ipsum dolor sit amet consectetur. Tempus volutpat tempus faucibus pharetra sem vel.",
+        image: "/images/Security Compliance/security-complianceImg.png",
+        title: "Security & Compliance",
+        text: "We can help your business with our managed network security services to meet your compliance needs. Our experienced team make sure that your servers are in good hands.",
+        slug: "/security-compliance"
       },
     ];
   

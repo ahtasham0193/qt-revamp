@@ -3,11 +3,13 @@ import ContactUsForm from "@/components/ContactUsForm"
 import Layout from "@/components/Layout"
 import OtherServices from "@/components/OtherServices"
 import Image from "next/image"
+import Link from "next/link"
 import React from 'react'
 
 
 
-const WebsiteDevelopment = ({servicesCard}) => {
+const WebsiteDevelopment = ({ servicesCard }) => {
+
     return (
         <Layout>
             <section>
@@ -41,17 +43,17 @@ const WebsiteDevelopment = ({servicesCard}) => {
                                 Do you want to know why we are best in the game?
                             </h1>
                             <p className="mt-6  text-center">
-                            The digital market is a great pool, and to stand out among the many fish (competitors) is difficult. It took us plenty of effort and hard work to reach where we are today. Here is why we are the best in the Game:
+                                The digital market is a great pool, and to stand out among the many fish (competitors) is difficult. It took us plenty of effort and hard work to reach where we are today. Here is why we are the best in the Game:
                             </p>
                             <div className="mt-10 max-w-[600px] mx-auto">
                                 <Accordion title="We Provide You with a Secure Website">
-                                With an amazing website comes a fear of data leaks or hacking. But not when it is crafted at the hands of our team! Trust us when we say our experts make sure no data leak or security breach happens at your irresistible website.
+                                    With an amazing website comes a fear of data leaks or hacking. But not when it is crafted at the hands of our team! Trust us when we say our experts make sure no data leak or security breach happens at your irresistible website.
                                 </Accordion>
                                 <Accordion title="We Won't Let You be Obsolete">Our team gives you timely updates on evolving patterns in the market. This way, you stay ahead of the Game and don't become obsolete, which is the need of the hour.</Accordion>
                                 <Accordion title="We Let You Be You">Every brand/product is different, and no template fits all. Hence, we believe in letting you be you and putting your best step forward with our customized web development services. This way, you get to greet your audience with your authentic brand spirit, giving a nice and instant boost to your product.</Accordion>
                                 <Accordion title="We Make Sure You Boost Your Product Performance">Staying relevant in your business world is very important. When businesses don't revise their product according to industry trends, they quickly become obsolete. We help you stay updated and hence boost product performance per the industry trends.</Accordion>
                                 <Accordion title="We Provide a Safe & User-Friendly Experience">Trust us when we say your website will be a memorable experience for your clients. Our web development experts make sure there is adequate security on the website as well as post-purchase care. This way, they get a safe and user-friendly experience and keep coming back!</Accordion>
-                               
+
                             </div>
                         </div>
                     </div>
@@ -92,9 +94,9 @@ const WebsiteDevelopment = ({servicesCard}) => {
                                     height={300}
                                 />
                             </div>
-                        </div> 
+                        </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
-                        <div className="md:col-span-1 px-5 sm:px-[74px] py-4">
+                            <div className="md:col-span-1 px-5 sm:px-[74px] py-4">
                                 <Image
                                     src="/images/Desktop Software/softwareAppImg2.png"
                                     alt="Image"
@@ -107,7 +109,7 @@ const WebsiteDevelopment = ({servicesCard}) => {
                                 <h4 className="text-xl sm:text-3xl font-semibold">AUTO BUTLER SYSTEM</h4>
                                 <p className="text-sm sm:text-lg mt-5">Auto Butler system is a product for today’s busy lifestyles as it takes the worry out of appearance care. You can have both your appearance care and maintenance done in one convenient appointment at the same Dealership that sold you the car.</p>
                             </div>
-                           
+
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
                             <div className="md:col-span-1 px-5 sm:px-[74px] py-4">
@@ -128,44 +130,47 @@ const WebsiteDevelopment = ({servicesCard}) => {
                 </div>
             </section>
             <section className="mt-24">
-            <div className="w-full px-4 py-12 bg-light-primary-color">
-                <div className="container">
-                    <h2 className="section-heading font-bold text-4xl text-center">
-                        Other Services
-                    </h2>
-                    <p className="text-center max-w-[600px] block m-auto mt-4">
-                    Quaid Technologies: Your gateway to exceptional IT solutions.
-                    Crafting excellence in every service we deliver.
-                    </p>
+                <div className="w-full px-4 py-12 bg-light-primary-color">
+                    <div className="container">
+                        <h2 className="section-heading font-bold text-4xl text-center">
+                            Other Services
+                        </h2>
+                        <p className="text-center max-w-[600px] block m-auto mt-4">
+                            Quaid Technologies: Your gateway to exceptional IT solutions.
+                            Crafting excellence in every service we deliver.
+                        </p>
 
-                    <div className="flex flex-wrap justify-around p-4">
-                        {servicesCard?.map((card) => {
-                            return (
-                                <div className="card md:mx-0 md:w-1/3 w- overflow-hidden  max-w-sm mx-2 my-4 border border-slate-200 rounded">
-                                    <div className="w-full h-fit p-3 bg-white flex items-center justify-center">
-                                        <Image
-                                            src={card.image}
-                                            className="w-auto h-[150px]"
-                                            width="200"
-                                            height="200"
-                                            alt="Description of the image"
-                                        />
+                        <div className="flex flex-wrap justify-around p-4">
+                            {servicesCard?.map((card) => {
+                                return (
+                                    <div className="card md:mx-0 md:w-1/3 w- overflow-hidden  max-w-sm mx-2 my-4 border border-slate-200 rounded">
+                                        <div className="w-full h-fit p-3 bg-white flex items-center justify-center">
+                                            <Image
+                                                src={card.image}
+                                                className="w-auto h-[150px] object-contain"
+                                                width="200"
+                                                height="200"
+                                                alt="Description of the image"
+                                            />
+                                        </div>
+                                        <div className="p-5">
+                                            <h2 className="text-xl font-bold">{card.title}</h2>
+                                            <p className="my-5">{card.text}</p>
+                                           
+                                            <Link href={card.slug}>
+                                                <span className="font-semibold cursor-pointer">Learn more</span>
+                                            </Link>
+                                        </div>
                                     </div>
-                                    <div className="p-5">
-                                        <h2 className="text-xl font-bold">{card.title}</h2>
-                                        <p className="my-5">{card.text}</p>
-                                        <span className="font-semibold">Learn more</span>
-                                    </div>
-                                </div>
-                            );
-                        })}
-                    </div>
+                                );
+                            })}
+                        </div>
 
-                    <div className="w-full mt-10">
-                        <ContactUsForm/>
+                        <div className="w-full mt-10">
+                            <ContactUsForm />
+                        </div>
                     </div>
                 </div>
-            </div>
             </section>
         </Layout>
     )
@@ -178,26 +183,29 @@ export async function getServerSideProps(context) {
     // The data should come as props to the Services component.
 
     const servicesCard = [
-      {
-        image: "/images/service1.png",
-        title: "Everything you need to grow your business",
-        text: "Lorem ipsum dolor sit amet consectetur. Tempus volutpat tempus faucibus pharetra sem vel.",
-      },
-      {
-        image: "/images/service1.png",
-        title: "Everything you need to grow your business",
-        text: "Lorem ipsum dolor sit amet consectetur. Tempus volutpat tempus faucibus pharetra sem vel.",
-      },
-      {
-        image: "/images/service1.png",
-        title: "Everything you need to grow your business",
-        text: "Lorem ipsum dolor sit amet consectetur. Tempus volutpat tempus faucibus pharetra sem vel.",
-      },
+        {
+            image: "/images/Mobile Software Development/mobileSoftwaredevelopmentImg.png",
+            title: "Mobile Software Development",
+            text: "The company leads the state of the art Mobile Software Development, enabling seamless user experiences across all modern platforms and devices.",
+            slug: "/mobile-software-development"
+        },
+        {
+            image: "/images/Hire Overseas/hireOverseasImg.png",
+            title: "Hire Overseas Development Team",
+            text: "Our Cloud Team service allows you to hire on-site or offshore technical resources without being constrained by distance or international borders.",
+            slug: "/hire-overseas"
+        },
+        {
+            image: "/images/Desktop Software/desktopSoftwareImg.png",
+            title: "Desktop Software Development",
+            text: "We provide leading software development services to our worldwide clients. Quaid Technology is the expert partner you need to deliver innovative and competitive results.",
+            slug: "/desktop-software"
+        },
     ];
-  
+
     // By returning { props: servicesCard }, the Services component
     // will receive `servicesCard` as a prop at build time
     return {
-      props: { servicesCard },
+        props: { servicesCard },
     }
-  }
+}

@@ -12,20 +12,22 @@ import Link from "next/link";
 function HomePage() {
   const [servicesCard, setServicesCard] = useState([
     {
-      route: "it-staff-augmented",
       image: "/images/books.svg",
       title: "IT Staff Augmented Services",
       text: "With so many technologies to work upon, hiring gets difficult when you are looking for a specialty. Why worrying when you can simply go for IT Staff Augmentation? Don't have the right person to do the job in-house? You don't need to hire a permanent resource.",
+      slug: "/it-staff-augmented"
     },
     {
       image: "/images/website development/website-developmentImg.png",
       title: "Website Development Services",
       text: "Want to Turn Your Website into a Lead Magnet? Want to Turn every Visitor into a Buyer? Let us take things into our hands and revolutionize your digital journey like never before. Quaid Technologies offers a full range of custom Web Application development services that help design, build, and evolve web-based software.",
+      slug: "/website-development"
     },
     {
       image: "/images/Mobile Software Development/mobileSoftwaredevelopmentImg.png",
       title: "Mobile Software Development Services",
       text: "Our elite in-house team specializes in software engineering, product development, cloud architecture, and digital transformation. We rapidly and reliably deliver software that meets the needs of the world’s most demanding organizations.",
+      slug: "/mobile-software-development"
     },
   ]);
 
@@ -61,6 +63,7 @@ function HomePage() {
       video: "/videos/saima.mp4",
     },
   ]);
+
   return (
 
     <Layout>
@@ -93,12 +96,12 @@ function HomePage() {
 
             <div className="flex mb-12">
               <Link href="/portfolio">
-              <Button variant="primary">View Projects</Button>
+                <Button variant="primary">View Projects</Button>
               </Link>
               <Link href="/contact">
-              <Button variant="secondary" classes="ml-5">
-                Contact Us
-              </Button>
+                <Button variant="secondary" classes="ml-5">
+                  Contact Us
+                </Button>
               </Link>
             </div>
           </div>
@@ -159,17 +162,17 @@ function HomePage() {
               Everything you need to grow your business
             </h1>
             <p className="max-w-[700px] my-[1rem] w-fit block m-auto leading-relaxed text-center">
-             M/S Quaid Technologies has been providing Software Development & IT Services since 1998 with the merger of M/S PakCyber Group in 2013. We have been the technical solution provider to many industries and moved them from manual procedures to paperless fully Automated Solutions. 
+              M/S Quaid Technologies has been providing Software Development & IT Services since 1998 with the merger of M/S PakCyber Group in 2013. We have been the technical solution provider to many industries and moved them from manual procedures to paperless fully Automated Solutions.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 p-4">
-              {servicesCard?.map((card) => {
+              {servicesCard?.map((card, index) => {
                 return (
-                  <div className="overflow-hidden max-w-sm mx-auto my-4 border border-slate-200 rounded">
+                  <div className="overflow-hidden max-w-sm mx-auto my-4 border border-slate-200 rounded" key={index}>
                     <div className="w-full p-3 bg-white flex items-center justify-center">
                       <Image
                         src={card.image}
-                        className="w-auto h-[150px]"
+                        className="w-auto h-[150px] object-contain"
                         width="200"
                         height="200"
                         alt="Description of the image"
@@ -177,10 +180,12 @@ function HomePage() {
                     </div>
                     <div className="p-5">
                       <h2 className="text-xl font-bold">{card.title}</h2>
-                     
+
                       <p className="my-5">{card.text}</p>
-                      
-                      <span className="font-semibold">Learn more</span>
+
+                      <Link href={card.slug}>
+                        <span className="font-semibold cursor-pointer">Learn more</span>
+                      </Link>
                     </div>
                   </div>
                 );
@@ -197,7 +202,7 @@ function HomePage() {
               Showcasing our cutting-edge projects
             </h1>
             <p className="max-w-[700px] my-[1rem] w-fit block m-auto leading-relaxed text-center">
-            Being the Development & Technical partner, Quaid Technologies is part of various organisations and projects around the globe. We have given services to many enterprises & organisations in Public & Private sectors. Below is the snippet of work done by us.
+              Being the Development & Technical partner, Quaid Technologies is part of various organisations and projects around the globe. We have given services to many enterprises & organisations in Public & Private sectors. Below is the snippet of work done by us.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4">
@@ -233,7 +238,7 @@ function HomePage() {
               Happy Clients
             </h1>
             <p className="max-w-[700px] my-[1rem] w-fit block m-auto leading-relaxed text-center">
-            Our satisfied clients are a testament to our commitment to excellence. Their success is our greatest achievement.
+              Our satisfied clients are a testament to our commitment to excellence. Their success is our greatest achievement.
             </p>
 
             <Carousel itemsToShowDesktop={1.7} itemsToShowMobile={1} margin={30} speed={5000}>

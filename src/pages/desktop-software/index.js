@@ -2,6 +2,7 @@ import ContactUsForm from "@/components/ContactUsForm"
 import Layout from "@/components/Layout"
 import OtherServices from "@/components/OtherServices"
 import Image from "next/image"
+import Link from "next/link"
 import React from 'react'
 
 const DesktopSoftware = ({servicesCard}) => {
@@ -117,7 +118,7 @@ const DesktopSoftware = ({servicesCard}) => {
                                     <div className="w-full h-fit p-3 bg-white flex items-center justify-center">
                                         <Image
                                             src={card.image}
-                                            className="w-auto h-[150px]"
+                                            className="w-auto h-[150px] object-contain"
                                             width="200"
                                             height="200"
                                             alt="Description of the image"
@@ -126,7 +127,9 @@ const DesktopSoftware = ({servicesCard}) => {
                                     <div className="p-5">
                                         <h2 className="text-xl font-bold">{card.title}</h2>
                                         <p className="my-5">{card.text}</p>
-                                        <span className="font-semibold">Learn more</span>
+                                        <Link href={card.slug}>
+                                                <span className="font-semibold cursor-pointer">Learn more</span>
+                                            </Link>
                                     </div>
                                 </div>
                             );
@@ -151,19 +154,22 @@ export async function getServerSideProps(context) {
 
     const servicesCard = [
       {
-        image: "/images/service1.png",
-        title: "Everything you need to grow your business",
-        text: "Lorem ipsum dolor sit amet consectetur. Tempus volutpat tempus faucibus pharetra sem vel.",
+        image: "/images/books.svg",
+        title: "IT Staff Augmentation Services",
+        text: "With so many technologies to work upon, hiring gets difficult when you are looking for a specialty. Why worrying when you can simply go for IT Staff Augmentation?",
+        slug: "/it-staff-augmented"
       },
       {
-        image: "/images/service1.png",
-        title: "Everything you need to grow your business",
-        text: "Lorem ipsum dolor sit amet consectetur. Tempus volutpat tempus faucibus pharetra sem vel.",
+        image: "/images/Digital Marketing/digitalMarketingImg.png",
+        title: "Digital Marketing",
+        text: "Grow a bigger, booming business in the world of the digital market with our first-rate digital marketing services. Get your hands on our tailored and exceptional digital marketing strategy that helps businesses to",
+        slug: "/digital-marketing"
       },
       {
-        image: "/images/service1.png",
-        title: "Everything you need to grow your business",
-        text: "Lorem ipsum dolor sit amet consectetur. Tempus volutpat tempus faucibus pharetra sem vel.",
+        image: "/images/website development/website-developmentImg.png",
+        title: "Web Development",
+        text: "We provide client-focused, customer-centric, Web Application Development Solutions that deliver tangible business results.",
+        slug: "/website-development"
       },
     ];
   

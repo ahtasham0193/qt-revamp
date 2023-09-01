@@ -140,11 +140,6 @@ function Footer() {
                   <FaTwitter />
                 </div>
                 </a>
-                <a href="">
-                <div className="flex items-center justify-center w-12 h-12 rounded-full border">
-                  <FaYoutube />
-                </div>
-                </a>
                 <a href="https://www.instagram.com/quaidtech/">
                 <div className="flex items-center justify-center w-12 h-12 rounded-full border">
                   <FaInstagram />
