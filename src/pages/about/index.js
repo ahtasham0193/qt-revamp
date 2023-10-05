@@ -3,6 +3,8 @@ import Image from "next/image";
 import Accordion from "@/components/Accordian";
 import { useState } from "react";
 import ContactUsForm from "@/components/ContactUsForm";
+import Link from "next/link";
+import { IoIosArrowDroprightCircle } from 'react-icons/io'
 
 function AboutUs({ servicesCard, globalPresence, clientAreas }) {
 
@@ -212,7 +214,7 @@ function AboutUs({ servicesCard, globalPresence, clientAreas }) {
               Gone are the days when you and your brand relied on the manual workforce. This is the digital transformation era, and you must jump on the bandwagon if you haven't already. With our impeccable software development services, the journey is going to be an unforgettable one.</Accordion>
             <Accordion title="Mobile Software Development">Our elite in-house team specializes in software engineering, product development, cloud architecture, and digital transformation. We rapidly and reliably deliver software that meets the needs of the world’s most demanding organizations. Our diverse team is united to create some extraordinary apps for your business.</Accordion>
             <Accordion title="Digital/Search Engine Marketing">
-            Want Higher Ranks, Greater Leads, And Increased Return On Investment (ROI)? You’re at the right spot! It’s high time to switch to the newer marketing tactics for maximizing conversion rates.
+              Want Higher Ranks, Greater Leads, And Increased Return On Investment (ROI)? You’re at the right spot! It’s high time to switch to the newer marketing tactics for maximizing conversion rates.
             </Accordion>
             <Accordion title="Managed Hosting Services">Servers are the life-line of business’ technology infrastructure. Every time a server stops, and so does your business. We have a knowledgeable and experienced team who make sure that your servers are in good hands. The fundamental layer of protection is much needed before upsetting your company’s crucial data on web. </Accordion>
             <Accordion title="Branding and Designing">We offer a full-service branding and design strategy that helps you bring your ideas to life. We offer a complete range of creative services tailored around your immediate and on-going branding requirements. From logos to website design, to print and digital, we've got you covered! </Accordion>
@@ -221,44 +223,46 @@ function AboutUs({ servicesCard, globalPresence, clientAreas }) {
       </section>
 
       <section>
-      <div className="w-full px-4 py-12 bg-light-primary-color">
-                <div className="container">
-                    <h2 className="section-heading font-bold text-4xl text-center">
-                        Other Services
-                    </h2>
-                    <p className="text-center max-w-[600px] block m-auto mt-4">
-                    Quaid Technologies: Your gateway to exceptional IT solutions.
-                    Crafting excellence in every service we deliver.
-                    </p>
+        <div className="w-full px-4 py-12 bg-light-primary-color">
+          <div className="container">
+            <h2 className="section-heading font-bold text-4xl text-center">
+              Other Services
+            </h2>
+            <p className="text-center max-w-[600px] block m-auto mt-4">
+              Quaid Technologies: Your gateway to exceptional IT solutions.
+              Crafting excellence in every service we deliver.
+            </p>
 
-                    <div className="flex flex-wrap justify-around p-4">
-                        {servicesCard?.map((card) => {
-                            return (
-                                <div className="card md:mx-0 md:w-1/3 w- overflow-hidden  max-w-sm mx-2 my-4 border border-slate-200 rounded">
-                                    <div className="w-full h-fit p-3 bg-white flex items-center justify-center">
-                                        <Image
-                                            src={card.image}
-                                            className="w-auto h-[150px]"
-                                            width="200"
-                                            height="200"
-                                            alt="Description of the image"
-                                        />
-                                    </div>
-                                    <div className="p-5">
-                                        <h2 className="text-xl font-bold">{card.title}</h2>
-                                        <p className="my-5">{card.text}</p>
-                                        <span className="font-semibold">Learn more</span>
-                                    </div>
-                                </div>
-                            );
-                        })}
+            <div className="flex flex-wrap justify-around p-4">
+              {servicesCard?.map((card) => {
+                return (
+                  <div className="card md:mx-0 md:w-1/3 w- overflow-hidden  max-w-sm mx-2 my-4 border border-slate-200 rounded">
+                    <div className="w-full h-fit p-3 bg-white flex items-center justify-center">
+                      <Image
+                        src={card.image}
+                        className="w-auto h-[150px] object-contain"
+                        width="200"
+                        height="200"
+                        alt="Description of the image"
+                      />
                     </div>
-
-                    <div className="w-full mt-10">
-                        <ContactUsForm/>
+                    <div className="p-5">
+                      <h2 className="text-xl font-bold">{card.title}</h2>
+                      <p className="my-5">{card.text}</p>
+                      <Link href={card.slug}>
+                        <span className="font-semibold cursor-pointer">Learn more <IoIosArrowDroprightCircle className="inline-block align-middle text-primary-color text-2xl"/></span>
+                      </Link>
                     </div>
-                </div>
+                  </div>
+                );
+              })}
             </div>
+
+            <div className="w-full mt-10">
+              <ContactUsForm />
+            </div>
+          </div>
+        </div>
       </section>
     </Layout>
   );
@@ -281,19 +285,22 @@ export async function getServerSideProps(context) {
 
   const servicesCard = [
     {
-      image: "/images/service1.png",
-      title: "Everything you need to grow your business",
-      text: "Lorem ipsum dolor sit amet consectetur. Tempus volutpat tempus faucibus pharetra sem vel.",
+      image: "/images/Digital Marketing/digitalMarketingImg.png",
+      title: "Digital Marketing",
+      text: "Grow a bigger, booming business in the world of the digital market with our first-rate digital marketing services. Get your hands on our tailored and exceptional digital marketing strategy that helps businesses to",
+      slug: "/digital-marketing"
     },
     {
-      image: "/images/service1.png",
-      title: "Everything you need to grow your business",
-      text: "Lorem ipsum dolor sit amet consectetur. Tempus volutpat tempus faucibus pharetra sem vel.",
+      image: "/images/Desktop Software/desktopSoftwareImg.png",
+      title: "Desktop Software Development",
+      text: "We provide leading software development services to our worldwide clients. Quaid Technology is the expert partner you need to deliver innovative and competitive results.",
+      slug: "/desktop-software"
     },
     {
-      image: "/images/service1.png",
-      title: "Everything you need to grow your business",
-      text: "Lorem ipsum dolor sit amet consectetur. Tempus volutpat tempus faucibus pharetra sem vel.",
+      image: "/images/Branding And Designing/brandingImg.png",
+      title: "Designing & Branding",
+      text: "We offer a full-service branding and custom design strategy to our clients , we help you bring your ideas to life.",
+      slug: "/branding-and-designing"
     },
   ]
 

@@ -48,7 +48,7 @@ const OtherServices = () => {
                                     <div className="p-5">
                                         <h2 className="text-xl font-bold">{card.title}</h2>
                                         <p className="my-5">{card.text}</p>
-                                        <span className="font-semibold">Learn more</span>
+                                        <span className="font-semibold">Learn more <IoIosArrowDroprightCircle className="inline-block align-middle text-primary-color text-2xl"/></span>
                                     </div>
                                 </div>
                             );

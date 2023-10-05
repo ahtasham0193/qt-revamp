@@ -1,14 +1,14 @@
-import Header from "../components/Header";
+
 import Button from "@/components/Button";
 import Slider from "@/components/Slider";
 import Image from "next/image";
 import { useState } from "react";
 import Carousel from "../components/Carousel";
 import Video from "@/components/Video";
-import Footer from "@/components/Footer";
 import ContactUsForm from "@/components/ContactUsForm";
 import Layout from "@/components/Layout";
 import Link from "next/link";
+import { IoIosArrowDroprightCircle } from 'react-icons/io'
 function HomePage() {
   const [servicesCard, setServicesCard] = useState([
     {
@@ -64,6 +64,19 @@ function HomePage() {
     },
   ]);
 
+  const [startIdx, setStartIdx] = useState(0);
+
+  const nextSlide = () => {
+    setStartIdx((prevStartIdx) =>
+      prevStartIdx + 2 >= portfolioCard.length ? 0 : prevStartIdx + 2
+    );
+  };
+
+  const prevSlide = () => {
+    setStartIdx((prevStartIdx) =>
+      prevStartIdx - 2 < 0 ? portfolioCard.length - 2 : prevStartIdx - 2
+    );
+  };
   return (
 
     <Layout>
@@ -184,7 +197,8 @@ function HomePage() {
                       <p className="my-5">{card.text}</p>
 
                       <Link href={card.slug}>
-                        <span className="font-semibold cursor-pointer">Learn more</span>
+                        <span className="font-semibold cursor-pointer">Learn more <IoIosArrowDroprightCircle className="inline-block align-middle text-primary-color text-2xl"/></span> 
+                       
                       </Link>
                     </div>
                   </div>
@@ -204,14 +218,25 @@ function HomePage() {
             <p className="max-w-[700px] my-[1rem] w-fit block m-auto leading-relaxed text-center">
               Being the Development & Technical partner, Quaid Technologies is part of various organisations and projects around the globe. We have given services to many enterprises & organisations in Public & Private sectors. Below is the snippet of work done by us.
             </p>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4">
-              {portfolioCard?.map((card) => {
-                return (
-                  <div className="overflow-hidden max-w-sm mx-auto my-4 border border-slate-200 rounded">
+            <section className="flex justify-center items-center py-16 w-full">
+              <div className="w-[30%] h-[514px] flex items-center">
+              <div className="w-full">
+            <h2 className="section-heading  text-4xl leading-normal font-bold mb-2">Our Projects</h2>
+            <Link href="/portfolio">
+                        <span className="font-semibold cursor-pointer ml-2">See all projects <IoIosArrowDroprightCircle className="inline-block align-middle text-primary-color text-2xl"/></span>
+            </Link>
+            </div>
+            </div>
+      <div className="w-[70%] relative">
+        <div className="space-x-4 relative overflow-hidden w-full grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-3 p-4 ">
+          {portfolioCard?.slice(startIdx, startIdx + 2)?.map((project, index) => (
+  
+            <div className= {`max-w-sm overflow-hidden shadow-lg transform transition-transform duration-300 my-4 border border-slate-200 rounded h-full ${
+                 index === 0 ? 'translate-x-0' : ""
+               }`}>
                     <div className="w-full p-3 bg-white flex items-center justify-center">
                       <Image
-                        src={card.image}
+                        src={project.image}
                         className="w-auto h-[250px] md:h-[150px]"
                         width="200"
                         height="200"
@@ -220,13 +245,27 @@ function HomePage() {
                       />
                     </div>
                     <div className="p-5">
-                      <h2 className="text-xl font-bold">{card.title}</h2>
-                      <p className="my-5">{card.text}</p>
+                      <h2 className="text-xl font-bold">{project.title}</h2>
+                      <p className="my-5">{project.text}</p>
                     </div>
                   </div>
-                );
-              })}
-            </div>
+          ))}
+        </div>
+        <button
+            className="absolute top-[52%] left-[-4rem] transform -translate-y-1/2 bg-gray-800 text-white px-4 py-2 rounded-full"
+            onClick={prevSlide}
+          >
+            &lt;
+          </button>
+          <button
+            className="absolute top-[52%] right-[-1.9rem] transform -translate-y-1/2 bg-gray-800 text-white px-4 py-2 rounded-full"
+            onClick={nextSlide}
+          >
+            &gt;
+          </button>
+      </div>
+    </section>
+            
           </div>
         </div>
       </section>

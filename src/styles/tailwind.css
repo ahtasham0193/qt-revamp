@@ -9,9 +9,12 @@
 
 .hero-heading {
     font-family: 'Lora', serif;
+    font-weight: 400;
+    color: #3B3A3C;
 }
 .section-heading {
-    font-family: 'Allerta', sans-serif;
+    font-family: 'AvertaStd', sans-serif;
+    color: #3B3A3C;
 }
 .section {
     @apply p-10 rounded;
@@ -25,6 +28,11 @@
 }
 .thin-container {
     @apply max-w-[800px] m-auto
+}
+body
+{
+    font-family: 'AvertaStd', sans-serif;
+    color: #3B3A3C;
 }
 @media (max-width: 768px) {
     .sm\:responsive-header-list {

@@ -5,7 +5,7 @@ import OtherServices from "@/components/OtherServices"
 import Image from "next/image"
 import Link from "next/link"
 import React from 'react'
-
+import { IoIosArrowDroprightCircle } from 'react-icons/io'
 
 
 const SecurityCompliance = ({servicesCard}) => {
@@ -64,13 +64,13 @@ const SecurityCompliance = ({servicesCard}) => {
                     <Accordion title="Networks">Networks allow us to share information quickly over vast distances. This also makes them a risk. A breached network can do untold amounts of damage to a company.Personal information damage the company’s image</Accordion>
                     <Accordion title="Devices">A user’s personal device that connects to a company network can inject unknown code into the system. Similarly, clicking on the wrong email attachment can quickly spread malicious software.</Accordion>
                     <Accordion title="Users">Careless users are a significant risk for any company. They don’t know they have been compromised and don’t know they are enabling an online attack. Phishing emails now responsible for 91% successful cyber-attacks.</Accordion>
-                    <Accordion title="SAST">Content 8</Accordion>
-                    <Accordion title="DAST">Content 9</Accordion>
-                    <Accordion title="SCA">Content 10</Accordion>
-                    <Accordion title="IAST and Hybrid Tools">Content 11</Accordion>
-                    <Accordion title="MAST">Content 12</Accordion>
-                    <Accordion title="ASTaaS">Content 13</Accordion>
-                    <Accordion title="ASTO">Content 14</Accordion>
+                    <Accordion title="SAST">We specialize in providing top-notch Static Application Security Testing services. Our team of experienced security experts uses cutting-edge SAST tools and methodologies to identify and mitigate security risks in your software applications.</Accordion>
+                    <Accordion title="DAST">We excel in providing top-tier Dynamic Application Security Testing services. Our team of seasoned security professionals employs state-of-the-art DAST tools and methodologies to pinpoint and mitigate security risks in your software applications.</Accordion>
+                    <Accordion title="SCA">We specialize in providing comprehensive Origin Analysis and Software Composition Analysis services. Our team of experts utilizes advanced tools and methodologies to help you manage and secure your software components effectively.</Accordion>
+                    <Accordion title="IAST and Hybrid Tools">We excel in providing state-of-the-art IAST and Hybrid Tools services. Our team of seasoned security professionals employs cutting-edge tools and methodologies to help you secure your applications dynamically.</Accordion>
+                    <Accordion title="MAST">We specialize in providing top-tier Mobile Application Security Testing (MAST) services. Our team of expert security professionals utilizes cutting-edge tools and methodologies to assess and enhance the security of your mobile apps.</Accordion>
+                    <Accordion title="ASTaaS">We specialize in providing top-tier Application Security Testing as a Service (ASTaaS). Our team of certified security professionals leverages advanced tools and methodologies to ensure the security of your applications.</Accordion>
+                    <Accordion title="ASTO">We excel in providing top-tier Application Security Testing Orchestration (ASTO) services. Our team of certified security professionals combines extensive expertise with advanced tools and technologies to enhance your application security. </Accordion>
                 </div>
             </section>
             <section className="mt-24">
@@ -101,7 +101,7 @@ const SecurityCompliance = ({servicesCard}) => {
                                         <h2 className="text-xl font-bold">{card.title}</h2>
                                         <p className="my-5">{card.text}</p>
                                         <Link href={card.slug}>
-                                                <span className="font-semibold cursor-pointer">Learn more</span>
+                                                <span className="font-semibold cursor-pointer">Learn more <IoIosArrowDroprightCircle className="inline-block align-middle text-primary-color text-2xl"/></span>
                                             </Link>
                                     </div>
                                 </div>

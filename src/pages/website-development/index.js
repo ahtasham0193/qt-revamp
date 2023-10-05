@@ -5,7 +5,7 @@ import OtherServices from "@/components/OtherServices"
 import Image from "next/image"
 import Link from "next/link"
 import React from 'react'
-
+import { IoIosArrowDroprightCircle } from 'react-icons/io'
 
 
 const WebsiteDevelopment = ({ servicesCard }) => {
@@ -158,7 +158,7 @@ const WebsiteDevelopment = ({ servicesCard }) => {
                                             <p className="my-5">{card.text}</p>
                                            
                                             <Link href={card.slug}>
-                                                <span className="font-semibold cursor-pointer">Learn more</span>
+                                                <span className="font-semibold cursor-pointer">Learn more <IoIosArrowDroprightCircle className="inline-block align-middle text-primary-color text-2xl"/></span>
                                             </Link>
                                         </div>
                                     </div>
