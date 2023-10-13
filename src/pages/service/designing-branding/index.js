@@ -3,6 +3,7 @@ import ContactUsForm from "@/components/ContactUsForm"
 import ImageAccordion from "@/components/ImageAccordian"
 import Layout from "@/components/Layout"
 import OtherServices from "@/components/OtherServices"
+import Head from "next/head"
 import Image from "next/image"
 import Link from "next/link"
 import React from 'react'
@@ -12,6 +13,14 @@ import { IoIosArrowDroprightCircle } from 'react-icons/io'
 const BrandingAndDesigning = ({servicesCard}) => {
 
     return (
+        <>
+          <Head>
+        <title>Branding and Creative Design Services - Quaid Technologies</title>
+        <meta 
+          name="description"
+          content="We offer a full-service branding and design strategy to our clients. From logos to website design, to print and digital, we&#039;ve got you covered! Contact us now"/>
+        
+      </Head>
         <Layout>
             <section>
                 <div className="w-full">
@@ -98,6 +107,7 @@ const BrandingAndDesigning = ({servicesCard}) => {
             </section>
 
         </Layout>
+        </>
     )
 }
 

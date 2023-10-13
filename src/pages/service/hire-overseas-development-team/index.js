@@ -3,6 +3,7 @@ import ContactUsForm from "@/components/ContactUsForm"
 import Layout from "@/components/Layout"
 import OtherServices from "@/components/OtherServices"
 import OurClients from "@/components/OurClients"
+import Head from "next/head"
 import Image from "next/image"
 import Link from "next/link"
 import React from 'react'
@@ -11,6 +12,13 @@ import { IoIosArrowDroprightCircle } from 'react-icons/io'
 const HireOverseas = ({servicesCard}) => {
     return (
         <>
+              <Head>
+        <title>Hire Dedicated Remote Software Development Team | Quaid Technologies</title>
+        <meta 
+          name="description"
+          content="Hire 100% dedicated software developers and remote development teams - Get your projects done from the best remote software developers without any hassle - Visit Now!"/>
+        
+      </Head>
             <Layout>
                 <section>
                     <div className="w-full">

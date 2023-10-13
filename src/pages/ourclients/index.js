@@ -1,10 +1,18 @@
 import Layout from '@/components/Layout'
 import OurClients from '@/components/OurClients'
+import Head from 'next/head'
 import React from 'react'
 
 const Careers = () => {
     return (
         <>
+           <Head>
+        <title>Our Clients - Quaid Technologies</title>
+        <meta 
+          name="description"
+          content="Our clients praise us for our great results, expert knowledge, and on-time delivery. Browse who we&#039;ve worked with and all of the industries we regularly serve"/>
+        
+      </Head>
             <Layout>
                 <section>
                     <div className="w-full">

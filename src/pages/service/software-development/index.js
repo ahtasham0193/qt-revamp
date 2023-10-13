@@ -2,6 +2,7 @@ import Accordion from "@/components/Accordian"
 import ContactUsForm from "@/components/ContactUsForm"
 import Layout from "@/components/Layout"
 import OtherServices from "@/components/OtherServices"
+import Head from "next/head"
 import Image from "next/image"
 import Link from "next/link"
 import React from 'react'
@@ -9,6 +10,14 @@ import { IoIosArrowDroprightCircle } from 'react-icons/io'
 
 const SoftwareDevelopment = ({servicesCard}) => {
     return (
+        <>
+         <Head>
+        <title>Best Software Development Company | Quaid Technologies</title>
+        <meta 
+          name="description"
+          content="Quaid Technologies is a Software development company that purely focuses on building impressive yet cost effective amazing Software. Visit Now."/>
+        
+      </Head>
         <Layout>
             <section>
                 <div className="w-full p-6">
@@ -150,6 +159,7 @@ const SoftwareDevelopment = ({servicesCard}) => {
             </div>
             </section>
         </Layout>
+        </>
     )
 }
 

@@ -5,10 +5,20 @@ import { useState } from "react";
 import ContactUsForm from "@/components/ContactUsForm";
 import Link from "next/link";
 import { IoIosArrowDroprightCircle } from 'react-icons/io'
+import Head from "next/head";
 
 function AboutUs({ servicesCard, globalPresence, clientAreas }) {
 
   return (
+
+    <>
+       <Head>
+        <title>About Us - Quaid Technologies</title>
+        <meta 
+          name="description"
+          content="With more than 20 years of experience in IT, we ensure the smooth running of our projects via safe and reliable IT and Paperless Automated Solutions."/>
+        
+      </Head>
     <Layout>
       <section>
         <div className="w-full">
@@ -265,6 +275,7 @@ function AboutUs({ servicesCard, globalPresence, clientAreas }) {
         </div>
       </section>
     </Layout>
+    </>
   );
 }
 

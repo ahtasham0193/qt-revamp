@@ -3,9 +3,19 @@ import Layout from "@/components/Layout";
 import Image from "next/image";
 import CallToAction from "@/components/CallToAction";
 import Link from "next/link";
+import Head from "next/head";
 
 const Blogs = ({ blogs }) => {
   return (
+    <>
+      <Head>
+        <title>Our Blog - Quaid Technologies</title>
+        <meta 
+          name="description"
+          content="Browse our blog posts &amp; get valuable insights! Stay up to date with the latest company news, other business processes, and technology trends!"/>
+        
+      </Head>
+   
     <Layout>
       <section className="w-full">
         <div className="container">
@@ -93,6 +103,7 @@ const Blogs = ({ blogs }) => {
 
       <CallToAction />
     </Layout>
+    </>
   );
 };
 

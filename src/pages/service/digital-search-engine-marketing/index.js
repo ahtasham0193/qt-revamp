@@ -2,6 +2,7 @@ import Accordion from "@/components/Accordian"
 import ContactUsForm from "@/components/ContactUsForm"
 import Layout from "@/components/Layout"
 import OtherServices from "@/components/OtherServices"
+import Head from "next/head"
 import Image from "next/image"
 import Link from "next/link"
 import React from 'react'
@@ -10,6 +11,14 @@ import { IoIosArrowDroprightCircle } from 'react-icons/io'
 
 const DigitalMarketing = ({servicesCard}) => {
     return (
+        <>
+          <Head>
+        <title>Grow Your Business with Digital Marketing - Quaid Technologies</title>
+        <meta 
+          name="description"
+          content="Our digital marketing services can accelerate your business to operate from the bottom to the cloud. Gain a competitive edge in the digital space!"/>
+        
+      </Head>
         <Layout>
             <section>
                 <div className="w-full p-6">
@@ -558,6 +567,7 @@ const DigitalMarketing = ({servicesCard}) => {
             </section>
 
         </Layout>
+        </>
     )
 }
 

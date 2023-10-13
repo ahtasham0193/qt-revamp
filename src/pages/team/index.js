@@ -1,10 +1,19 @@
 import Layout from '@/components/Layout'
+import Head from 'next/head'
 import Image from 'next/image'
 import React from 'react'
 
 const Team = ({ founders, management, team, solutionArchitects, uiuxExpert, seo, qaAutomation, adminTeam }) => {
     return (
         <>
+        
+           <Head>
+        <title>Meet Our Team - Quaid Technologies</title>
+        <meta 
+          name="description"
+          content="Team members at Quaid Technologies are empowered to lead and be accountable for their commitments. Meet our professional experts now!"/>
+        
+      </Head>
             <Layout>
                 <section>
                     <div className="w-full">

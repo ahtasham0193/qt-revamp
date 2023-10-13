@@ -8,9 +8,19 @@ import Accordion from "@/components/Accordian";
 import ContactUsForm from "@/components/ContactUsForm";
 import Link from "next/link";
 import { IoIosArrowDroprightCircle } from 'react-icons/io'
+import Head from "next/head";
 
 const ItStaffAugmented = ({ processCards, clients, servicesCard }) => {
     return(
+      <>
+      <Head>
+        <title>IT Staff Augmentation Services - Quaid Technologies</title>
+        <meta 
+          name="description"
+          content="IT Staff Augmentation Services by Quaidtech | Dedicated &amp; Ready to Deploy Remote Software Development Resources"/>
+        
+      </Head>
+
         <Layout>
       <div className="w-full p-6">
         <div className="w-full">
@@ -179,6 +189,7 @@ const ItStaffAugmented = ({ processCards, clients, servicesCard }) => {
             </div>
         </section>
     </Layout>
+    </>
     )
 }
 

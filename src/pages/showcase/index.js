@@ -1,11 +1,21 @@
 import ContactUsForm from "@/components/ContactUsForm"
 import Layout from "@/components/Layout"
+import Head from "next/head"
 import Image from "next/image"
 import React from 'react'
 
 
 const Portfolio = () => {
     return (
+        <>
+           <Head>
+        <title>Our Portfolio - Quaid Technologies</title>
+        <meta 
+          name="description"
+          content="Our company portfolio reflects our creativity &amp; quality of work. We have tackled many challenges and get succeeded in an efficient manner. Learn More"/>
+        
+      </Head>
+     
         <Layout>
             <section>
                 <div className="w-full">
@@ -163,6 +173,7 @@ const Portfolio = () => {
                 </div>
             </section>
         </Layout>
+        </>
     )
 }
 

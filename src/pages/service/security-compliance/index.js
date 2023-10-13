@@ -2,6 +2,7 @@ import Accordion from "@/components/Accordian"
 import ContactUsForm from "@/components/ContactUsForm"
 import Layout from "@/components/Layout"
 import OtherServices from "@/components/OtherServices"
+import Head from "next/head"
 import Image from "next/image"
 import Link from "next/link"
 import React from 'react'
@@ -10,6 +11,14 @@ import { IoIosArrowDroprightCircle } from 'react-icons/io'
 
 const SecurityCompliance = ({servicesCard}) => {
     return (
+        <>
+         <Head>
+        <title>Enterprise Security and Compliances Services - Quaid Technologies</title>
+        <meta 
+          name="description"
+          content="We can help your business with our managed network security services to meet your compliance needs. Contact us for Security and Compliance Solutions."/>
+        
+      </Head>
         <Layout>
             <section>
                 <div className="w-full">
@@ -116,6 +125,7 @@ const SecurityCompliance = ({servicesCard}) => {
             </div>
             </section>
         </Layout>
+        </>
     )
 }
 

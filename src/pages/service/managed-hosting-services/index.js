@@ -1,6 +1,7 @@
 import ContactUsForm from "@/components/ContactUsForm"
 import Layout from "@/components/Layout"
 import OtherServices from "@/components/OtherServices"
+import Head from "next/head"
 import Image from "next/image"
 import Link from "next/link"
 import React from 'react'
@@ -8,6 +9,14 @@ import { IoIosArrowDroprightCircle } from 'react-icons/io'
 
 const CloudBasedHosting = ({servicesCard}) => {
     return (
+        <>
+        <Head>
+        <title>Cloud Based Hosting Services Provider - Quaid Technologies</title>
+        <meta 
+          name="description"
+          content="Quaid Technologies is an affordable cloud hosting service provider, we offer dedicated server hosting &amp; cloud hosting solutions to small, medium and corporate clients"/>
+        
+      </Head>
         <Layout>
             <section>
                 <div className="w-full">
@@ -75,6 +84,7 @@ const CloudBasedHosting = ({servicesCard}) => {
             </div>
             </section>
         </Layout>
+        </>
     )
 }
 

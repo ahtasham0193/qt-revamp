@@ -1,6 +1,7 @@
 import ContactUsForm from "@/components/ContactUsForm"
 import Layout from "@/components/Layout"
 import OtherServices from "@/components/OtherServices"
+import Head from "next/head"
 import Image from "next/image"
 import Link from "next/link"
 import React from 'react'
@@ -8,6 +9,14 @@ import { IoIosArrowDroprightCircle } from 'react-icons/io'
 
 const DesktopSoftware = ({servicesCard}) => {
     return (
+        <>
+           <Head>
+        <title>Top Software Development Company | Quaid Technologies</title>
+        <meta 
+          name="description"
+          content="Quaid technologies Offers a Variety of Custom Software Development Services including Desktop , Web, mobile app development, QA testing and Many More . Visit Now"/>
+        
+      </Head>
         <Layout>
             <section>
                 <div className="w-full">
@@ -144,6 +153,7 @@ const DesktopSoftware = ({servicesCard}) => {
             </div>
             </section>
         </Layout>
+        </>
     )
 }
 

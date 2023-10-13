@@ -9,6 +9,7 @@ import ContactUsForm from "@/components/ContactUsForm";
 import Layout from "@/components/Layout";
 import Link from "next/link";
 import { IoIosArrowDroprightCircle } from 'react-icons/io'
+import Head from "next/head";
 function HomePage() {
   const [servicesCard, setServicesCard] = useState([
     {
@@ -79,6 +80,14 @@ function HomePage() {
   };
   return (
 
+    <>
+      <Head>
+        <title>Top Managed IT Services Provider - Quaid Technologies</title>
+        <meta 
+          name="description"
+          content="The best IT Service Provider and long-time Automated Solution Provider with a proven track record of delivering premium IT services in Pakistan. Visit Now!"/>
+        
+      </Head>
     <Layout>
       <div className="w-full  px-6">
         <div className="container py-12 bg-[url('/images/hero-bg.png')] bg-no-repeat bg-[center_50px] sm:bg-[length:100%_100%] bg-[length:115%] ">
@@ -300,7 +309,7 @@ function HomePage() {
         </div>
       </section>
     </Layout>
-
+    </>
   );
 }
 

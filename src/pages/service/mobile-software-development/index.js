@@ -1,6 +1,7 @@
 import ContactUsForm from "@/components/ContactUsForm"
 import Layout from "@/components/Layout"
 import OtherServices from "@/components/OtherServices"
+import Head from "next/head"
 import Image from "next/image"
 import Link from "next/link"
 import React from 'react'
@@ -8,6 +9,14 @@ import { IoIosArrowDroprightCircle } from 'react-icons/io'
 
 const MobileSoftwareDevelopment = ({servicesCard}) => {
     return (
+        <>
+         <Head>
+        <title>Mobile Application Development Services - Get Your App</title>
+        <meta 
+          name="description"
+          content="Quaid Technologies is a leading mobile app development company that builds stunning apps with inventive features, immersive interfaces, and scalable back-ends"/>
+        
+      </Head>
         <Layout>
             <section>
                 <div className="w-full p-6">
@@ -143,6 +152,7 @@ const MobileSoftwareDevelopment = ({servicesCard}) => {
             </div>
             </section>
         </Layout>
+        </>
     )
 }
 
