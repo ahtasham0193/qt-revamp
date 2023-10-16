@@ -227,26 +227,26 @@ function HomePage() {
             <p className="max-w-[700px] my-[1rem] w-fit block m-auto leading-relaxed text-center">
               Being the Development & Technical partner, Quaid Technologies is part of various organisations and projects around the globe. We have given services to many enterprises & organisations in Public & Private sectors. Below is the snippet of work done by us.
             </p>
-            <section className="flex justify-center items-center py-16 w-full">
-              <div className="w-[30%] h-[514px] flex items-center">
+            <section className="flex flex-col justify-center items-center py-16 w-full sm:flex-row">
+              <div className="sm:w-[30%] w-full h-auto flex items-center">
               <div className="w-full">
-            <h2 className="section-heading  text-4xl leading-normal font-bold mb-2">Our Projects</h2>
-            <Link href="/portfolio">
+            <h2 className="section-heading  text-4xl leading-normal font-bold mb-2 text-center sm:text-left">Our Projects</h2>
+            <Link href="/portfolio" className="w-full block text-center sm:w-auto sm:flex sm:text-left">
                         <span className="font-semibold cursor-pointer ml-2">See all projects <IoIosArrowDroprightCircle className="inline-block align-middle text-primary-color text-2xl"/></span>
             </Link>
             </div>
             </div>
-      <div className="w-[70%] relative">
-        <div className="space-x-4 relative overflow-hidden w-full grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-3 p-4 ">
-          {portfolioCard?.slice(startIdx, startIdx + 2)?.map((project, index) => (
-  
-            <div className= {`max-w-sm overflow-hidden shadow-lg transform transition-transform duration-300 my-4 border border-slate-200 rounded h-full ${
-                 index === 0 ? 'translate-x-0' : ""
-               }`}>
+      <div className="w-full sm:w-[70%] relative">
+
+      <Carousel itemsToShowDesktop={2} itemsToShowMobile={1} margin={30} speed={5000}>
+              {portfolioCard?.map((item,index) => {
+                return (
+                  <div className="sm:w-full w-[95%] h-[500px] rounded-lg overflow-hidden shadow-md" key={index}>
+                   <div className="w-full h-auto">
                     <div className="w-full p-3 bg-white flex items-center justify-center">
                       <Image
-                        src={project.image}
-                        className="w-auto h-[250px] md:h-[150px]"
+                        src={item.image}
+                        className="w-auto h-[150px] md:h-[150px]"
                         width="200"
                         height="200"
                         alt="Description of the image"
@@ -254,24 +254,14 @@ function HomePage() {
                       />
                     </div>
                     <div className="p-5">
-                      <h2 className="text-xl font-bold">{project.title}</h2>
-                      <p className="my-5">{project.text}</p>
+                      <h2 className="text-xl font-bold">{item.title}</h2>
+                      <p className="my-5">{item.text}</p>
                     </div>
                   </div>
-          ))}
-        </div>
-        <button
-            className="absolute top-[52%] left-[-4rem] transform -translate-y-1/2 bg-gray-800 text-white px-4 py-2 rounded-full"
-            onClick={prevSlide}
-          >
-            &lt;
-          </button>
-          <button
-            className="absolute top-[52%] right-[-1.9rem] transform -translate-y-1/2 bg-gray-800 text-white px-4 py-2 rounded-full"
-            onClick={nextSlide}
-          >
-            &gt;
-          </button>
+                  </div>
+                );
+              })}
+            </Carousel>
       </div>
     </section>
             

@@ -4,6 +4,27 @@ function Carousel({ children, speed = 2000, fractionOfNext = 0.2, margin = 0, it
   const [current, setCurrent] = useState(0);
   const [itemsToShow, setItemsToShow] = useState(itemsToShowDesktop);
   const totalItems = React.Children.count(children);
+  const [isMobile, setIsMobile] = useState(false);
+  const [isMobileInitialized, setIsMobileInitialized] = useState(false);
+
+  useEffect(() => {
+    function handleResize() {
+      setIsMobile(window.innerWidth <= 768);
+    }
+
+    if (!isMobileInitialized) {
+      setIsMobile(window.innerWidth <= 768);
+      setIsMobileInitialized(true);
+    }
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [isMobileInitialized]);
+  const marginn = isMobile ? 0 : 30;
+
   
   // Update the state on window resize
   useEffect(() => {
@@ -29,14 +50,14 @@ function Carousel({ children, speed = 2000, fractionOfNext = 0.2, margin = 0, it
 
   return (
     <div>
-      <div className="relative w-full overflow-hidden">
+      <div className="relative w-full overflow-hidden mt-7">
         <div
           className="flex transition-transform duration-1000"
           style={{ transform: `translateX(-${(current * 100) / itemsToShow}%)` }}
         >
           {React.Children.map(children, (child, index) => (
             <div 
-              style={{ flex: `0 0 ${100 / itemsToShow}%`, margin: `${margin}px` }} 
+              style={{ flex: `0 0 ${100 / itemsToShow}%`, margin: `${marginn}px` }}
               key={index}
             >
               {child}

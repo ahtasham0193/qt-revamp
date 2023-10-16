@@ -66,8 +66,8 @@ const Header = () => {
           />
         )}
         <ul
-          className={`w-fit flex  gap-11 sm:flex ${isOpen
-            ? "pt-20 w-[60%] items-start fixed top-0 right-0 bottom-0 p-6 bg-gray-100 z-50 flex-col align-start sm:relative sm:bg-transparent sm:p-0 sm:flex-row transform translate-x-0 sm:translate-x-0"
+          className={`w-fit flex  gap-11 sm:flex  ${isOpen
+            ? "pt-20 w-full items-start fixed top-0 right-0 bottom-0 p-6 bg-gray-100 z-50 flex-col align-start sm:relative sm:bg-transparent sm:p-0 sm:flex-row transform translate-x-0 sm:translate-x-0"
             : "hidden transform translate-x-full sm:translate-x-0"
             } transition-transform items-center duration-200 ease-in-out`}
         >
@@ -89,7 +89,7 @@ const Header = () => {
           </li>
           <li className="group relative">
               <p className={`${isServiceActive ? 'text-primary-color' : 'text-gray-700'} cursor-pointer`}>Services</p>
-            <div className="absolute left-0 mt-2 w-72 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 overflow-hidden z-50 transition-all duration-200 ease-in-out opacity-0 invisible group-hover:opacity-100 group-hover:visible">
+            <div className={`${isOpen ? "right-[-127px]" : "left-0"} absolute mt-2 w-72 rounded-md s shadow-lg bg-white ring-1 ring-black ring-opacity-5 overflow-hidden z-50 transition-all duration-200 ease-in-out opacity-0 invisible group-hover:opacity-100 group-hover:visible `}>
               <div className="py-1">
                 <Link href="/service/it-staff-augmentation-services">
                   <p className={`${router.pathname === '/service/it-staff-augmentation-services' ? 'text-primary-color' : 'text-gray-700'} block px-4 py-2 text-sm hover:bg-gray-100 `}>IT Staff Augmentation Services</p>
