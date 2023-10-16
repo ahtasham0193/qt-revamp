@@ -49,15 +49,15 @@ export async function getServerSideProps(context) {
     // The data should come as props to the Services component.
 
     const galleryImages = [
-        { image: "/images/dummy10.avif" },
-        { image: "/images/dummy10.avif"},
-        { image: "/images/dummy10.avif"},
-        { image: "/images/dummy10.avif"},
-        { image: "/images/dummy10.avif"},
-        { image: "/images/dummy10.avif"},
-        { image: "/images/dummy10.avif"},
-        { image: "/images/dummy10.avif"},
-        { image: "/images/dummy10.avif"},
+        { image: "/images/dummy.jpg" },
+        { image: "/images/dummy.jpg"},
+        { image: "/images/dummy.jpg"},
+        { image: "/images/dummy.jpg"},
+        { image: "/images/dummy.jpg"},
+        { image: "/images/dummy.jpg"},
+        { image: "/images/dummy.jpg"},
+        { image: "/images/dummy.jpg"},
+        { image: "/images/dummy.jpg"},
         
         
     ]
