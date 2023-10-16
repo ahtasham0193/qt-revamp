@@ -66,7 +66,7 @@ const Header = () => {
           />
         )}
         <ul
-          className={`w-fit flex  gap-11 sm:flex  ${isOpen
+          className={`w-fit flex  gap-11 sm:flex md:gap-6 lg:gap-11 ${isOpen
             ? "pt-20 w-full items-start fixed top-0 right-0 bottom-0 p-6 bg-gray-100 z-50 flex-col align-start sm:relative sm:bg-transparent sm:p-0 sm:flex-row transform translate-x-0 sm:translate-x-0"
             : "hidden transform translate-x-full sm:translate-x-0"
             } transition-transform items-center duration-200 ease-in-out`}

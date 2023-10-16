@@ -9,11 +9,11 @@ function Carousel({ children, speed = 2000, fractionOfNext = 0.2, margin = 0, it
 
   useEffect(() => {
     function handleResize() {
-      setIsMobile(window.innerWidth <= 768);
+      setIsMobile(window.innerWidth <= 568);
     }
 
     if (!isMobileInitialized) {
-      setIsMobile(window.innerWidth <= 768);
+      setIsMobile(window.innerWidth <= 568);
       setIsMobileInitialized(true);
     }
 
