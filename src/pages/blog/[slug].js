@@ -4,113 +4,43 @@ import Image from "next/image";
 import Carousel from "@/components/Carousel";
 import CallToAction from "@/components/CallToAction";
 import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchBlogDetail, fetchRelatedBlogData } from "@/store/slices/global";
 const Post = ({ blogs }) => 
 {
+  const dispatch = useDispatch();
   const router = useRouter();
   let  {slug}  = router.query;
-  
-  if (typeof slug === 'string') {
-    slug = slug.replace(/-/g, ' ')
-  }
-  
+  const blogDetails = useSelector((state) => state.globalItem?.blogDetail);
+  const relBlogs = useSelector((state) => state.globalItem?.relatedBlogs);
 
+  useEffect(() => {
+    dispatch(fetchBlogDetail(slug));
+    dispatch(fetchRelatedBlogData(slug))
+  },[dispatch])
 
   return (
     <Layout>
       <section className="w-full px-4 py-10 sm:p-16">
         <div className="container">
           <h1 className="text-center text-2xl sm:text-4xl font-bold max-w-[700px] m-auto capitalize">
-            {slug}
+            {blogDetails.title}
           </h1>
           <p className="text-center mt-6 font-semibold text-lg">
-            <span>Zainab Iqbal</span> | <span>July 03, 2023</span>{" "}
+            <span>{blogDetails.name}</span> | <span>{blogDetails.publish_date}</span>{" "}
           </p>
           <div className="w-full max-w-[1100px] rounded-md overflow-hidden m-auto">
             <Image
-              src="/images/blog1.png"
+              src={blogDetails.image_url}
               className="w-full  m-auto mt-10"
               width="300"
               height="300"
-              alt="description for blogs images"
+              alt={blogDetails.detailedpg_imgcaption}
             />
           </div>
 
           <div className="w-full max-w-[1000px] m-auto text-justify mt-8">
-            <h3 className="text-2xl sm:text-4xl font-bold">
-              What Does a Great User Experience Mean?
-            </h3>
-            <p className="mt-4">
-              If you find that your website is not generating as many leads as
-              you believe it should, if your website’s bounce rates remain high,
-              or if you simply wish to further enhance the satisfaction of your
-              users’ interactions on your website, then you’ve come to the right
-              place! The following is a list of tips to improve the efficiency,
-              usability, and accessibility of user interactions on a website to
-              create a richer user experience through changes that are easy to
-              implement, but make a world of a difference.
-            </p>
-
-            <p className="mt-4">
-              If you find that your website is not generating as many leads as
-              you believe it should, if your website’s bounce rates remain high,
-              or if you simply wish to further enhance the satisfaction of your
-              users’ interactions on your website, then you’ve come to the right
-              place! The following is a list of tips to improve the efficiency,
-              usability, and accessibility of user interactions on a website to
-              create a richer user experience through changes that are easy to
-              implement, but make a world of a difference.
-            </p>
-
-            <p className="mt-4">
-              If you find that your website is not generating as many leads as
-              you believe it should, if your website’s bounce rates remain high,
-              or if you simply wish to further enhance the satisfaction of your
-              users’ interactions on your website, then you’ve come to the right
-              place! The following is a list of tips to improve the efficiency,
-              usability, and accessibility of user interactions on a website to
-              create a richer user experience through changes that are easy to
-              implement, but make a world of a difference.
-            </p>
-            <p className="mt-4">
-              If you find that your website is not generating as many leads as
-              you believe it should, if your website’s bounce rates remain high,
-              or if you simply wish to further enhance the satisfaction of your
-              users’ interactions on your website, then you’ve come to the right
-              place! The following is a list of tips to improve the efficiency,
-              usability, and accessibility of user interactions on a website to
-              create a richer user experience through changes that are easy to
-              implement, but make a world of a difference.
-            </p>
-            <p className="mt-4">
-              If you find that your website is not generating as many leads as
-              you believe it should, if your website’s bounce rates remain high,
-              or if you simply wish to further enhance the satisfaction of your
-              users’ interactions on your website, then you’ve come to the right
-              place! The following is a list of tips to improve the efficiency,
-              usability, and accessibility of user interactions on a website to
-              create a richer user experience through changes that are easy to
-              implement, but make a world of a difference.
-            </p>
-            <p className="mt-4">
-              If you find that your website is not generating as many leads as
-              you believe it should, if your website’s bounce rates remain high,
-              or if you simply wish to further enhance the satisfaction of your
-              users’ interactions on your website, then you’ve come to the right
-              place! The following is a list of tips to improve the efficiency,
-              usability, and accessibility of user interactions on a website to
-              create a richer user experience through changes that are easy to
-              implement, but make a world of a difference.
-            </p>
-            <p className="mt-4">
-              If you find that your website is not generating as many leads as
-              you believe it should, if your website’s bounce rates remain high,
-              or if you simply wish to further enhance the satisfaction of your
-              users’ interactions on your website, then you’ve come to the right
-              place! The following is a list of tips to improve the efficiency,
-              usability, and accessibility of user interactions on a website to
-              create a richer user experience through changes that are easy to
-              implement, but make a world of a difference.
-            </p>
+          <div className="mt-4" dangerouslySetInnerHTML={{ __html: blogDetails.detailed_content }} />
           </div>
         </div>
       </section>
@@ -127,23 +57,23 @@ const Post = ({ blogs }) =>
               margin={30}
               speed={5000}
             >
-              {blogs?.map((item, index) => {
+              {relBlogs?.map((item, index) => {
                 return (
                   <div class="w-full" key={index}>
                     <div className="w-full h-[150px] sm:h-[240px] overflow-hidden">
                       <Image
-                        src={item.image}
+                        src={item.image_url}
                         className="w-full max-w-[100%] h-full object-cover m-auto"
                         width="300"
                         height="300"
-                        alt="Illustration of services content"
+                        alt={item.image_caption}
                       />
                     </div>
                     <div className="w-full py-5">
                       <h3 className="font-bold text-xl">{item.title}</h3>
-                      <p className="mt-4">{item.text}</p>
+                      <p className="mt-4">{item.brief_content}</p>
                       <p className="mt-4">
-                        <span>{item.author}</span> |<span> {item.date}</span>
+                        <span>{item.name}</span> |<span> {item.publish_date}</span>
                       </p>
                     </div>
                   </div>
