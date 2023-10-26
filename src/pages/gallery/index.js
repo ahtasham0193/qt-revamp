@@ -18,7 +18,7 @@ function Gallery({ galleryImages }) {
                               
                             </p>
                         </div>
-                        <div class="gap-8 columns-3 mt-10">
+                        <div class="gap-8 columns-1 md:columns-2 lg:columns-3 mt-10">
                             {
                                 galleryImages?.map((img, index) => {
                                     return <Image

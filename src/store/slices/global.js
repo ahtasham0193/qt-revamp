@@ -13,8 +13,8 @@ const initialState = {
 
 
 export const fetchBlogsData = createAsyncThunk('fetchBlogsData',
-    async () => {
-        return await api.get(`blog?offset=1`).then(res => {
+    async (offset) => {
+        return await api.get(`blog?offset=${offset}`).then(res => {
             if(!res.hasErrors()) {
                 return res.data
             }
