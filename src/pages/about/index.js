@@ -29,18 +29,7 @@ function AboutUs({ servicesCard, globalPresence, clientAreas }) {
                   Who We Are
                 </h1>
                 <p className="mt-5 text-lg">
-                  M/S Quaid Technologies has been providing Software Development
-                  & IT Services since 1998 with the merger of M/S PakCyber Group
-                  in 2013. We have automated many industries and moved them from
-                  manual procedures to paperless fully Automated Solutions. We
-                  Develop Applications in a wide range of categories for service
-                  industries and online enterprises. The applications that we
-                  have developed are quite unique and easy to use. We help
-                  enterprises and businesses in executing their Digital
-                  Marketing Strategies. Our clients are enjoying versatile
-                  selling experiences and rapid business growth. We Safeguarded
-                  and Secured many enterprises, IT Infrastructures and made them
-                  solid and strong to face any threat from potential intruders.
+                M/S Quaid Technologies has been providing Software Development & IT Services since 1998, with the merger of M/S PakCyber Group in 2013. We have been the technical solution provider for many industries, and transitioned them from manual procedures to paperless, full automated solutions. We develop unique, easy to use applications in a wide range of categories for service industries and online enterprises, and help enterprises and businesses execute their Digital Marketing Strategies. Our clients enjoy  versatile selling experiences and rapid business growth. Moreover, we have safeguarded and secured many enterprises and IT Infrastructures and made them solid and strong to face any threat from potential intruders.
                 </p>
               </div>
               <div className="w-full md:w-2/5 p-4">
@@ -317,27 +306,27 @@ export async function getServerSideProps(context) {
 
   const globalPresence = [
     {
-      image: "/images/flag1.png",
+      image: "/images/USA-flag.png",
       title: "USA",
       text: "Apps & Portals (Medical etc)",
     },
     {
-      image: "/images/flag2.png",
+      image: "/images/aust-flag.png",
       title: "AUS",
       text: "Travel & Tourism, Education",
     },
     {
-      image: "/images/flag3.png",
+      image: "/images/th-flag.png",
       title: "TH",
       text: "eServices / Money Transfer",
     },
     {
-      image: "/images/flag4.png",
+      image: "/images/uk-flag.png",
       title: "UK",
       text: "eCommerce, Deal Apps",
     },
     {
-      image: "/images/flag5.png",
+      image: "/images/uae-flag.png",
       title: "UAE",
       text: "Smart Apps / Portals",
     },

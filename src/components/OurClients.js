@@ -55,6 +55,10 @@ const OurClients = () => {
         {
             image: "/images/Clients/AEO.png",
         },
+        {
+            image: "/images/Clients/USGCO_Logo.png",
+        }
+       
     ];
     return (
                     <div className="w-full mt-7">

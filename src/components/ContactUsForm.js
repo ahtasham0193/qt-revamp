@@ -12,7 +12,7 @@ const ContactUsForm = () => {
           <div className="grid gap-6">
             <div className="mt-10">
               <b className="block">Contact Us</b>
-              <span>+92 51 8448182</span> | <span>+92 51 2715101</span> 
+              <span>+92 51 8448182</span> | <span>+92 51 2715101</span>
             </div>
 
             <div>

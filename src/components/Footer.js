@@ -2,8 +2,10 @@ import Link from "next/link";
 import Image from "next/image";
 import Button from "./Button";
 import { FaFacebookF, FaTwitter, FaYoutube, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import { useRouter } from "next/router";
 
 function Footer() {
+  const router = useRouter();
   return (
     <>
       <footer className="w-full h-auto bg-white p-4 py-20 border-b">
@@ -27,12 +29,12 @@ function Footer() {
                 <h3 className="font-bold text-2xl mt-4">Pages</h3>
                 <ul className="footer-list">
                   <li>
-                    <Link href="/">
+                    <Link href="/"  className={`${router.pathname === '/' ? 'text-primary-color' : 'text-gray-700'} hover:text-primary-color`}>
                       <span>Home</span>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/portfolio">
+                    <Link href="/showcase" className={`${router.pathname === '/showcase' ? 'text-primary-color' : 'text-gray-700'} hover:text-primary-color`}>
                       <span>
                         Portfolio
                       </span>
@@ -44,50 +46,50 @@ function Footer() {
                 <h3 className="font-bold text-2xl mt-4">Services</h3>
                 <ul className="footer-list">
                   <li>
-                    <Link href="/it-staff-augmented">
-                      <span>IT Staff Augmentation Services</span>
+                    <Link href="/service/it-staff-augmentation-services">
+                      <span className={`${router.pathname === '/service/it-staff-augmentation-services' ? 'text-primary-color' : 'text-gray-700'} hover:text-primary-color `}>IT Staff Augmentation Services</span>
                     </Link></li>
                   <li>
-                    <Link href="/hire-overseas">
-                      <span>
+                    <Link href="/service/hire-overseas-development-team">
+                      <span className={`${router.pathname === '/hire-overseas-development-team' ? 'text-primary-color' : 'text-gray-700'} hover:text-primary-color `}>
                         Hire Overseas Development Team
                       </span>
                     </Link></li>
                   <li>
-                    <Link href="/desktop-software">
-                      <span>Desktop Software Development</span>
+                    <Link href="/service/desktop-software-development">
+                      <span className={`${router.pathname === '/service/desktop-software-development' ? 'text-primary-color' : 'text-gray-700'} hover:text-primary-color `}>Desktop Software Development</span>
                     </Link></li>
                   <li>
-                    <Link href="/website-development">
-                      <span>Website Development</span>
+                    <Link href="/service/web-development">
+                      <span className={`${router.pathname === '/service/web-development' ? 'text-primary-color' : 'text-gray-700'} hover:text-primary-color `}>Website Development</span>
                     </Link></li>
                   <li>
-                    <Link href="/software-development">
-                      <span>Software Development</span>
+                    <Link href="/service/software-development">
+                      <span className={`${router.pathname === '/service/software-development' ? 'text-primary-color' : 'text-gray-700'} hover:text-primary-color `}>Software Development</span>
                     </Link></li>
                   <li>
-                    <Link href="/mobile-software-development">
-                      <span>Mobile Software Development</span>
+                    <Link href="/service/mobile-software-development">
+                      <span className={`${router.pathname === '/service/mobile-software-development' ? 'text-primary-color' : 'text-gray-700'} hover:text-primary-color `}>Mobile Software Development</span>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/digital-marketing">
-                      <span>Digital / Search Engine Marketing</span>
+                    <Link href="/service/digital-search-engine-marketing">
+                      <span className={`${router.pathname === '/service/digital-search-engine-marketing' ? 'text-primary-color' : 'text-gray-700'} hover:text-primary-color `}>Digital / Search Engine Marketing</span>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/cloud-based-hosting">
-                      <span>Managed Hosting Services</span>
+                    <Link href="/service/managed-hosting-services">
+                      <span className={`${router.pathname === '/service/managed-hosting-services' ? 'text-primary-color' : 'text-gray-700'} hover:text-primary-color `}>Managed Hosting Services</span>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/security-compliance">
-                      <span>Security & Compliance</span>
+                    <Link href="/service/security-compliance">
+                      <span className={`${router.pathname === '/service/security-compliance' ? 'text-primary-color' : 'text-gray-700'} hover:text-primary-color `}>Security & Compliance</span>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/branding-and-designing">
-                      <span>Designing & Branding</span>
+                    <Link href="/service/designing-branding">
+                      <span className={`${router.pathname === '/service/designing-branding' ? 'text-primary-color' : 'text-gray-700'} hover:text-primary-color `}>Designing & Branding</span>
                     </Link>
                   </li>
                 </ul>
@@ -97,21 +99,21 @@ function Footer() {
                 <ul className="footer-list">
                   <li>
                     <Link href="/team">
-                      <span>Team</span>
+                      <span className={`${router.pathname === '/team' ? 'text-primary-color ' : 'text-gray-700'} hover:text-primary-color`}>Team</span>
                     </Link></li>
                   <li>
-                    <Link href="/careers">
-                      <span>Career</span>
+                    <Link href="/ourclients">
+                      <span className={`${router.pathname === '/ourclients' ? 'text-primary-color ' : 'text-gray-700'} hover:text-primary-color`}>Clients</span>
                     </Link>
                   </li>
                   <li>
                     <Link href="/about">
-                      <span>About</span>
+                      <span className={`${router.pathname === '/about' ? 'text-primary-color ' : 'text-gray-700'} hover:text-primary-color`}>About</span>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/contact">
-                      <span>
+                    <Link href="/contact-qt">
+                      <span className={`${router.pathname === '/contact-qt' ? 'text-primary-color ' : 'text-gray-700'} hover:text-primary-color`}>
                         Contact Us
                       </span>
                     </Link>

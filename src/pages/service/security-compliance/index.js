@@ -30,13 +30,14 @@ const SecurityCompliance = ({servicesCard}) => {
                                         src="/images/Security Compliance/security-complianceImg.png"
                                         alt="Image"
                                         className="w-full max-w-[1200px] m-auto object-contain"
-                                        width={500}
+                                        width={1000}
                                         height={300}
                                     />
                                 </div>
                                 <div className="w-full mt-7">
                                     <h1 className="text-xl sm:text-3xl font-semibold text-center">Security compliance</h1>
-                                    <p className=' max-w-[850px] m-auto text-sm sm:text-lg text-center mt-5'>Servers are the life-line of business’ technology infrastructure. Every time a server stops, and so does your business. We have a knowledgeable and experienced team who make sure that your servers are in good hands. The fundamental layer of protection is much needed before upsetting your company’s crucial data on web. The quick advancement of Web-borne malware developed digital dangers and data security dangers. Now the Web Threat Security is more common than anytime. With the increasing number of cyber criminals, now the web requires more advanced system other than customary system security and host based security innovations. We can help your business with our managed network security services to meet your compliance needs.</p>
+                                    <p className=' max-w-[850px] m-auto text-sm sm:text-lg text-center mt-5'>Servers are the life-line of business’ technology infrastructure. Every time a server stops, so does your business. We have a knowledgeable and experienced team who make sure that your servers are in good hands. The advancement of beb-borne malware has developed digital dangers and data security dangers, and web threat security is now more common than ever. With the increasing number of cyber criminals, the web requires advanced systems beyond customary system security and host based security innovations. A fundamental layer of protection is needed to avoid compromising your company’s crucial data on the web. We can help your business with our managed network security services to meet your compliance needs.
+                                    </p>
                                 </div>
                             </div>
                         </div>

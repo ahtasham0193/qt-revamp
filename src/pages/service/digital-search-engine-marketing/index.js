@@ -40,7 +40,7 @@ const DigitalMarketing = ({servicesCard}) => {
                                 PACE UP YOUR BUSINESS’S GROWTH WITH DIGITAL MARKETING SERVICES
                             </h2>
                             <p className="mt-5 text-center font-normal leading-7 text-base">
-                                Want Higher Ranks, Greater Leads, And Increased Return On Investment (ROI)? You’re at the right spot! It’s high time to switch to the newer marketing tactics for maximizing conversion rates.
+                            Want higher rankings, greater leads, and increased return on investment (ROI)? You’re in the right place! It’s high time to switch to the newer marketing tactics for maximizing conversion rates.
                             </p>
                         </div>
                     </div>
@@ -54,11 +54,11 @@ const DigitalMarketing = ({servicesCard}) => {
                                 Here’s How Our Digital Marketing Services Can Benefit Your Business:
                             </h2>
                             <p className="mt-5  font-normal leading-7 text-base">
-                                Grow a bigger, booming business in the world of the digital market with our first-rate digital marketing services. Get your hands on our tailored and exceptional digital marketing strategy that helps businesses to;
+                            Grow a bigger, booming business in the world of the digital market with our first-rate digital marketing services. Get your hands on our tailored and exceptional digital marketing strategy that helps businesses to:
                             </p>
                             <ul className=" list-disc mt-5 pl-4">
                                 <li className="font-normal leading-7 text-base">
-                                    Drive value and build your brand online
+                                Drive value and build your brand online
                                 </li>
                                 <li className="font-normal leading-7 text-base">
                                     Improve your website’s search engine rankings
@@ -88,7 +88,7 @@ const DigitalMarketing = ({servicesCard}) => {
                                 What Is Digital Marketing And What Do Digital Marketing Services Include?
                             </h2>
                             <p className="mt-5  font-normal leading-7 text-base">
-                                When you use the internet as well as other digital communication modes to reach your potential buyers, this type of advertising is called digital marketing or online marketing. This can be inclusive of the following;
+                            The type of advertising where you use the internet—as well as other digital communication modes—to reach your potential buyers is called digital marketing, or online marketing. This can be inclusive of the following:
                             </p>
                             <ul className=" list-disc mt-5 pl-4">
                                 <li className="font-normal leading-7 text-base">
@@ -139,20 +139,20 @@ const DigitalMarketing = ({servicesCard}) => {
                                 Q. Why Is Digital Marketing Important?
                             </h2>
                             <p className="mt-5 font-normal leading-7 text-base">
-                                A. Needless to say, this is the era of digital marketing. Keep in mind that your business has no future if you don't go for digital marketing. And this is so because of the ever-increasing number of internet users all around the world.
+                            A. Needless to say, this is the era of digital marketing. Keep in mind that your business has no future if you don't go for digital marketing, especially because of the ever-increasing number of internet users all around the world.
                             </p>
                             <p className="font-normal leading-7 text-base">
-                                In fact, the internet has made everything just a click away and this is what necessitates your active presence in the digital market.
+                            In fact, the internet has made everything just a click away, and this is what necessitates your active presence in the digital market.
                             </p>
                             <p className="font-normal leading-7 text-base">
-                                More beneficially, especially small businesses can get full advantage of digital marketing considering the least up-front costs.
+                            Small businesses in particular can gain full advantage of digital marketing considering the low up-front costs.
                             </p>
 
                             <h2 className="text-xl sm:text-[22px] font-normal mt-5">
-                                Q. How Hiring A Digital Marketing Agency Can Help Grow Your Business?
+                                Q. How Can Hiring A Digital Marketing Agency Help Grow Your Business?
                             </h2>
                             <p className="mt-5 font-normal leading-7 text-base">
-                                Hiring a digital marketing agency means you will get benefit from
+                                Hiring a digital marketing agency means you will get benefit from:
                             </p>
                             <ul className=" list-disc mt-5 pl-4">
                                 <li className="font-normal leading-7 text-base">
@@ -175,49 +175,49 @@ const DigitalMarketing = ({servicesCard}) => {
                                 </li>
                             </ul>
                             <p className="mt-5 font-normal leading-7 text-base">
-                                Actually, a digital marketing company will help in building and running on your behalf the right digital marketing campaign tailored to your business’s needs. Moreover, hiring a digital marketing company than relying on your in-house resources would help your business in the following ways;
+                            Digital marketing companies support you in building and running the right digital marketing campaign on your behalf, tailored to your business’s needs. Moreover, hiring a digital marketing company over relying on your in-house resources would help your business in the following ways:
                             </p>
 
                             <h2 className="text-xl sm:text-[22px] font-normal mt-5">
                                 Time And Money-Saving:
                             </h2>
                             <p className="mt-5 font-normal leading-7 text-base">
-                                This approach can save you a lot of your precious time. By relying on a marketing agency, you shift some of your burdens to them, and this way you could easily focus more on your business. Also, when you hire a marketing agency, you save great bucks since you don't have to hire full-time employees to do the job.
+                            This approach can save you precious time. By relying on a marketing agency, you shift some of your burdens to them, and this way you can easily focus more on your business. Additionally, when you hire a marketing agency, you save a pretty penny since you don't have to hire full-time employees to do the job.
                             </p>
 
                             <h2 className="text-xl sm:text-[22px] font-normal mt-5">
                                 Marketing Campaign Management:
                             </h2>
                             <p className="mt-5 font-normal leading-7 text-base">
-                                Not only does a marketing agency create your personalized digital marketing strategy but also runs and manages it effectively. This way you can exclusively concentrate on your business/producing quality products.
+                            Not only does a marketing agency create a personalized digital marketing strategy, but they also run and manage it effectively. This way you can concentrate exclusively on your business and producing quality products.
                             </p>
 
                             <h2 className="text-xl sm:text-[22px] font-normal mt-5">
                                 Generation Of Higher Revenue:
                             </h2>
                             <p className="mt-5 font-normal leading-7 text-base">
-                                Hiring a digital marketing agency will help in optimizing all of your marketing efforts and this is what ensures maximum revenue.
+                            Hiring a digital marketing agency will help in optimizing all of your marketing efforts, and this is what ensures maximum revenue.
                             </p>
 
                             <h2 className="text-xl sm:text-[22px] font-normal mt-5">
                                 Analytics:
                             </h2>
                             <p className="mt-5 font-normal leading-7 text-base">
-                                The digital marketing company you hire will update you regularly on analytics so you could keep track of how well your marketing strategy is working.
+                            The digital marketing company you hire will update you regularly on analytics so you could keep track of how well your marketing strategy is working.
                             </p>
 
                             <h2 className="text-xl sm:text-[22px] font-normal mt-5">
                                 Update Knowledge And Advanced Tools:
                             </h2>
                             <p className="mt-5 font-normal leading-7 text-base">
-                                Professional digital marketing agency makes use of up-to-the-minute tools and advanced technology to provide up-to-the-mark services. They do not compromise on quality and this is what helps your business grow more and grow better.
+                            Professional digital marketing agencies make use of up-to-the-minute tools and advanced technologies to provide the best services. They do not compromise on quality and this is what helps your business grow more and grow better.
                             </p>
 
                             <h2 className="text-xl sm:text-[22px] font-normal mt-5">
                                 Why Choose Our Digital Marketing Company For Digital Marketing Services?
                             </h2>
                             <p className="mt-5 font-normal leading-7 text-base">
-                                Your full-service digital marketing company is here. What sets us ahead of our rivals and makes your reliable digital marketing agency is our;
+                            Your full-service digital marketing company is here. What sets us ahead of our rivals and makes your reliable digital marketing agency is our:
                             </p>
                         </div>
                     </div>
@@ -228,12 +228,12 @@ const DigitalMarketing = ({servicesCard}) => {
                     <Accordion title="Excellence Of Years:">
                     We have been delivering excellent and effective digital marketing services for over a decade. Our enriched experience speaks for our quality services that actually generate more and more leads.
                     </Accordion>
-                    <Accordion title="Bespoke Digital Marketing Campaigns:">We know very well that every business has different goals and target customers that's why we don't use the cookie-cutter approach. Instead, we design bespoke digital marketing campaigns that could actually voice your concerns and drive more traffic to your sites.</Accordion>
-                    <Accordion title="Seasoned Digital Marketers:">Our seasoned team of expert digital marketers is our pride. Knowing the nuts and bolts of the digital marketing industry, our certified marketing specialists design and execute a digital marketing strategy that is aligning with your business's needs.</Accordion>
-                    <Accordion title="A Large Number Of Satisfied Clients:">We have never failed to impress a large number of businesses with our quality services. That’s why our valued clients have always provided us with positive feedback. You can check our portfolio to know more about that.</Accordion>
-                    <Accordion title="Budget-Friendly Rates:">One of the biggest reasons for choosing us is our market competitive services charges. We have always succeeded to give our clients cost-effective services that could give their businesses a greater boost.</Accordion>
-                    <Accordion title="Best Customer Support:">Our 24/7 customer support is readily available to listen to all your relevant concerns and serve you in the best possible manner. Dealing professionally with clients, our excellent customer support team goes above and beyond to meet their requirements and surpass their expectations.</Accordion>
-                    <Accordion title="Wide-Ranging Services:">Our unrivaled and wide-ranging digital marketing services encompass the following.</Accordion>
+                    <Accordion title="Bespoke Digital Marketing Campaigns:">We know very well that every business has different goals and target customers. That's why we don't use the cookie-cutter approach. Instead, we design customized, bespoke digital marketing campaigns that could actually voice your concerns and drive more traffic to your sites.</Accordion>
+                    <Accordion title="Seasoned Digital Marketers:">Our seasoned team of expert digital marketers is our pride. With full knowledge on the nuts and bolts of the digital marketing industry, our certified marketing specialists design and execute a digital marketing strategy that is aligning with your business's needs.</Accordion>
+                    <Accordion title="A Large Number Of Satisfied Clients:">We have never failed to impress a large number of businesses with our quality services. That’s why our valued clients have always provided us with positive feedback. You can check our portfolio to learn more.</Accordion>
+                    <Accordion title="Budget-Friendly Rates:">One of the biggest reasons for choosing us is our market competitive services charges. We have always succeeded in giving our clients cost-effective services that could give their businesses a greater boost.</Accordion>
+                    <Accordion title="Best Customer Support:">Our 24/7 customer support is readily available to listen to all your relevant concerns and serve you in the best possible manner. Our excellent customer support team goes above and beyond to meet their requirements and surpass their expectations.</Accordion>
+                    <Accordion title="Wide-Ranging Services:">Our unrivaled and wide-ranging digital marketing services encompass the following:</Accordion>
                 </div>
                 <div className="w-full p-6">
                     <div className="w-full">
@@ -242,7 +242,7 @@ const DigitalMarketing = ({servicesCard}) => {
                                 1. Internet Marketing Services:
                             </h2>
                             <p className="mt-5 font-normal leading-7 text-base">
-                                In the present times, being present online has become crucial for businesses for faster and better growth. Our expert strategists design and deploy an internet marketing strategy considering the specific needs of your business. Getting this service can help you;
+                            In this day and age, being present online has become crucial for businesses for faster, better growth. Our expert strategists design and deploy an internet marketing strategy considering the specific needs of your business. Making use of this service can help you:
                             </p>
 
                             <ul className=" list-disc mt-5 pl-4">
@@ -268,9 +268,7 @@ const DigitalMarketing = ({servicesCard}) => {
                                 2. Pay Per Click (PPC) Advertising:
                             </h2>
                             <p className="mt-5 font-normal leading-7 text-base">
-                                Did you know that PPC is amongst the most effective type of digital marketing? Notably, PPC advertising yielded 50% more conversions in comparison to an organic one.
-                                PPC can provide you with immediate and consistent results.
-                                With the help of PPC, you can fulfill many of your advertising and business goals. Best of all, it's quantifiable and trackable. Our top-notch PPC advertising services can yield you;
+                            Did you know that PPC is amongst the most effective types of digital marketing? Most nootably, PPC advertising yielded 50% more conversions in comparison to an organic one. PPC can provide you with immediate and consistent results, and allow you to fulfill many of your advertising and business goals. Best of all, it's quantifiable and trackable. Our top-notch PPC advertising services can yield you:
                             </p>
 
                             <ul className=" list-disc mt-5 pl-4">
@@ -296,12 +294,10 @@ const DigitalMarketing = ({servicesCard}) => {
                                 3. Search Engine Optimization (SEO):
                             </h2>
                             <p className="mt-5 font-normal leading-7 text-base">
-                                It’s interesting to know that Google is the search engine that users visit the most on a daily basis. When talking about the second most visited search engine, there comes YouTube
-                                And most of the visitors don't bother clicking on pages 2, 3 or so rather they usually rely on the content that appeared on the first page.
+                            Google is the search engine that users visit the most on a daily basis followed by YouTube. And, even with this status most of the visitors don't bother clicking on the second page of search results, and instead rely on the content that appears on the first page.
                             </p>
                             <p className="mt-5 font-normal leading-7 text-base">
-                                To be on the top of the search results on these search engines, SEO plays a pivotal part. SEO is also helpful in learning the user’s behavior so you could design and execute your marketing strategy accordingly.
-                                From analyzing keywords to building backlinks to creating killer content, our SEO specialists do it all for you. Best of all, SEO is measurable, relatively inexpensive and;
+                            To put yourself on the top of the search results on these search engines, SEO plays a pivotal part. SEO is also helpful in learning the user’s behavior so you could design and execute your marketing strategy accordingly. From analyzing keywords, to building backlinks, to creating killer content, our SEO specialists do it all for you. Best of all, SEO is measurable, relatively inexpensive and:
                             </p>
 
                             <ul className=" list-disc mt-5 pl-4">
@@ -327,15 +323,13 @@ const DigitalMarketing = ({servicesCard}) => {
                                 4. Social Media Marketing:
                             </h2>
                             <p className="mt-5 font-normal leading-7 text-base">
-                                The right social media marketing strategy will help in brand awareness and better customer engagement.
-                                Did you know that over 4.50 billion people are using social media all across the globe? This popping figure necessitates integrating a robust social media marketing strategy for increasing leads.
+                            The right social media marketing strategy is a necessity to boost brand awareness and better customer engagement. Did you know that over 4.50 billion people are using social media all across the globe? This popping figure stresses the need to integrate robust social media marketing strategy in order to increase leads.
                             </p>
                             <p className="mt-5 font-normal leading-7 text-base">
-                                Be it Facebook, Twitter, YouTube, Pinterest, Instagram, LinkedIn, TikTok, or any other social media platform, our exceptional marketing strategy will help you ace all such social media channels.
+                            Be it Facebook, Twitter, YouTube, Pinterest, Instagram, LinkedIn, TikTok, or any other social media platform, our exceptional marketing strategy will help you ace all such social media channels.
                             </p>
                             <p className="mt-5 font-normal leading-7 text-base">
-                                Unlike using a cookie-cutter approach, we design your marketing strategy considering the unique requirements of your business
-                                Our social media experts craft befitting posts and upload them at the right time so that they could attract your target customers and drive more traffic.
+                            Unlike following a cookie-cutter approach, we design your marketing strategy by considering the unique requirements of your business. Our social media experts create fitting posts and upload them at the right time so that they could attract your target customers and drive more traffic.
                             </p>
 
                             <ul className=" list-disc mt-5 pl-4">
@@ -358,7 +352,7 @@ const DigitalMarketing = ({servicesCard}) => {
                                 5. Content Marketing:
                             </h2>
                             <p className="mt-5 font-normal leading-7 text-base">
-                                Interestingly, content marketing let around 70% of the customers stick to a brand as they acquired a positive brand image via reading/watching relevant content e.g.,
+                            Content marketing leads to around 70% of customers sticking to a brand that they’ve seen a positive brand image for via reading/watching relevant content e.g:
                             </p>
 
                             <ul className=" list-disc mt-5 pl-4">
@@ -379,23 +373,20 @@ const DigitalMarketing = ({servicesCard}) => {
                                 </li>
                             </ul>
                             <p className="mt-5 font-normal leading-7 text-base">
-                                Know that consistent content makes your brand more credible, and reliable.
-                                Know that content marketing is incredibly important for your business for client retention, raising brand awareness as well as increasing SERP rankings.
+                            Consistent content makes your brand more credible, and reliable. Because of this, content marketing is incredibly important for your business for client retention, raising brand awareness as well as increasing SERP rankings..
                             </p>
                             <p className="mt-5 font-normal leading-7 text-base">
-                                Our content creators know how to produce high-quality content from scratch that is SEO-friendly, readable, and could also engage potential customers. Along with that, our specialists do the right advertising of your content so to give you real value for your hard-earned.
+                            Our content creators know how to produce high-quality content from scratch that is SEO-friendly, readable, and could also engage potential customers. Along with that, our specialists do the right advertising of your content to give you real value for your hard-earned.
                             </p>
 
                             <h2 className="text-xl sm:text-[22px] font-normal mt-5">
                                 6. E-mail Marketing Services:
                             </h2>
                             <p className="mt-5 font-normal leading-7 text-base">
-                                Did you know that acquiring a new customer is 5x more costly than retaining an existing one? This is where e-mail marketing makes your perfect pick. This is so because it keeps your loyal customers updated regarding your offers, deals, and new products and thus drives more sales.
-                                Needless to say, the key to keeping connected to your customers and site visitors is undoubtedly e-mail marketing.
+                            Did you know that acquiring a new customer is five times more costly than retaining an existing one? This is where e-mail marketing comes in. It keeps your loyal customers updated regarding your offers, deals, and new products and thus drives more sales. Needless to say, the key to keeping connected to your customers and site visitors is undoubtedly e-mail marketing.
                             </p>
                             <p className="mt-5 font-normal leading-7 text-base">
-                                Worldwide, the number of active email users is popping at 4.3 billion. So, how could you not consider this an effective mode of advertising?
-                                Our expert email marketing strategists would run effective and tailored email marketing campaigns for your business considering your goals, modality, and users. By making the most out of our cost-effective email marketing services, you can
+                            The number of active email users worldwide is bursting at 4.3 billion. So, how could you not consider this an effective mode of advertising? Our expert email marketing strategists would run effective and tailored email marketing campaigns for your business considering your goals, modality, and users. By making the most out of our cost-effective email marketing services, you can
                             </p>
 
                             <ul className=" list-disc mt-5 pl-4">

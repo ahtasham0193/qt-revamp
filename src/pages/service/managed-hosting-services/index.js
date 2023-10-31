@@ -34,7 +34,7 @@ const CloudBasedHosting = ({servicesCard}) => {
                                 </div>
                                 <div className="w-full mt-7">
                                     <h1 className="text-xl sm:text-3xl font-semibold text-center">Cloud based hosting services</h1>
-                                    <p className=' max-w-[850px] m-auto text-sm sm:text-lg text-center mt-5'>Focus on your business and avoid all the web hosting hassles. Our managed hosting services guarantee unmatched performance, reliability and choice with support that acts as your extended team. We offer dedicated server hosting & cloud hosting solutions to small, medium and large corporate clients. This way, the load is balanced, security is taken care of and hardware resources are available virtually, so they can be used when needed.</p>
+                                    <p className=' max-w-[850px] m-auto text-sm sm:text-lg text-center mt-5'>Focus on your business and avoid all the web hosting hassles through our hosting services! We guarantee unmatched performance, reliability and choice with support that acts as your extended team. We offer dedicated server hosting and cloud hosting solutions to small, medium and large corporate clients. This way, the load is balanced, security is taken care of, and hardware resources are available virtually to be used when needed.</p>
                                 </div>
                             </div>
                         </div>

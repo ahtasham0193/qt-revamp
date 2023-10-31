@@ -36,8 +36,9 @@ const WebsiteDevelopment = ({ servicesCard }) => {
                                 Website development since 1998
                             </h1>
                             <p className="mt-6  text-center">
-                                Want to Turn Your Website into a Lead Magnet? Want to Turn every Visitor into a Buyer? Let us take things into our hands and revolutionize your digital journey like never before.
-                                Quaid Technologies offers a full range of custom Web Application development services that help design, build, and evolve web-based software. We provide client focused and customer centric website solutions that deliver tangible business results. We add the latest features, enhanced settings, and custom considerations. Our leading edge technical experts have the ability to create any sort of site at any stage by appropriately understanding your business needs.
+                            Want to transform your website into a lead magnet? Want to turn every visitor into a buyer? Allow us to take things into our hands and revolutionize your digital journey like never before! Quaid Technologies offers a full range of custom Web Application Development Services that help design, build, and evolve web-based software.
+                            We provide client focused and customer centric website solutions that deliver tangible business results. We add the latest features, enhanced settings, and custom considerations. As a result, our leading edge technical experts have the ability to create any sort of site at any stage by appropriately understanding your business needs.
+
                             </p>
 
                             <Image
@@ -52,16 +53,16 @@ const WebsiteDevelopment = ({ servicesCard }) => {
                                 Do you want to know why we are best in the game?
                             </h1>
                             <p className="mt-6  text-center">
-                                The digital market is a great pool, and to stand out among the many fish (competitors) is difficult. It took us plenty of effort and hard work to reach where we are today. Here is why we are the best in the Game:
+                            The digital market is a vast pool, and standing out among the many fish is difficult. It took us plenty of effort and hard work to reach where we are today. Here is why we are the best in the Game:
                             </p>
                             <div className="mt-10 max-w-[600px] mx-auto">
                                 <Accordion title="We Provide You with a Secure Website">
-                                    With an amazing website comes a fear of data leaks or hacking. But not when it is crafted at the hands of our team! Trust us when we say our experts make sure no data leak or security breach happens at your irresistible website.
+                                With an amazing website comes the fear of data leaks or hacking—but not not when it’s created at the hands of our team! Trust us when we say our experts make sure no data leaks or security breaches will happen to your irresistible website.
                                 </Accordion>
-                                <Accordion title="We Won't Let You be Obsolete">Our team gives you timely updates on evolving patterns in the market. This way, you stay ahead of the Game and don't become obsolete, which is the need of the hour.</Accordion>
-                                <Accordion title="We Let You Be You">Every brand/product is different, and no template fits all. Hence, we believe in letting you be you and putting your best step forward with our customized web development services. This way, you get to greet your audience with your authentic brand spirit, giving a nice and instant boost to your product.</Accordion>
-                                <Accordion title="We Make Sure You Boost Your Product Performance">Staying relevant in your business world is very important. When businesses don't revise their product according to industry trends, they quickly become obsolete. We help you stay updated and hence boost product performance per the industry trends.</Accordion>
-                                <Accordion title="We Provide a Safe & User-Friendly Experience">Trust us when we say your website will be a memorable experience for your clients. Our web development experts make sure there is adequate security on the website as well as post-purchase care. This way, they get a safe and user-friendly experience and keep coming back!</Accordion>
+                                <Accordion title="We Won't Let You be Obsolete">Our team gives you timely updates on evolving patterns in the market. This way, you stay ahead of the game and remain relevant no matter the hour.</Accordion>
+                                <Accordion title="We Let You Be You">Every brand and product is different, and no template fits all. Hence, we believe in letting you be you and putting your best step forward with our customized web development services. This way, you get to greet your audience with your authentic brand spirit, which instantly boosts your product.</Accordion>
+                                <Accordion title="We Make Sure You Boost Your Product Performance">Staying relevant in the business world is very important. When businesses don't revise their product according to industry trends, they quickly become obsolete. We help you stay updated and hence boost product performance per the industry trends.</Accordion>
+                                <Accordion title="We Provide a Safe & User-Friendly Experience">Trust us when we say using your website will be a memorable experience for your clients. Our web development experts make sure there is adequate security on the website as well as post-purchase care. This way, they get a safe and user-friendly experience and are sure to keep coming back!</Accordion>
 
                             </div>
                         </div>
@@ -75,10 +76,10 @@ const WebsiteDevelopment = ({ servicesCard }) => {
                         <h2 className="text-xl sm:text-3xl font-semibold text-center">Our Process</h2>
                         <div className="w-full mt-10">
                             <Image
-                                src="/images/Desktop Software/ourProcess.png"
+                                src="/images/Desktop Software/our-process.png"
                                 alt="Image"
                                 className="w-full object-contain"
-                                width={500}
+                                width={1000}
                                 height={300}
                             />
                         </div>
@@ -92,7 +93,7 @@ const WebsiteDevelopment = ({ servicesCard }) => {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
                             <div className="md:col-span-1 px-5 sm:px-[74px] py-4">
                                 <h4 className="text-xl sm:text-3xl font-semibold">LEARNING MANAGEMENT SYSTEM (LMS)</h4>
-                                <p className="text-sm sm:text-lg mt-5">May it be that you want to add a self-paced eLearning course to your curriculum, or simply want to digitize your gradebook, a learning management system (LMS) is a great way to bring your classroom into the 21st century. Team at QuaidTech will help you learn how leveraging technology can help you do just that to get the best results.</p>
+                                <p className="text-sm sm:text-lg mt-5">Maybe you want to add a self-paced eLearning course to your curriculum, or simply want to digitize your gradebook. A learning management system (LMS) is a great way to bring your classroom into the 21st century. Team at QuaidTech will help you learn how leveraging technology can help you do just that to get the best results.</p>
                             </div>
                             <div className="md:col-span-1 px-5 sm:px-[74px] py-4">
                                 <Image
@@ -116,14 +117,14 @@ const WebsiteDevelopment = ({ servicesCard }) => {
                             </div>
                             <div className="md:col-span-1 px-5 sm:px-[74px] py-4">
                                 <h4 className="text-xl sm:text-3xl font-semibold">AUTO BUTLER SYSTEM</h4>
-                                <p className="text-sm sm:text-lg mt-5">Auto Butler system is a product for today’s busy lifestyles as it takes the worry out of appearance care. You can have both your appearance care and maintenance done in one convenient appointment at the same Dealership that sold you the car.</p>
+                                <p className="text-sm sm:text-lg mt-5">The Auto Butler system is a product for today’s busy lifestyles as it takes the worry out of appearance care for your vehicle. You can have both your appearance care and maintenance done in one convenient appointment at the same dealership that sold you the car.</p>
                             </div>
 
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
                             <div className="md:col-span-1 px-5 sm:px-[74px] py-4">
                                 <h4 className="text-xl sm:text-3xl font-semibold">WEB PORTALS, CMS, E-COMMERCE SYSTEMS</h4>
-                                <p className="text-sm sm:text-lg mt-5">New technologies are transforming both brick-and-mortar and eCommerce retail businesses. We make retail software that can help you run your business more effectively and keep up with the latest trends.</p>
+                                <p className="text-sm sm:text-lg mt-5">New technologies are transforming both brick-and-mortar and eCommerce retail businesses. We at QuaidTech make retail software that can help you run your business more effectively and keep up with the latest trends.</p>
                             </div>
                             <div className="md:col-span-1 px-5 sm:px-[74px] py-4">
                                 <Image

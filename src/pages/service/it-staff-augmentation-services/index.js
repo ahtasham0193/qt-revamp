@@ -54,23 +54,19 @@ const ItStaffAugmented = ({ processCards, clients, servicesCard }) => {
               Highly trained & motivated teams
             </h1>
             <p className="mt-6  text-center">
-              Unlock the potential of your projects with our team of highly
-              trained and motivated professionals. Our IT staff augmented
-              services bring together top talent, equipped with the latest
-              skills and driven by a passion for excellence, to ensure your
-              software development initiatives are executed flawlessly.
+            Unlock your projects’ potential with our team of highly trained and motivated professionals! Our IT staff augmented services bring together top talent, equipped with the latest skills and driven by a passion for excellence, to ensure your software development initiatives are executed flawlessly.
             </p>
             <div className="mt-10 max-w-[600px] mx-auto">
               <Accordion title="Web Developer">
-              We have an excellent team of web developers. We will provide you with both frontend and backend developers working according to your time zone.
+              We have an excellent team of web developers, and will provide you with both frontend and backend developers who can work according to your time zone.
               </Accordion>
-              <Accordion title="Mobile App Developer">Mobile app development is an entirely different niche of the digital world. A web developer is not always able to design mobile apps. It requires a different set of skills and experience. We house some of the world's tech geniuses to do your job.</Accordion>
-              <Accordion title="Designers">The purpose of web content is to attract its audience which can only be achieved if the content is appealing. Whether you want to design a web page, a website, an app, or social media content, we nourishe a talent pool so that you choose from the best.</Accordion>
-              <Accordion title="DevOps">Assist your developers by our best develop operations. For the smooth running of all operations at your end, we provide outstanding automation, testing, integration, and management services.</Accordion>
-              <Accordion title="Quality Assurance Teams">Quality of work determines any company's credibility. When you deliver a product, you want to ensure it's your best effort. Maybe you have a good team of in-house computer engineers, but you still want someone to review your work. Some companies have a separate quality assurance department but some cannot afford to hire full-time employees in-house. For such a job, you can get an augmented team of QAs.</Accordion>
-              <Accordion title="Client Management Teams">When you are running an IT company, your main focus is product development. Nevertheless, if your relationship with your clients is not efficient enough, you will not be able to stay in the market for long. To establish good client relations and effective communication, you can contact our It Staff augmentation services to hire a client management team.</Accordion>
-              <Accordion title="Project Manager">Are you supervising every project your team is working on? We can take up your burden by giving you well-trained project managers. They will make sure that your teams are collaborating, clients are satisfied and the project is being delivered on time. They will schedule and keep a record of everything.</Accordion>
-              <Accordion title="Business Analysts">Marketing is the key to any successful business. If you are new in the market and need to boost your company business, get more clients, and better jobs you must have a dedicated business management team. You will find some of the best-qualified people for managing all your marketing hassles here.</Accordion>
+              <Accordion title="Mobile App Developer">Mobile app development is an entirely different niche in the digital world. A web developer is not always able to design mobile apps, which requires a different set of skills and experience. We house some of the world's best tech geniuses who specialize in those exact skills to get the job done.</Accordion>
+              <Accordion title="Designers">The purpose of web content is to attract an audience, which can only be achieved if the content is appealing. Whether you want to design a web page, a website, an app, or social media content, we house an impeccable talent pool so that you choose from the best.</Accordion>
+              <Accordion title="DevOps">Assist your developers with the best of our best development operations. To ensure that all operations on your end run smoothly, we provide outstanding automation, testing, integration, and management services.</Accordion>
+              <Accordion title="Quality Assurance Teams">Quality of work determines any company's credibility. When you deliver a product, you want to ensure it's your best effort. Maybe you have a good team of in-house computer engineers, but you still want someone to review your work. Some companies have a separate quality assurance department, but some cannot afford to hire full-time employees in-house. For such a job, you can reliably turn to our augmented team of QAs.</Accordion>
+              <Accordion title="Client Management Teams">No matter how good your product development may be, if your relationship with your clients is poor, you will not be able to stay in the market for long. To establish great client relations and effective communication, you can contact our IT staff augmentation services to hire a client management team.</Accordion>
+              <Accordion title="Project Manager">Are you supervising every project your team is working on? We can take the burden off your shoulders by providing you with well-trained project managers. They will make sure that your teams are collaborating efficiently, clients are satisfied, and that the project is being delivered on time by scheduling and keeping a record of everything.</Accordion>
+              <Accordion title="Business Analysts">Marketing is the key to any successful business. If your company is in the industry looking to boost your business, attract more clients, and create better jobs, then you must have a dedicated business management team. You’ll find some of the best-qualified people for managing all your marketing hassles here at Quaid Technologies.</Accordion>
               
             
             </div>
@@ -206,22 +202,22 @@ export async function getServerSideProps(context) {
       {
         stats: 1,
         title: "Know What You Need",
-        text: "You must have a clear idea of what are your requirements. An easy way to do so is to enlist the problems you are facing in the smooth delivery of your work. Identify the gaps which need to be filled to resolve these problems. When you contact us, we will make sure that we dedicate a person who can listen to all your needs and requirements. Be very clear when explaining all the details to our personnel.",
+        text: "You must have a clear idea of your requirements. An easy way to do so is to list the problems hindering the smooth delivery of your work, and then identify the gaps which need to be filled to resolve these problems. When you contact us, we will make sure that we dedicate a person who can listen to all your needs and requirements. Be as clear as you can when explaining all the details to our personnel!",
       },
       {
         stats: 2,
         title: "Choose The Required Team Member",
-        text: "If you are looking for a specific job doer such as a graphic designer, you can pick one from our team of skilled people. On the other hand, if you identify the gap in your company but you are not sure who to assign the task to, we will be glad to recommend what sort of team or team member suits best your requirement.",
+        text: "If you are looking for a specific type of worker, such as a graphic designer, you can pick one from our team of skilled people. On the other hand, if you identify a gap to be filled but are not sure who to assign the task to, we will be glad to recommend a team or team member that best suits your requirement.",
       },
       {
         stats: 3,
         title: "Have A One-On-One Interrogation",
-        text: "You can interview our candidates one on one. We can arrange an online interview session so that you can have a satisfactory conversation. No matter what part of the world you are in, you will be fully facilitated.",
+        text: "You can interview our candidates one on one. We will arrange an online interview session so that you can have a satisfactory conversation. No matter what part of the world you are in, you will be fully facilitated.",
       },
       {
         stats: 4,
         title: "Start Working Right Away",
-        text: "Once you are satisfied with the hiring of your augmented team, you can start assigning work right away. We make sure that our teams are available according to the said time. Moreover, we provide them with a peaceful work environment, and the latest equipment, and technologies to work efficiently.",
+        text: "Once you are satisfied with the hiring of your augmented team, you can start assigning work right away. We make sure that our teams are available according to the agreed timings, and we provide them with a peaceful work environment as well as the latest equipment and technologies to work efficiently.",
       },
     ];
   

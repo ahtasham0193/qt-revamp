@@ -15,13 +15,13 @@ function HomePage() {
     {
       image: "/images/books.svg",
       title: "IT Staff Augmented Services",
-      text: "With so many technologies to work upon, hiring gets difficult when you are looking for a specialty. Why worrying when you can simply go for IT Staff Augmentation? Don't have the right person to do the job in-house? You don't need to hire a permanent resource.",
+      text: "With so many technologies to work upon, hiring becomes difficult when you are looking to fill a speciality. Why worry when you can simply go for IT Staff Augmentation? Don’t have the right person to get the job done in-house? You don't need to hire a permanent resource.",
       slug: "/it-staff-augmented"
     },
     {
       image: "/images/website development/website-developmentImg.png",
       title: "Website Development Services",
-      text: "Want to Turn Your Website into a Lead Magnet? Want to Turn every Visitor into a Buyer? Let us take things into our hands and revolutionize your digital journey like never before. Quaid Technologies offers a full range of custom Web Application development services that help design, build, and evolve web-based software.",
+      text: "Want to transform your website into a lead magnet? Want to turn every visitor into a buyer? Allow us to take things into our hands and revolutionize your digital journey like never before! Quaid Technologies offers a full range of custom Web Application Development Services that help design, build, and evolve web-based software.",
       slug: "/website-development"
     },
     {
@@ -36,17 +36,27 @@ function HomePage() {
     {
       image: "/images/Portfolio/NewsConnectImg.png",
       title: "News Connect",
-      text: "Get latest news from United States to UK to Japan, around the world including but not limited to India, Pakistan, Philippines, Sweden, Germany, France, Italy, United Arab Emirates, Saudi Arabia and other without annoying Advertisements. ",
+      text: "Get the latest news from the US to the UK to Japan, to around the world, including but not limited to India, Pakistan, the Philippines, Sweden, Germany, France, Italy, the UAE, Saudi Arabia and others without the annoying advertisements.",
     },
     {
       image: "/images/Portfolio/playTravelImg.png",
       title: "Play Travel",
-      text: "Play Travel is a web app for people who love to travel without being worried about making payments upfront. Through this app travelling is made accessible to more Australians, by offering them flexible payment plans, and has given globetrotters rejoice.",
+      text: "Play Travel is a web app for people who love to travel without having to worry about making payments upfront. Travelling is made accessible to more Australians through this app by offering flexible payment plans, and has given globetrotters cause for rejoice!",
     },
     {
       image: "/images/Portfolio/DAEPImg.png",
       title: "DAEP",
       text: "DAEP (Dubai Aviation Engineering Projects) is a leading engineering organization responsible for the design, master planning, infrastructure development and construction of Dubai’s dynamic aviation sector. Under the leadership of Mr. Jonathan Ali Khan, team QuaidTech uplifted the design of DAEP.",
+    },
+    {
+      image: "/images/Portfolio/askariBankImg.png",
+      title: "Askari Bank Portal",
+      text: "Askari Bank is a commercial bank and is owned by Fauji Foundation. They needed to automate their recruitment portal and resolve several operational challenges related to it. Our client aimed to eliminate unnecessary delays in hiring, minimise labour and streamline the recruitment process. Within a few months, we automated our client’s job portal to help them reduce recruitment cost and boost operational efficiency.",
+    },
+    {
+      image: "/images/Portfolio/ballisticCalculatorImg.png",
+      title: "Ballistic Calculator App",
+      text: "This App presents enhanced features as well as graphical representation of trajectories, in all weathers and all locations.",
     },
   ]);
 
@@ -134,42 +144,42 @@ function HomePage() {
         <Slider itemsInMobileView={6} itemsInDesktopView={6}>
           <Image
             src="/images/client1.png"
-            className="sm:h-[70px] h-[30px] w-auto"
+            className="sm:h-[70px] h-[30px] w-auto block mx-auto"
             width="100"
             height="100"
             alt="Description of the image"
           />
           <Image
             src="/images/client2.png"
-            className="sm:h-[70px] h-[30px] w-auto"
+            className="sm:h-[70px] h-[30px] w-auto block mx-auto"
             width="100"
             height="100"
             alt="Description of the image"
           />
           <Image
             src="/images/client3.png"
-            className="sm:h-[70px] h-[30px] w-auto"
+            className="sm:h-[70px] h-[30px] w-auto block mx-auto"
             width="100"
             height="100"
             alt="Description of the image"
           />
           <Image
             src="/images/client4.png"
-            className="sm:h-[70px] h-[30px] w-auto"
+            className="sm:h-[70px] h-[30px] w-auto block mx-auto"
             width="100"
             height="100"
             alt="Description of the image"
           />
           <Image
             src="/images/client5.png"
-            className="sm:h-[70px] h-[30px] w-auto"
+            className="sm:h-[70px] h-[30px] w-auto block mx-auto"
             width="100"
             height="100"
             alt="Description of the image"
           />
           <Image
             src="/images/client6.png"
-            className="sm:h-[70px] h-[30px] w-auto"
+            className="sm:h-[70px] h-[30px] w-auto block mx-auto"
             width="100"
             height="100"
             alt="Description of the image"
@@ -184,7 +194,7 @@ function HomePage() {
               Everything you need to grow your business
             </h1>
             <p className="max-w-[700px] my-[1rem] w-fit block m-auto leading-relaxed text-center">
-              M/S Quaid Technologies has been providing Software Development & IT Services since 1998 with the merger of M/S PakCyber Group in 2013. We have been the technical solution provider to many industries and moved them from manual procedures to paperless fully Automated Solutions.
+            M/S Quaid Technologies has been providing Software Development & IT Services since 1998, with the merger of M/S PakCyber Group in 2013. We have been the technical solution provider for many industries, and transitioned them from manual procedures to paperless, full automated solutions.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 p-4">
@@ -225,7 +235,7 @@ function HomePage() {
               Showcasing our cutting-edge projects
             </h1>
             <p className="max-w-[700px] my-[1rem] w-fit block m-auto leading-relaxed text-center">
-              Being the Development & Technical partner, Quaid Technologies is part of various organisations and projects around the globe. We have given services to many enterprises & organisations in Public & Private sectors. Below is the snippet of work done by us.
+            Being a Development & Technical partner, Quaid Technologies is part of various organisations and projects around the globe. We have provided our services to many enterprises & organisations in both the public and private sectors. Below is a snippet of our work.
             </p>
             <section className="flex flex-col justify-center items-center py-16 w-full sm:flex-row">
               <div className="sm:w-[30%] w-full h-auto flex items-center">
@@ -238,7 +248,7 @@ function HomePage() {
             </div>
       <div className="w-full sm:w-[70%] relative">
 
-      <Carousel itemsToShowDesktop={2} itemsToShowMobile={1} margin={30} speed={5000}>
+      <Carousel itemsToShowDesktop={2} itemsToShowMobile={1} margin={30} speed={2000}>
               {portfolioCard?.map((item,index) => {
                 return (
                   <div className="sm:w-full w-[95%] h-[500px] rounded-lg overflow-hidden shadow-md" key={index}>
@@ -279,7 +289,7 @@ function HomePage() {
               Our satisfied clients are a testament to our commitment to excellence. Their success is our greatest achievement.
             </p>
 
-            <Carousel itemsToShowDesktop={1.7} itemsToShowMobile={1} margin={30} speed={5000}>
+            <Carousel itemsToShowDesktop={1.7} itemsToShowMobile={1} margin={30} speed={2000}>
               {clients?.map((item) => {
                 return (
                   <div className="w-full sm:h-[500px] h-[250px] rounded-lg overflow-hidden shadow-md">

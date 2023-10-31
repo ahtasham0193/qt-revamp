@@ -25,9 +25,9 @@ const Header = () => {
     };
   }, []);
 
-  const handleButtonClick = () => {
-    router.push("/contact-qt");
-  };
+  // const handleButtonClick = () => {
+  //   router.push("/contact-qt");
+  // };
 
   const isServiceActive = 
   router.pathname === "/service/it-staff-augmentation-services" ||
@@ -83,7 +83,7 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link href="/showcase" className={router.pathname === '/showcase' ? 'text-primary-color' : 'text-gray-700'}>
+            <Link href="/showcase" className={`${router.pathname === '/showcase' ? 'text-primary-color' : 'text-gray-700'} hover:text-primary-color`}>
               <span>Portfolio</span>
             </Link>
           </li>
@@ -92,62 +92,65 @@ const Header = () => {
             <div className={`${isOpen ? "right-[-127px]" : "left-0"} absolute mt-2 w-72 rounded-md s shadow-lg bg-white ring-1 ring-black ring-opacity-5 overflow-hidden z-50 transition-all duration-200 ease-in-out opacity-0 invisible group-hover:opacity-100 group-hover:visible `}>
               <div className="py-1">
                 <Link href="/service/it-staff-augmentation-services">
-                  <p className={`${router.pathname === '/service/it-staff-augmentation-services' ? 'text-primary-color' : 'text-gray-700'} block px-4 py-2 text-sm hover:bg-gray-100 `}>IT Staff Augmentation Services</p>
+                  <p className={`${router.pathname === '/service/it-staff-augmentation-services' ? 'text-primary-color' : 'text-gray-700'} block px-4 py-2 text-sm hover:text-primary-color `}>IT Staff Augmentation Services</p>
                 </Link>
                 <Link href="/service/hire-overseas-development-team">
-                  <p className={`${router.pathname === '/hire-overseas-development-team' ? 'text-primary-color' : 'text-gray-700'} block px-4 py-2 text-sm hover:bg-gray-100 `}>Hire Overseas Development Team</p>
+                  <p className={`${router.pathname === '/hire-overseas-development-team' ? 'text-primary-color' : 'text-gray-700'} block px-4 py-2 text-sm hover:text-primary-color `}>Hire Overseas Development Team</p>
                 </Link>
                 <Link href="/service/desktop-software-development">
-                  <p className={`${router.pathname === '/service/desktop-software-development' ? 'text-primary-color' : 'text-gray-700'} block px-4 py-2 text-sm hover:bg-gray-100 `}>Desktop Software Development</p>
+                  <p className={`${router.pathname === '/service/desktop-software-development' ? 'text-primary-color' : 'text-gray-700'} block px-4 py-2 text-sm hover:text-primary-color `}>Desktop Software Development</p>
                 </Link>
                 <Link href="/service/web-development">
-                  <p className={`${router.pathname === '/service/web-development' ? 'text-primary-color' : 'text-gray-700'} block px-4 py-2 text-sm hover:bg-gray-100 `}>Website Development</p>
+                  <p className={`${router.pathname === '/service/web-development' ? 'text-primary-color' : 'text-gray-700'} block px-4 py-2 text-sm hover:text-primary-color `}>Website Development</p>
                 </Link>
                 <Link href="/service/software-development">
-                  <p className={`${router.pathname === '/service/software-development' ? 'text-primary-color' : 'text-gray-700'} block px-4 py-2 text-sm hover:bg-gray-100 `}>Software Development</p>
+                  <p className={`${router.pathname === '/service/software-development' ? 'text-primary-color' : 'text-gray-700'} block px-4 py-2 text-sm hover:text-primary-color `}>Software Development</p>
                 </Link>
                 <Link href="/service/mobile-software-development">
-                  <p className={`${router.pathname === '/service/mobile-software-development' ? 'text-primary-color' : 'text-gray-700'} block px-4 py-2 text-sm hover:bg-gray-100 `}>Mobile Software Development</p>
+                  <p className={`${router.pathname === '/service/mobile-software-development' ? 'text-primary-color' : 'text-gray-700'} block px-4 py-2 text-sm hover:text-primary-color `}>Mobile Software Development</p>
                 </Link>
                 <Link href="/service/digital-search-engine-marketing">
-                  <p className={`${router.pathname === '/service/digital-search-engine-marketing' ? 'text-primary-color' : 'text-gray-700'} block px-4 py-2 text-sm hover:bg-gray-100 `}>Digital / Search Engine Marketing</p>
+                  <p className={`${router.pathname === '/service/digital-search-engine-marketing' ? 'text-primary-color' : 'text-gray-700'} block px-4 py-2 text-sm hover:text-primary-color `}>Digital / Search Engine Marketing</p>
                 </Link>
                 <Link href="/service/managed-hosting-services">
-                  <p className={`${router.pathname === '/service/managed-hosting-services' ? 'text-primary-color' : 'text-gray-700'} block px-4 py-2 text-sm hover:bg-gray-100 `}>Managed Hosting Services</p>
+                  <p className={`${router.pathname === '/service/managed-hosting-services' ? 'text-primary-color' : 'text-gray-700'} block px-4 py-2 text-sm hover:text-primary-color `}>Managed Hosting Services</p>
                 </Link>
                 <Link href="/service/security-compliance">
-                  <p className={`${router.pathname === '/service/security-compliance' ? 'text-primary-color' : 'text-gray-700'} block px-4 py-2 text-sm hover:bg-gray-100 `}>Security & Compliance</p>
+                  <p className={`${router.pathname === '/service/security-compliance' ? 'text-primary-color' : 'text-gray-700'} block px-4 py-2 text-sm hover:text-primary-color `}>Security & Compliance</p>
                 </Link>
                 <Link href="/service/designing-branding">
-                  <p className={`${router.pathname === '/service/designing-branding' ? 'text-primary-color' : 'text-gray-700'} block px-4 py-2 text-sm hover:bg-gray-100 `}>Designing & Branding</p>
+                  <p className={`${router.pathname === '/service/designing-branding' ? 'text-primary-color' : 'text-gray-700'} block px-4 py-2 text-sm hover:text-primary-color `}>Designing & Branding</p>
                 </Link>
               </div>
             </div>
           </li>
           <li>
-            <Link href="/team" className={router.pathname === '/team' ? 'text-primary-color ' : 'text-gray-700'}>
+            <Link href="/team" className={`${router.pathname === '/team' ? 'text-primary-color ' : 'text-gray-700'} hover:text-primary-color`}>
               <span>Team</span>
             </Link>
           </li>
           <li>
-            <Link href="/blog" className={router.pathname === '/blog' ? 'text-primary-color ' : 'text-gray-700'}>
+            <Link href="/blog" className={`${router.pathname === '/blog' ? 'text-primary-color ' : 'text-gray-700'} hover:text-primary-color`}>
               <span>Blogs</span>
             </Link>
           </li>
           <li>
-            <Link href="/ourclients" className={router.pathname === '/ourclients' ? 'text-primary-color ' : 'text-gray-700'}>
+            <Link href="/ourclients" className={`${router.pathname === '/ourclients' ? 'text-primary-color ' : 'text-gray-700'} hover:text-primary-color`}>
               <span>Clients</span>
             </Link>
           </li>
           <li>
-            <Link href="/about" className={router.pathname === '/about' ? 'text-primary-color ' : 'text-gray-700'}>
+            <Link href="/about" className={`${router.pathname === '/about' ? 'text-primary-color ' : 'text-gray-700'} hover:text-primary-color`}>
               <span>About</span>
             </Link>
           </li>
 
-          <Button variant="primary" onClick={handleButtonClick}>
+          <Link href="/contact-qt">
+          <Button variant="primary">
             Contact Us
           </Button>
+          </Link>
+        
         </ul>
       </nav>
     </header>

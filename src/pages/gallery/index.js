@@ -26,8 +26,8 @@ function Gallery({ galleryImages }) {
                                         key={index}
                                         className={`w-full ${index % 2 === 0 ? 'aspect-video' : 'aspect-square'
                                             } mb-6 object-cover border border-gray-300 shadow-xl rounded-md`}
-                                        width="1000"
-                                        height="600"
+                                        width={1000}
+                                        height={800}
                                         alt="Description of the image"
                                     />
                                 })
@@ -49,16 +49,18 @@ export async function getServerSideProps(context) {
     // The data should come as props to the Services component.
 
     const galleryImages = [
-        { image: "/images/dummy.jpg" },
-        { image: "/images/dummy.jpg"},
-        { image: "/images/dummy.jpg"},
-        { image: "/images/dummy.jpg"},
-        { image: "/images/dummy.jpg"},
-        { image: "/images/dummy.jpg"},
-        { image: "/images/dummy.jpg"},
-        { image: "/images/dummy.jpg"},
-        { image: "/images/dummy.jpg"},
-        
+        { image: "/images/gallery/gallery1.png" },
+        { image: "/images/gallery/gallery2.jpg"},
+        { image: "/images/gallery/gallery3.jpg"},
+        { image: "/images/gallery/gallery4.png"},
+        { image: "/images/gallery/gallery5.png"},
+        { image: "/images/gallery/gallery6.webp"},
+        { image: "/images/gallery/gallery7.png"},
+        { image: "/images/gallery/gallery8.png"},
+        { image: "/images/gallery/gallery9.jpg"},
+        { image: "/images/gallery/gallery10.webp"},
+        { image: "/images/gallery/galery11.jpeg"},
+        { image: "/images/gallery/gallery12.jpeg"},
         
     ]
 
