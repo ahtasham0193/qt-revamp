@@ -34,6 +34,9 @@ body
     font-family: 'AvertaStd', sans-serif;
     color: #3B3A3C;
 }
+.text-gray-900-important {
+    color: #333!important; /* Replace with your desired color value */
+  }
 @media (max-width: 768px) {
     .sm\:responsive-header-list {
       position: fixed;

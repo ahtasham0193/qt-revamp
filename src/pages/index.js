@@ -16,19 +16,19 @@ function HomePage() {
       image: "/images/books.svg",
       title: "IT Staff Augmented Services",
       text: "With so many technologies to work upon, hiring becomes difficult when you are looking to fill a speciality. Why worry when you can simply go for IT Staff Augmentation? Don’t have the right person to get the job done in-house? You don't need to hire a permanent resource.",
-      slug: "/it-staff-augmented"
+      slug: "/service/it-staff-augmentation-services"
     },
     {
       image: "/images/website development/website-developmentImg.png",
       title: "Website Development Services",
       text: "Want to transform your website into a lead magnet? Want to turn every visitor into a buyer? Allow us to take things into our hands and revolutionize your digital journey like never before! Quaid Technologies offers a full range of custom Web Application Development Services that help design, build, and evolve web-based software.",
-      slug: "/website-development"
+      slug: "/service/web-development"
     },
     {
       image: "/images/Mobile Software Development/mobileSoftwaredevelopmentImg.png",
       title: "Mobile Software Development Services",
       text: "Our elite in-house team specializes in software engineering, product development, cloud architecture, and digital transformation. We rapidly and reliably deliver software that meets the needs of the world’s most demanding organizations.",
-      slug: "/mobile-software-development"
+      slug: "/service/mobile-software-development"
     },
   ]);
 
@@ -74,241 +74,237 @@ function HomePage() {
       video: "/videos/saima.mp4",
     },
   ]);
-
-  const [startIdx, setStartIdx] = useState(0);
-
-  const nextSlide = () => {
-    setStartIdx((prevStartIdx) =>
-      prevStartIdx + 2 >= portfolioCard.length ? 0 : prevStartIdx + 2
-    );
-  };
-
-  const prevSlide = () => {
-    setStartIdx((prevStartIdx) =>
-      prevStartIdx - 2 < 0 ? portfolioCard.length - 2 : prevStartIdx - 2
-    );
+  const [currentVideoIndex, setCurrentVideoIndex] = useState(null);
+  const handleVideoPlay = (index) => {
+    if (currentVideoIndex !== null && currentVideoIndex !== index) {
+      const prevVideo = document.getElementById(`video-${currentVideoIndex}`);
+      if (prevVideo) {
+        prevVideo.pause();
+      }
+    }
+    setCurrentVideoIndex(index);
   };
   return (
 
     <>
       <Head>
         <title>Top Managed IT Services Provider - Quaid Technologies</title>
-        <meta 
+        <meta
           name="description"
-          content="The best IT Service Provider and long-time Automated Solution Provider with a proven track record of delivering premium IT services in Pakistan. Visit Now!"/>
-        
+          content="The best IT Service Provider and long-time Automated Solution Provider with a proven track record of delivering premium IT services in Pakistan. Visit Now!" />
+
       </Head>
-    <Layout>
-      <div className="w-full  px-6">
-        <div className="container py-12 bg-[url('/images/hero-bg.png')] bg-no-repeat bg-[center_50px] sm:bg-[length:100%_100%] bg-[length:115%] ">
-          <div className="hero-section-content-wrapper max-w-[900px] mt-12 p-1">
-            <h1 className="hero-heading text-4xl sm:text-7xl leading-normal mt-2 sm:mt-12">
-              Creating Intelligent & Scalable Digital Solutions.
-            </h1>
-            <ul className="flex w-fit gap-14 my-10">
-              <li>
-                <span className="text-primary-color text-[1.5rem] font-bold">
-                  100+
-                </span>
-                <p>Project Completed</p>
-              </li>
-              <li>
-                <span className="text-primary-color text-[1.5rem] font-bold">
-                  30+
-                </span>
-                <p>Total Clients</p>
-              </li>
-              <li>
-                <span className="text-primary-color text-[1.5rem] font-bold">
-                  80+
-                </span>
-                <p>Tech Experts</p>
-              </li>
-            </ul>
+      <Layout>
+        <div className="w-full  px-6">
+          <div className="container py-12 bg-[url('/images/hero-bg.png')] bg-no-repeat bg-[center_50px] sm:bg-[length:100%_100%] bg-[length:115%] ">
+            <div className="hero-section-content-wrapper max-w-[900px] mt-12 p-1">
+              <h1 className="hero-heading text-4xl sm:text-7xl leading-normal mt-2 sm:mt-12">
+                Creating Intelligent & Scalable Digital Solutions.
+              </h1>
+              <ul className="flex w-fit gap-14 my-10">
+                <li>
+                  <span className="text-primary-color text-[1.5rem] font-bold">
+                    100+
+                  </span>
+                  <p>Project Completed</p>
+                </li>
+                <li>
+                  <span className="text-primary-color text-[1.5rem] font-bold">
+                    30+
+                  </span>
+                  <p>Total Clients</p>
+                </li>
+                <li>
+                  <span className="text-primary-color text-[1.5rem] font-bold">
+                    80+
+                  </span>
+                  <p>Tech Experts</p>
+                </li>
+              </ul>
 
-            <div className="flex mb-12">
-              <Link href="/portfolio">
-                <Button variant="primary">View Projects</Button>
-              </Link>
-              <Link href="/contact">
-                <Button variant="secondary" classes="ml-5">
-                  Contact Us
-                </Button>
-              </Link>
+              <div className="flex mb-12">
+                <Link href="/showcase">
+                  <Button variant="primary">View Projects</Button>
+                </Link>
+                <Link href="/contact-qt">
+                  <Button variant="secondary" classes="ml-5">
+                    Contact Us
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <section>
-        <Slider itemsInMobileView={6} itemsInDesktopView={6}>
-          <Image
-            src="/images/client1.png"
-            className="sm:h-[70px] h-[30px] w-auto block mx-auto"
-            width="100"
-            height="100"
-            alt="Description of the image"
-          />
-          <Image
-            src="/images/client2.png"
-            className="sm:h-[70px] h-[30px] w-auto block mx-auto"
-            width="100"
-            height="100"
-            alt="Description of the image"
-          />
-          <Image
-            src="/images/client3.png"
-            className="sm:h-[70px] h-[30px] w-auto block mx-auto"
-            width="100"
-            height="100"
-            alt="Description of the image"
-          />
-          <Image
-            src="/images/client4.png"
-            className="sm:h-[70px] h-[30px] w-auto block mx-auto"
-            width="100"
-            height="100"
-            alt="Description of the image"
-          />
-          <Image
-            src="/images/client5.png"
-            className="sm:h-[70px] h-[30px] w-auto block mx-auto"
-            width="100"
-            height="100"
-            alt="Description of the image"
-          />
-          <Image
-            src="/images/client6.png"
-            className="sm:h-[70px] h-[30px] w-auto block mx-auto"
-            width="100"
-            height="100"
-            alt="Description of the image"
-          />
-        </Slider>
-      </section>
+        <section>
+          <Slider itemsInMobileView={6} itemsInDesktopView={6}>
+            <Image
+              src="/images/client1.png"
+              className="sm:h-[70px] h-[30px] w-auto block mx-auto"
+              width="100"
+              height="100"
+              alt="Description of the image"
+            />
+            <Image
+              src="/images/client2.png"
+              className="sm:h-[70px] h-[30px] w-auto block mx-auto"
+              width="100"
+              height="100"
+              alt="Description of the image"
+            />
+            <Image
+              src="/images/client3.png"
+              className="sm:h-[70px] h-[30px] w-auto block mx-auto"
+              width="100"
+              height="100"
+              alt="Description of the image"
+            />
+            <Image
+              src="/images/client4.png"
+              className="sm:h-[70px] h-[30px] w-auto block mx-auto"
+              width="100"
+              height="100"
+              alt="Description of the image"
+            />
+            <Image
+              src="/images/client5.png"
+              className="sm:h-[70px] h-[30px] w-auto block mx-auto"
+              width="100"
+              height="100"
+              alt="Description of the image"
+            />
+            <Image
+              src="/images/client6.png"
+              className="sm:h-[70px] h-[30px] w-auto block mx-auto"
+              width="100"
+              height="100"
+              alt="Description of the image"
+            />
+          </Slider>
+        </section>
 
-      <section className="sm:rounded sm:p-10 mt-10 bg-light-primary-color" id="services-section">
-        <div className="container">
-          <div className="py-12 px-6 w-full h-[500] ">
-            <h1 className="section-heading  text-4xl leading-normal font-bold text-center ">
-              Everything you need to grow your business
-            </h1>
-            <p className="max-w-[700px] my-[1rem] w-fit block m-auto leading-relaxed text-center">
-            M/S Quaid Technologies has been providing Software Development & IT Services since 1998, with the merger of M/S PakCyber Group in 2013. We have been the technical solution provider for many industries, and transitioned them from manual procedures to paperless, full automated solutions.
-            </p>
+        <section className="sm:rounded sm:p-10 mt-10 bg-light-primary-color" id="services-section">
+          <div className="container">
+            <div className="py-12 px-6 w-full h-[500] ">
+              <h1 className="section-heading  text-4xl leading-normal font-bold text-center ">
+                Everything you need to grow your business
+              </h1>
+              <p className="max-w-[700px] my-[1rem] w-fit block m-auto leading-relaxed text-center">
+                M/S Quaid Technologies has been providing Software Development & IT Services since 1998, with the merger of M/S PakCyber Group in 2013. We have been the technical solution provider for many industries, and transitioned them from manual procedures to paperless, full automated solutions.
+              </p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 p-4">
-              {servicesCard?.map((card, index) => {
-                return (
-                  <div className="overflow-hidden max-w-sm mx-auto my-4 border border-slate-200 rounded" key={index}>
-                    <div className="w-full p-3 bg-white flex items-center justify-center">
-                      <Image
-                        src={card.image}
-                        className="w-auto h-[150px] object-contain"
-                        width="200"
-                        height="200"
-                        alt="Description of the image"
-                      />
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 p-4">
+                {servicesCard?.map((card, index) => {
+                  return (
+                    <div className="overflow-hidden max-w-sm mx-auto my-4 border border-slate-200 rounded" key={index}>
+                      <div className="w-full p-3 bg-white flex items-center justify-center">
+                        <Image
+                          src={card.image}
+                          className="w-auto h-[150px] object-contain"
+                          width="200"
+                          height="200"
+                          alt="Description of the image"
+                        />
+                      </div>
+                      <div className="p-5">
+                        <h2 className="text-xl font-bold">{card.title}</h2>
+
+                        <p className="my-5">{card.text}</p>
+
+                        <Link href={card.slug}>
+                          <span className="font-semibold cursor-pointer">Learn more <IoIosArrowDroprightCircle className="inline-block align-middle text-primary-color text-2xl" /></span>
+
+                        </Link>
+                      </div>
                     </div>
-                    <div className="p-5">
-                      <h2 className="text-xl font-bold">{card.title}</h2>
-
-                      <p className="my-5">{card.text}</p>
-
-                      <Link href={card.slug}>
-                        <span className="font-semibold cursor-pointer">Learn more <IoIosArrowDroprightCircle className="inline-block align-middle text-primary-color text-2xl"/></span> 
-                       
-                      </Link>
-                    </div>
-                  </div>
-                );
-              })}
+                  );
+                })}
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="sm:rounded sm:p-10" id="services-section">
-        <div className="container">
-          <div className="py-12 px-6 w-full">
-            <h1 className="section-heading  text-4xl leading-normal font-bold text-center ">
-              Showcasing our cutting-edge projects
-            </h1>
-            <p className="max-w-[700px] my-[1rem] w-fit block m-auto leading-relaxed text-center">
-            Being a Development & Technical partner, Quaid Technologies is part of various organisations and projects around the globe. We have provided our services to many enterprises & organisations in both the public and private sectors. Below is a snippet of our work.
-            </p>
-            <section className="flex flex-col justify-center items-center py-16 w-full sm:flex-row">
-              <div className="sm:w-[30%] w-full h-auto flex items-center">
-              <div className="w-full">
-            <h2 className="section-heading  text-4xl leading-normal font-bold mb-2 text-center sm:text-left">Our Projects</h2>
-            <Link href="/portfolio" className="w-full block text-center sm:w-auto sm:flex sm:text-left">
-                        <span className="font-semibold cursor-pointer ml-2">See all projects <IoIosArrowDroprightCircle className="inline-block align-middle text-primary-color text-2xl"/></span>
-            </Link>
-            </div>
-            </div>
-      <div className="w-full sm:w-[70%] relative">
+        <section className="sm:rounded sm:p-10" id="services-section">
+          <div className="container">
+            <div className="py-12 px-6 w-full">
+              <h1 className="section-heading  text-4xl leading-normal font-bold text-center ">
+                Showcasing our cutting-edge projects
+              </h1>
+              <p className="max-w-[700px] my-[1rem] w-fit block m-auto leading-relaxed text-center">
+                Being a Development & Technical partner, Quaid Technologies is part of various organisations and projects around the globe. We have provided our services to many enterprises & organisations in both the public and private sectors. Below is a snippet of our work.
+              </p>
+              <section className="flex flex-col justify-center items-center py-16 w-full sm:flex-row">
+                <div className="sm:w-[30%] w-full h-auto flex items-center">
+                  <div className="w-full">
+                    <h2 className="section-heading  text-4xl leading-normal font-bold mb-2 text-center sm:text-left">Our Projects</h2>
+                    <Link href="/showcase" className="w-full block text-center sm:w-auto sm:flex sm:text-left">
+                      <span className="font-semibold cursor-pointer ml-2">See all projects <IoIosArrowDroprightCircle className="inline-block align-middle text-primary-color text-2xl" /></span>
+                    </Link>
+                  </div>
+                </div>
+                <div className="w-full sm:w-[70%] relative">
 
-      <Carousel itemsToShowDesktop={2} itemsToShowMobile={1} margin={30} speed={2000}>
-              {portfolioCard?.map((item,index) => {
-                return (
-                  <div className="sm:w-full w-[95%] h-[500px] rounded-lg overflow-hidden shadow-md" key={index}>
-                   <div className="w-full h-auto">
-                    <div className="w-full p-3 bg-white flex items-center justify-center">
-                      <Image
-                        src={item.image}
-                        className="w-auto h-[150px] md:h-[150px]"
-                        width="200"
-                        height="200"
-                        alt="Description of the image"
-                        quality='100'
-                      />
-                    </div>
-                    <div className="p-5">
-                      <h2 className="text-xl font-bold">{item.title}</h2>
-                      <p className="my-5">{item.text}</p>
-                    </div>
-                  </div>
-                  </div>
-                );
-              })}
-            </Carousel>
-      </div>
-    </section>
-            
+                  <Carousel itemsToShowDesktop={2} itemsToShowMobile={1} margin={30} speed={2000}>
+                    {portfolioCard?.map((item, index) => {
+                      return (
+                        <div className="sm:w-full w-[95%] h-[500px] rounded-lg overflow-hidden shadow-md" key={index}>
+                          <div className="w-full h-auto">
+                            <div className="w-full p-3 bg-white flex items-center justify-center">
+                              <Image
+                                src={item.image}
+                                className="w-auto h-[150px] md:h-[150px]"
+                                width="200"
+                                height="200"
+                                alt="Description of the image"
+                                quality='100'
+                              />
+                            </div>
+                            <div className="p-5">
+                              <h2 className="text-xl font-bold">{item.title}</h2>
+                              <p className="my-5">{item.text}</p>
+                            </div>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </Carousel>
+                </div>
+              </section>
+
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="sm:rounded sm:p-10 bg-light-primary-color">
-        <div className="container">
-          <div className="py-12 px-6 w-full">
-            <h1 className="section-heading  text-4xl leading-normal font-bold text-center ">
-              Happy Clients
-            </h1>
-            <p className="max-w-[700px] my-[1rem] w-fit block m-auto leading-relaxed text-center">
-              Our satisfied clients are a testament to our commitment to excellence. Their success is our greatest achievement.
-            </p>
+        <section className="sm:rounded sm:p-10 bg-light-primary-color">
+          <div className="container">
+            <div className="py-12 px-6 w-full">
+              <h1 className="section-heading  text-4xl leading-normal font-bold text-center ">
+                Happy Clients
+              </h1>
+              <p className="max-w-[700px] my-[1rem] w-fit block m-auto leading-relaxed text-center">
+                Our satisfied clients are a testament to our commitment to excellence. Their success is our greatest achievement.
+              </p>
 
-            <Carousel itemsToShowDesktop={1.7} itemsToShowMobile={1} margin={30} speed={2000}>
-              {clients?.map((item) => {
-                return (
-                  <div className="w-full sm:h-[500px] h-[250px] rounded-lg overflow-hidden shadow-md">
-                    <Video
-                      videoSrc={item.video}
+              <Carousel itemsToShowDesktop={1.7} itemsToShowMobile={1} margin={30} speed={2000}>
+                {clients?.map((item, index) => (
+                  <div key={index} className="w-full sm:h-[500px] h-[250px] rounded-lg overflow-hidden shadow-md">
+                    <video
+                      id={`video-${index}`}
+                      src={item.video}
                       controls
                       width="320"
                       height="240"
                       className="w-full h-full object-cover"
+                      onPlay={() => handleVideoPlay(index)}
                     />
                   </div>
-                );
-              })}
-            </Carousel>
+                ))}
+              </Carousel>
+            </div>
+            <ContactUsForm />
           </div>
-          <ContactUsForm />
-        </div>
-      </section>
-    </Layout>
+        </section>
+      </Layout>
     </>
   );
 }

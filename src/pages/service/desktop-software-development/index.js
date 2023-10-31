@@ -168,19 +168,19 @@ export async function getServerSideProps(context) {
         image: "/images/books.svg",
         title: "IT Staff Augmentation Services",
         text: "With so many technologies to work upon, hiring gets difficult when you are looking for a specialty. Why worrying when you can simply go for IT Staff Augmentation?",
-        slug: "/it-staff-augmented"
+        slug: "/service/it-staff-augmentation-services"
       },
       {
         image: "/images/Digital Marketing/digitalMarketingImg.png",
         title: "Digital Marketing",
         text: "Grow a bigger, booming business in the world of the digital market with our first-rate digital marketing services. Get your hands on our tailored and exceptional digital marketing strategy that helps businesses to",
-        slug: "/digital-marketing"
+        slug: "/service/designing-branding"
       },
       {
         image: "/images/website development/website-developmentImg.png",
         title: "Web Development",
         text: "We provide client-focused, customer-centric, Web Application Development Solutions that deliver tangible business results.",
-        slug: "/website-development"
+        slug: "/service/web-development"
       },
     ];
   

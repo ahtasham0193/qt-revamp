@@ -8,7 +8,7 @@ const initialState = {
     blogsData: [],
     trendingBlog: {},
     blogDetail: {},
-    relatedBlogs: []
+    relatedBlogs: [],
 }
 
 
@@ -41,6 +41,32 @@ export const fetchTrendBlogData = createAsyncThunk('fetchTrendBlogData',
 export const fetchBlogDetail = createAsyncThunk('fetchBlogDetail',
     async (slug) => {
         return await api.get(`blog/${slug}`).then(res => {
+            if(!res.hasErrors()) {
+                return res.data
+            }
+            else {
+                throw res.errors[0].err?.text
+            }
+        })
+    }
+);
+
+export const postContactusForm = createAsyncThunk('postContactusForm',
+    async (data) => {
+        return await api.post(`contact-us`,data).then(res => {
+            if(!res.hasErrors()) {
+                return res.data
+            }
+            else {
+                throw res.errors[0].err?.text
+            }
+        })
+    }
+);
+
+export const postPortfolioForm = createAsyncThunk('postPortfolioForm',
+    async (data) => {
+        return await api.post(`contact-us/portfolio`,data).then(res => {
             if(!res.hasErrors()) {
                 return res.data
             }
@@ -84,6 +110,12 @@ const global_items = createSlice({
         })
         builder.addCase(fetchRelatedBlogData.fulfilled, (state, action) => {
             state.relatedBlogs = action.payload;
+        })
+        builder.addCase(postContactusForm.fulfilled, (state, action) => {
+            
+        })
+        builder.addCase(postPortfolioForm.fulfilled, (state, action) => {
+            
         })
     }
 })

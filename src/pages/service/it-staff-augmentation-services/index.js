@@ -57,15 +57,15 @@ const ItStaffAugmented = ({ processCards, clients, servicesCard }) => {
             Unlock your projects’ potential with our team of highly trained and motivated professionals! Our IT staff augmented services bring together top talent, equipped with the latest skills and driven by a passion for excellence, to ensure your software development initiatives are executed flawlessly.
             </p>
             <div className="mt-10 max-w-[600px] mx-auto">
-              <Accordion title="Web Developer">
+              <Accordion title="Web Developers">
               We have an excellent team of web developers, and will provide you with both frontend and backend developers who can work according to your time zone.
               </Accordion>
-              <Accordion title="Mobile App Developer">Mobile app development is an entirely different niche in the digital world. A web developer is not always able to design mobile apps, which requires a different set of skills and experience. We house some of the world's best tech geniuses who specialize in those exact skills to get the job done.</Accordion>
+              <Accordion title="Mobile App Developers">Mobile app development is an entirely different niche in the digital world. A web developer is not always able to design mobile apps, which requires a different set of skills and experience. We house some of the world's best tech geniuses who specialize in those exact skills to get the job done.</Accordion>
               <Accordion title="Designers">The purpose of web content is to attract an audience, which can only be achieved if the content is appealing. Whether you want to design a web page, a website, an app, or social media content, we house an impeccable talent pool so that you choose from the best.</Accordion>
               <Accordion title="DevOps">Assist your developers with the best of our best development operations. To ensure that all operations on your end run smoothly, we provide outstanding automation, testing, integration, and management services.</Accordion>
               <Accordion title="Quality Assurance Teams">Quality of work determines any company's credibility. When you deliver a product, you want to ensure it's your best effort. Maybe you have a good team of in-house computer engineers, but you still want someone to review your work. Some companies have a separate quality assurance department, but some cannot afford to hire full-time employees in-house. For such a job, you can reliably turn to our augmented team of QAs.</Accordion>
               <Accordion title="Client Management Teams">No matter how good your product development may be, if your relationship with your clients is poor, you will not be able to stay in the market for long. To establish great client relations and effective communication, you can contact our IT staff augmentation services to hire a client management team.</Accordion>
-              <Accordion title="Project Manager">Are you supervising every project your team is working on? We can take the burden off your shoulders by providing you with well-trained project managers. They will make sure that your teams are collaborating efficiently, clients are satisfied, and that the project is being delivered on time by scheduling and keeping a record of everything.</Accordion>
+              <Accordion title="Project Managers">Are you supervising every project your team is working on? We can take the burden off your shoulders by providing you with well-trained project managers. They will make sure that your teams are collaborating efficiently, clients are satisfied, and that the project is being delivered on time by scheduling and keeping a record of everything.</Accordion>
               <Accordion title="Business Analysts">Marketing is the key to any successful business. If your company is in the industry looking to boost your business, attract more clients, and create better jobs, then you must have a dedicated business management team. You’ll find some of the best-qualified people for managing all your marketing hassles here at Quaid Technologies.</Accordion>
               
             
@@ -105,7 +105,10 @@ const ItStaffAugmented = ({ processCards, clients, servicesCard }) => {
             <h3 className="font-bold text-xl mb-4 sm:mb-0">
               Build great products with our Augmented Reality Services
             </h3>
+            <Link href="/contact-qt">
+            
             <Button variant="primary">Get Started</Button>
+            </Link>
           </div>
         </div>
       </div>
@@ -120,12 +123,12 @@ const ItStaffAugmented = ({ processCards, clients, servicesCard }) => {
               {clients?.map((item) => {
                 return (
                   <div className=" overflow-hidden my-4 border border-slate-200 rounded h-full">
-                    <div className="w-full h-56 bg-white flex items-center justify-center">
+                    <div className="w-full h-62 bg-white flex items-center justify-center">
                       <Image
                         src={item.image}
-                        className="w-full h-full object-cover"
-                        width="200"
-                        height="200"
+                        className="w-full h-full object-contain"
+                        width="500"
+                        height="400"
                         alt="Description of the image"
                       />
                     </div>
@@ -211,7 +214,7 @@ export async function getServerSideProps(context) {
       },
       {
         stats: 3,
-        title: "Have A One-On-One Interrogation",
+        title: "Have A One-On-One Interview",
         text: "You can interview our candidates one on one. We will arrange an online interview session so that you can have a satisfactory conversation. No matter what part of the world you are in, you will be fully facilitated.",
       },
       {
@@ -223,22 +226,22 @@ export async function getServerSideProps(context) {
   
     const clients = [
       {
-        image: "/images/sample1.png",
+        image: "/images/It-staff-Augmentation/hassle-free-online-working.jpg",
         title: "Hassle-Free Online Working",
         text: "We know no horizons in the digital world. You can work from anywhere in the world with your team sitting at an entirely different place and time zone. We ensure that they are provided with an over-the-top working environment.",
       },
       {
-        image: "/images/sample2.png",
+        image: "/images/It-staff-Augmentation/latest-equipment-training.jpg",
         title: "Latest Equipment And Training",
         text: "We equip our staff with the latest technologies and devices. We also provide proper training to our staff so they could deliver matcless and par excellence work.",
       },
       {
-        image: "/images/sample1.png",
+        image: "/images/It-staff-Augmentation/legal-matters-management.jpg",
         title: "Legal Matters Management",
         text: "We take care of all the HR, accounts, and legal matters of our staff. We are there for you according to your need whether they are of short-term or long-term. You can just consider us an extension of your company which you can scale up or down according to your requirements.",
       },
       {
-        image: "/images/sample1.png",
+        image: "/images/It-staff-Augmentation/availability.jpg",
         title: "24/7 Availabliity",
         text: "We are here 24/7 to answer any of your queries and concerns. Contact us today to get the unprecedented IT staff augmentation services.",
       }
@@ -249,19 +252,19 @@ export async function getServerSideProps(context) {
         image: "/images/software development/software-developmentImg.png",
         title: "Software Development",
         text: "We provide client-focused, customer-centric, Web Application Development Solutions that deliver tangible business results.",
-        slug: "/software-development"
+        slug: "/service/software-development"
       },
       {
         image: "/images/Hire Overseas/hireOverseasImg.png",
         title: "Hire Overseas Development Team",
         text: "Our Cloud Team service allows you to hire on-site or offshore technical resources without being constrained by distance or international borders.",
-        slug: "/hire-overseas"
+        slug: "/service/hire-overseas-development-team"
       },
       {
         image: "/images/Security Compliance/security-complianceImg.png",
         title: "Security & Compliance",
         text: "We can help your business with our managed network security services to meet your compliance needs. Our experienced team make sure that your servers are in good hands.",
-        slug: "/security-compliance"
+        slug: "/service/security-compliance"
       },
     ];
   

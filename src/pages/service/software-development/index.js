@@ -172,19 +172,19 @@ export async function getServerSideProps(context) {
         image: "/images/Cloud Based hosting/cloudBasedImg.png",
         title: "Managed Hosting Services",
         text: "Our managed hosting guarantees unmatched performance, reliability and choice with support that acts as your extended team.",
-        slug: "/cloud-based-hosting"
+        slug: "/service/managed-hosting-services"
       },
       {
         image: "/images/website development/website-developmentImg.png",
         title: "Web Development",
         text: "We provide client-focused, customer-centric, Web Application Development Solutions that deliver tangible business results.",
-        slug: "/website-development"
+        slug: "/service/web-development"
       },
       {
         image: "/images/Digital Marketing/digitalMarketingImg.png",
         title: "Digital Marketing",
         text: "Grow a bigger, booming business in the world of the digital market with our first-rate digital marketing services. Get your hands on our tailored and exceptional digital marketing strategy that helps businesses to",
-        slug: "/digital-marketing"
+        slug: "/service/digital-search-engine-marketing"
       },
     ];
   

@@ -48,7 +48,7 @@ const BrandingAndDesigning = ({servicesCard}) => {
             </section>
             <section className="mt-7">
                 <div className="mt-10 max-w-[600px] mx-auto">
-                    <Accordion title="Web Desigining">
+                    <Accordion title="Web Designing">
                     A beautiful custom website is important for your online business presence to succeed. We offer all types of website designs like responsive, mobile, micro sites, WordPress etc. Our websites are not only highly customized and unique to every business, but also very affordable. Our creative designers see a project through to the end no matter how much time and effort it takes. That’s why our artists keep pace with the changes in the industry and provide dedicated work to our many clients. 
                     </Accordion>
                     <Accordion title="Graphic Designing">Make your business outstanding with our graphic design services. With an impressive logo, brochure, packaging and banner designs, we show your customers how unique and profound you are. Our creative minds utilize all of the insight, inventiveness, latest tools, softwares and visual depiction experience to make wonderful representations of your organization. We are excelling in printing materials, design, flyers, banners, infographics, business cards and report design. We love to work on projects like packaging designs and magazine designs.</Accordion>
@@ -123,19 +123,19 @@ export async function getServerSideProps(context) {
         image: "/images/books.svg",
         title: "IT Staff Augmentation Services",
         text: "With so many technologies to work upon, hiring gets difficult when you are looking for a specialty. Why worrying when you can simply go for IT Staff Augmentation?",
-        slug: "/it-staff-augmented"
+        slug: "/service/it-staff-augmentation-services"
       },
       {
         image: "/images/Security Compliance/security-complianceImg.png",
         title: "Security & Compliance",
         text: "We can help your business with our managed network security services to meet your compliance needs. Our experienced team make sure that your servers are in good hands.",
-        slug: "/security-compliance"
+        slug: "/service/security-compliance"
       },
       {
         image: "/images/Hire Overseas/hireOverseasImg.png",
         title: "Hire Overseas Development Team",
         text: "Our Cloud Team service allows you to hire on-site or offshore technical resources without being constrained by distance or international borders.",
-        slug: "/hire-overseas"
+        slug: "/service/hire-overseas-development-team"
       },
     ];
   

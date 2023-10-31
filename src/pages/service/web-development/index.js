@@ -59,7 +59,7 @@ const WebsiteDevelopment = ({ servicesCard }) => {
                                 <Accordion title="We Provide You with a Secure Website">
                                 With an amazing website comes the fear of data leaks or hacking—but not not when it’s created at the hands of our team! Trust us when we say our experts make sure no data leaks or security breaches will happen to your irresistible website.
                                 </Accordion>
-                                <Accordion title="We Won't Let You be Obsolete">Our team gives you timely updates on evolving patterns in the market. This way, you stay ahead of the game and remain relevant no matter the hour.</Accordion>
+                                <Accordion title="We Won't Let You become Obsolete">Our team gives you timely updates on evolving patterns in the market. This way, you stay ahead of the game and remain relevant no matter the hour.</Accordion>
                                 <Accordion title="We Let You Be You">Every brand and product is different, and no template fits all. Hence, we believe in letting you be you and putting your best step forward with our customized web development services. This way, you get to greet your audience with your authentic brand spirit, which instantly boosts your product.</Accordion>
                                 <Accordion title="We Make Sure You Boost Your Product Performance">Staying relevant in the business world is very important. When businesses don't revise their product according to industry trends, they quickly become obsolete. We help you stay updated and hence boost product performance per the industry trends.</Accordion>
                                 <Accordion title="We Provide a Safe & User-Friendly Experience">Trust us when we say using your website will be a memorable experience for your clients. Our web development experts make sure there is adequate security on the website as well as post-purchase care. This way, they get a safe and user-friendly experience and are sure to keep coming back!</Accordion>
@@ -198,19 +198,19 @@ export async function getServerSideProps(context) {
             image: "/images/Mobile Software Development/mobileSoftwaredevelopmentImg.png",
             title: "Mobile Software Development",
             text: "The company leads the state of the art Mobile Software Development, enabling seamless user experiences across all modern platforms and devices.",
-            slug: "/mobile-software-development"
+            slug: "/service/mobile-software-development"
         },
         {
             image: "/images/Hire Overseas/hireOverseasImg.png",
             title: "Hire Overseas Development Team",
             text: "Our Cloud Team service allows you to hire on-site or offshore technical resources without being constrained by distance or international borders.",
-            slug: "/hire-overseas"
+            slug: "/service/hire-overseas-development-team"
         },
         {
             image: "/images/Desktop Software/desktopSoftwareImg.png",
             title: "Desktop Software Development",
             text: "We provide leading software development services to our worldwide clients. Quaid Technology is the expert partner you need to deliver innovative and competitive results.",
-            slug: "/desktop-software"
+            slug: "/service/desktop-software-development"
         },
     ];
 

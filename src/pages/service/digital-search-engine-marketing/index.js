@@ -105,7 +105,7 @@ const DigitalMarketing = ({servicesCard}) => {
                                 </li>
                             </ul>
                             <p className="mt-5  font-normal leading-7 text-base">
-                                As far as digital marketing services are concerned, this is inclusive of but not limited to the following;
+                                As far as digital marketing services are concerned, these include but are not limited to the following:
                             </p>
                             <ul className=" list-disc mt-5 pl-4">
                                 <li className="font-normal leading-7 text-base">
@@ -225,15 +225,15 @@ const DigitalMarketing = ({servicesCard}) => {
             </section>
             <section>
                 <div className="mt-10 max-w-[600px] mx-auto">
-                    <Accordion title="Excellence Of Years:">
+                    <Accordion title="Years of Excellence:">
                     We have been delivering excellent and effective digital marketing services for over a decade. Our enriched experience speaks for our quality services that actually generate more and more leads.
                     </Accordion>
-                    <Accordion title="Bespoke Digital Marketing Campaigns:">We know very well that every business has different goals and target customers. That's why we don't use the cookie-cutter approach. Instead, we design customized, bespoke digital marketing campaigns that could actually voice your concerns and drive more traffic to your sites.</Accordion>
+                    <Accordion title="Customized Digital Marketing Campaigns:">We know very well that every business has different goals and target customers. That's why we don't use the cookie-cutter approach. Instead, we design customized, bespoke digital marketing campaigns that could actually voice your concerns and drive more traffic to your sites.</Accordion>
                     <Accordion title="Seasoned Digital Marketers:">Our seasoned team of expert digital marketers is our pride. With full knowledge on the nuts and bolts of the digital marketing industry, our certified marketing specialists design and execute a digital marketing strategy that is aligning with your business's needs.</Accordion>
-                    <Accordion title="A Large Number Of Satisfied Clients:">We have never failed to impress a large number of businesses with our quality services. That’s why our valued clients have always provided us with positive feedback. You can check our portfolio to learn more.</Accordion>
+                    <Accordion title="Numerous Satisfied Clients:">We have never failed to impress a large number of businesses with our quality services. That’s why our valued clients have always provided us with positive feedback. You can check our portfolio to learn more.</Accordion>
                     <Accordion title="Budget-Friendly Rates:">One of the biggest reasons for choosing us is our market competitive services charges. We have always succeeded in giving our clients cost-effective services that could give their businesses a greater boost.</Accordion>
                     <Accordion title="Best Customer Support:">Our 24/7 customer support is readily available to listen to all your relevant concerns and serve you in the best possible manner. Our excellent customer support team goes above and beyond to meet their requirements and surpass their expectations.</Accordion>
-                    <Accordion title="Wide-Ranging Services:">Our unrivaled and wide-ranging digital marketing services encompass the following:</Accordion>
+                    <Accordion title="Wide-Ranging Services:">Our unrivaled and wide-ranging digital marketing services encompass the following.</Accordion>
                 </div>
                 <div className="w-full p-6">
                     <div className="w-full">
@@ -373,7 +373,7 @@ const DigitalMarketing = ({servicesCard}) => {
                                 </li>
                             </ul>
                             <p className="mt-5 font-normal leading-7 text-base">
-                            Consistent content makes your brand more credible, and reliable. Because of this, content marketing is incredibly important for your business for client retention, raising brand awareness as well as increasing SERP rankings..
+                            Consistent content makes your brand more credible, and reliable. Because of this, content marketing is incredibly important for your business for client retention, raising brand awareness as well as increasing SERP rankings.
                             </p>
                             <p className="mt-5 font-normal leading-7 text-base">
                             Our content creators know how to produce high-quality content from scratch that is SEO-friendly, readable, and could also engage potential customers. Along with that, our specialists do the right advertising of your content to give you real value for your hard-earned.
@@ -574,19 +574,19 @@ export async function getServerSideProps(context) {
         image: "/images/Mobile Software Development/mobileSoftwaredevelopmentImg.png",
         title: "Mobile Software Development",
         text: "The company leads the state of the art Mobile Software Development, enabling seamless user experiences across all modern platforms and devices.",
-        slug: "/mobile-software-development"
+        slug: "/service/mobile-software-development"
       },
       {
         image: "/images/Desktop Software/desktopSoftwareImg.png",
         title: "Desktop Software Development",
         text: "We provide leading software development services to our worldwide clients. Quaid Technology is the expert partner you need to deliver innovative and competitive results.",
-        slug: "/desktop-software"
+        slug: "/service/desktop-software-development"
       },
       {
         image: "/images/Security Compliance/security-complianceImg.png",
         title: "Security & Compliance",
         text: "We can help your business with our managed network security services to meet your compliance needs. Our experienced team make sure that your servers are in good hands.",
-        slug: "/security-compliance"
+        slug: "/service/security-compliance"
       },
     ];
   

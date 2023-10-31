@@ -50,11 +50,11 @@ const HireOverseas = ({servicesCard}) => {
                                 <h2 className="text-xl sm:text-3xl font-semibold text-center">The Process</h2>
                                 <div className="mx-auto mb-8 w-full mt-12">
                                     <Image
-                                        src="/images/Hire Overseas/processImg.png"
+                                        src="/images/Hire Overseas/process.png"
                                         alt="Image"
                                         className="w-full max-w-[850px] m-auto object-contain"
-                                        width={500}
-                                        height={300}
+                                        width={900}
+                                        height={600}
                                     />
                                 </div>
                             </div>
@@ -203,19 +203,19 @@ export async function getServerSideProps(context) {
             image: "/images/Cloud Based hosting/cloudBasedImg.png",
             title: "Managed Hosting Services",
             text: "Our managed hosting guarantees unmatched performance, reliability and choice with support that acts as your extended team.",
-            slug: "/cloud-based-hosting"
+            slug: "/service/managed-hosting-services"
           },
           {
             image: "/images/Mobile Software Development/mobileSoftwaredevelopmentImg.png",
             title: "Mobile Software Development",
             text: "The company leads the state of the art Mobile Software Development, enabling seamless user experiences across all modern platforms and devices.",
-            slug: "/mobile-software-development"
+            slug: "/service/mobile-software-development"
           },
           {
             image: "/images/Branding And Designing/brandingImg.png",
             title: "Designing & Branding",
             text: "We offer a full-service branding and custom design strategy to our clients , we help you bring your ideas to life.",
-            slug: "/branding-and-designing"
+            slug: "/service/designing-branding"
           },
     ];
   

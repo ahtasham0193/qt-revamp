@@ -142,19 +142,19 @@ export async function getServerSideProps(context) {
         image: "/images/Branding And Designing/brandingImg.png",
         title: "Designing & Branding",
         text: "We offer a full-service branding and custom design strategy to our clients , we help you bring your ideas to life.",
-        slug: "/branding-and-designing"
+        slug: "/service/designing-branding"
       },
       {
         image: "/images/website development/website-developmentImg.png",
         title: "Web Development",
         text: "We provide client-focused, customer-centric, Web Application Development Solutions that deliver tangible business results.",
-        slug: "/website-development"
+        slug: "/service/web-development"
       },
       {
         image: "/images/Mobile Software Development/mobileSoftwaredevelopmentImg.png",
             title: "Mobile Software Development",
             text: "The company leads the state of the art Mobile Software Development, enabling seamless user experiences across all modern platforms and devices.",
-            slug: "/mobile-software-development"
+            slug: "/service/mobile-software-development"
       },
     ];
   
