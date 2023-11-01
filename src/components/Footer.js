@@ -40,6 +40,13 @@ function Footer() {
                       </span>
                     </Link>
                   </li>
+                  <li>
+                    <Link href="/gallery" className={`${router.pathname === '/showcase' ? 'text-primary-color' : 'text-gray-700'} hover:text-primary-color`}>
+                      <span>
+                        Life @ QuaidTech
+                      </span>
+                    </Link>
+                  </li>
                 </ul>
               </div>
               <div className="col-span-2 sm:col-span-3 p-4">

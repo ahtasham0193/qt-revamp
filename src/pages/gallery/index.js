@@ -10,10 +10,10 @@ function Gallery({ galleryImages }) {
                 <div className="w-full">
                     <div className="container">
                         <div className="w-full p-4">
-                            <h1 className="hero-heading text-4xl text-center sm:text-7xl leading-normal mt-2 sm:mt-12">Gallery</h1>
+                            <h1 className="hero-heading text-4xl text-center sm:text-7xl leading-normal mt-2 sm:mt-12">Life @ QuaidTech</h1>
                             <p className=' max-w-[700px] m-auto text-sm sm:text-lg text-center mt-5'>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia  <br />
-                                molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+                            Take a look through our gallery, and get to know the people and events  <br />
+                            that make QuaidTech great, and who can help you on your digital journey.
                                 
                               
                             </p>
@@ -50,17 +50,17 @@ export async function getServerSideProps(context) {
 
     const galleryImages = [
         { image: "/images/gallery/gallery1.png" },
-        { image: "/images/gallery/gallery2.jpg"},
+        { image: "/images/gallery/gallery2.png"},
         { image: "/images/gallery/gallery3.jpg"},
-        { image: "/images/gallery/gallery4.png"},
-        { image: "/images/gallery/gallery5.png"},
-        { image: "/images/gallery/gallery6.webp"},
-        { image: "/images/gallery/gallery7.png"},
-        { image: "/images/gallery/gallery8.png"},
-        { image: "/images/gallery/gallery9.jpg"},
+        { image: "/images/gallery/gallery4.jpg"},
+        { image: "/images/gallery/gallery5.jpg"},
+        { image: "/images/gallery/gallery6.png"},
+        { image: "/images/gallery/gallery7.jpg"},
+        { image: "/images/gallery/gallery8.jpg"},
+        { image: "/images/gallery/gallery9.png"},
         { image: "/images/gallery/gallery10.webp"},
-        { image: "/images/gallery/galery11.jpeg"},
-        { image: "/images/gallery/gallery12.jpeg"},
+        { image: "/images/gallery/galery11.webp"},
+        { image: "/images/gallery/gallery12.jpg"},
         
     ]
 

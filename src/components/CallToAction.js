@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 import Button from './Button'
 const CallToAction = () => 
@@ -10,8 +11,10 @@ const CallToAction = () =>
                 <h2 className='text-xl sm:text-4xl font-bold text-center '>
                 Are you ready to grow your business with us?
                 </h2>
-                <p className='mt-4 sm:mt-8 text-center'>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy.</p>
+                <p className='mt-4 sm:mt-8 text-center'>Excellence is in our history -- let it be a part of yours, too.</p>
+                <Link href="/contact-qt">
                 <Button variant="primary" classes="mt-4 sm:mt-8 block m-auto">Contact Us</Button>
+                </Link>
             </div>
         </div>
     </>

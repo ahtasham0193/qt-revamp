@@ -1,7 +1,12 @@
 import { postContactusForm } from "@/store/slices/global";
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import Button from "./Button"; // ensure this import path is correct
+import Button from "./Button"; 
+import { GoLocation } from 'react-icons/go';
+import { FiPhoneCall , FiClock} from 'react-icons/fi';
+import { AiOutlineMail } from 'react-icons/ai';
+import { BsWhatsapp } from 'react-icons/bs';
+import { FaViber } from 'react-icons/fa';
 
 const ContactUsForm = () => {
   const dispatch = useDispatch();
@@ -21,37 +26,33 @@ const ContactUsForm = () => {
   };
   return (
     <div className="w-full p-8 px-6 mt-8 bg-white max-w-[1200px] m-auto">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 items-center">
         <div className="w-full">
           <h2 className="section-heading text-4xl font-bold">Let’s talk to our experts</h2>
           <p className="mt-6">We are proud of contributing to the success of the world's leading brands.</p>
 
           <div className="grid gap-6">
-            <div className="mt-10">
-              <b className="block">Contact Us</b>
-              <span><b>PK:</b></span> <span>+92 51 8448182</span> | <span>+92 51 2715101</span>
-              <p className="mt-2"><span><b>US:</b></span> <span>+111 111 111</span> | <span>+111 111 111</span></p>
+            <div className="mt-5">
+              <b className="block mb-3">Address</b>
+              
+              <span className="flex gap-2 mb-2"><GoLocation className="text-xl text-primary-color"/> House# 72, Khursheed Alam Road, Westridge I, Opposite McDonald's, 46000, Rawalpindi</span>
+              <span className="flex gap-2 mb-2"><FiPhoneCall className="text-xl text-primary-color"/><b>Telephone: </b>+92 51 8448182</span>
+              <span className="flex gap-2 mb-2"><AiOutlineMail className="text-xl text-primary-color"/><b>Email: </b>info@quaidtech.com</span>
+              <span className="flex gap-2 mb-2"><BsWhatsapp className="text-xl text-primary-color"/><b>Whatsapp: </b>+92 3000 66 2512</span>
+              <span className="flex gap-2 mb-2"><FaViber className="text-xl text-primary-color"/><b>Viber: </b>+92 3000 66 2512</span>
             </div>
 
             <div>
-              <b className="block">Email</b>
-              <span>hr@quaidtech.com</span> 
+              <b className="block mb-3">HR</b>
+              <span className="flex gap-2 mb-2"><FiPhoneCall className="text-xl text-primary-color"/><b>Phone: </b>+92 3000 66 2512 | +92 51 271 5101</span>
+              <span className="flex gap-2 mb-2"><AiOutlineMail className="text-xl text-primary-color"/><b>Email: </b>hr@quaidtech.com</span>
             </div>
 
             <div>
-              <b className="block">Whatsapp at</b>
-              <span>+92300 0662512</span> 
-            </div>
-
-            <div>
-              <b className="block">Viber</b>
-              <span>+92300 0662512</span> 
-            </div>
-
-            <div>
-              <b className="block">Address</b>
-              <span><b>PK:</b></span><span>72, Khursheed Alam Road, Westridge I, Opposite McDonald's, 46000, Rawalpindi</span> 
-              <p className="mt-2"><span><b>US:</b></span><span>123 Main Street, Anytown, USA 12345</span> </p>
+              <b className="block mb-3">Accounts</b>
+              <span className="flex gap-2 mb-2"><FiPhoneCall className="text-xl text-primary-color"/><b>Phone: </b>+92 51 2715101</span>
+              <span className="flex gap-2 mb-2"><AiOutlineMail className="text-xl text-primary-color"/><b>Email: </b>accounts@quaidtech.com</span>
+              <span className="flex gap-2 mb-2"><FiClock className="text-xl text-primary-color"/><b>0ffice Timings: </b>7:00am - 8:00pm PKT (In Two Shifts)</span>
             </div>
           </div>
         </div>

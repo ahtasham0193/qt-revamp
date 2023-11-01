@@ -49,9 +49,7 @@ const Blogs = () => {
               Read our latest blogs
             </h1>
             <p className="text-center mt-4 sm:mt-8">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse varius enim in eros elementum tristique. Duis cursus,
-              mi quis viverra ornare, eros dolor.
+            Catch up on all you need to know about the industry, and keep yourself updated all at once!
             </p>
           </div>
           <Link href={`blog/${trendBlog.slug}`}>
