@@ -56,10 +56,10 @@ export async function getServerSideProps(context) {
         { image: "/images/gallery/gallery5.jpg"},
         { image: "/images/gallery/gallery6.png"},
         { image: "/images/gallery/gallery7.jpg"},
-        { image: "/images/gallery/gallery8.jpg"},
+        { image: "/images/gallery/gallery8.JPG"},
         { image: "/images/gallery/gallery9.png"},
         { image: "/images/gallery/gallery10.webp"},
-        { image: "/images/gallery/galery11.webp"},
+        { image: "/images/gallery/gallery11.webp"},
         { image: "/images/gallery/gallery12.jpg"},
         
     ]
