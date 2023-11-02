@@ -288,19 +288,19 @@ export async function getServerSideProps(context) {
       image: "/images/Digital Marketing/digitalMarketingImg.png",
       title: "Digital Marketing",
       text: "Grow a bigger, booming business in the world of the digital market with our first-rate digital marketing services. Get your hands on our tailored and exceptional digital marketing strategy that helps businesses to",
-      slug: "/digital-marketing"
+      slug: "/service/digital-search-engine-marketing"
     },
     {
       image: "/images/Desktop Software/desktopSoftwareImg.png",
       title: "Desktop Software Development",
       text: "We provide leading software development services to our worldwide clients. Quaid Technology is the expert partner you need to deliver innovative and competitive results.",
-      slug: "/desktop-software"
+      slug: "/service/desktop-software-development"
     },
     {
       image: "/images/Branding And Designing/brandingImg.png",
       title: "Designing & Branding",
       text: "We offer a full-service branding and custom design strategy to our clients , we help you bring your ideas to life.",
-      slug: "/branding-and-designing"
+      slug: "/service/designing-branding"
     },
   ]
 

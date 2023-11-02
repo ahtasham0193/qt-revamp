@@ -174,7 +174,7 @@ export async function getServerSideProps(context) {
         image: "/images/Digital Marketing/digitalMarketingImg.png",
         title: "Digital Marketing",
         text: "Grow a bigger, booming business in the world of the digital market with our first-rate digital marketing services. Get your hands on our tailored and exceptional digital marketing strategy that helps businesses to",
-        slug: "/service/designing-branding"
+        slug: "/service/digital-search-engine-marketing"
       },
       {
         image: "/images/website development/website-developmentImg.png",

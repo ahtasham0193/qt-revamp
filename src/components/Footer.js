@@ -41,7 +41,7 @@ function Footer() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/gallery" className={`${router.pathname === '/showcase' ? 'text-primary-color' : 'text-gray-700'} hover:text-primary-color`}>
+                    <Link href="/life-at-quaidtech" className={`${router.pathname === '/life-at-quaidtech' ? 'text-primary-color' : 'text-gray-700'} hover:text-primary-color`}>
                       <span>
                         Life @ QuaidTech
                       </span>
@@ -58,7 +58,7 @@ function Footer() {
                     </Link></li>
                   <li>
                     <Link href="/service/hire-overseas-development-team">
-                      <span className={`${router.pathname === '/hire-overseas-development-team' ? 'text-primary-color' : 'text-gray-700'} hover:text-primary-color `}>
+                      <span className={`${router.pathname === '/service/hire-overseas-development-team' ? 'text-primary-color' : 'text-gray-700'} hover:text-primary-color `}>
                         Hire Overseas Development Team
                       </span>
                     </Link></li>

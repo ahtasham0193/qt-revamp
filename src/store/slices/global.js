@@ -9,6 +9,7 @@ const initialState = {
     trendingBlog: {},
     blogDetail: {},
     relatedBlogs: [],
+    loading: false
 }
 
 
@@ -99,20 +100,36 @@ const global_items = createSlice({
     },
     extraReducers: (builder) =>
     {
+        builder.addCase(fetchBlogsData.pending, (state, action) => {
+            state.loading = true;
+        })
         builder.addCase(fetchBlogsData.fulfilled, (state, action) => {
             state.blogsData = action.payload;
+            state.loading = false;
+        })
+        builder.addCase(fetchTrendBlogData.pending, (state, action) => {
+            state.loading = true;
         })
         builder.addCase(fetchTrendBlogData.fulfilled, (state, action) => {
             state.trendingBlog = action.payload;
+            state.loading = false;
+        })
+        builder.addCase(fetchBlogDetail.pending, (state, action) => {
+            state.loading = true;
         })
         builder.addCase(fetchBlogDetail.fulfilled, (state, action) => {
             state.blogDetail = action.payload;
+            state.loading = false;
+        })
+        builder.addCase(fetchRelatedBlogData.pending, (state, action) => {
+            state.loading = true;
         })
         builder.addCase(fetchRelatedBlogData.fulfilled, (state, action) => {
             state.relatedBlogs = action.payload;
+            state.loading = false;
         })
         builder.addCase(postContactusForm.fulfilled, (state, action) => {
-            
+
         })
         builder.addCase(postPortfolioForm.fulfilled, (state, action) => {
             
