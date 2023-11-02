@@ -9,7 +9,9 @@ const initialState = {
     trendingBlog: {},
     blogDetail: {},
     relatedBlogs: [],
-    loading: false
+    loading: false,
+    contactAlert: false,
+    portflioAlert: false
 }
 
 
@@ -96,7 +98,12 @@ const global_items = createSlice({
     initialState,
     reducers:
     {
-
+        hideContactAlert : (state, action) => {
+            state.contactAlert = false;
+        },
+        hidePortfolioAlert : (state, action) => {
+            state.portflioAlert = false;
+        }
     },
     extraReducers: (builder) =>
     {
@@ -128,15 +135,23 @@ const global_items = createSlice({
             state.relatedBlogs = action.payload;
             state.loading = false;
         })
+        builder.addCase(postContactusForm.pending, (state, action) => {
+            state.loading = true;
+        })
         builder.addCase(postContactusForm.fulfilled, (state, action) => {
-
+            state.contactAlert = true;
+            state.loading = false;
+        })
+        builder.addCase(postPortfolioForm.pending, (state, action) => {
+            state.loading = true;
         })
         builder.addCase(postPortfolioForm.fulfilled, (state, action) => {
-            
+            state.portflioAlert = true;
+            state.loading = false;
         })
     }
 })
 
 
-export const {} = global_items.actions;
+export const { hideContactAlert , hidePortfolioAlert} = global_items.actions;
 export default global_items;

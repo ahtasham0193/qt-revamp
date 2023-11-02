@@ -95,7 +95,7 @@ const Header = () => {
                   <p className={`${router.pathname === '/service/it-staff-augmentation-services' ? 'text-primary-color' : 'text-gray-700'} block px-4 py-2 text-sm hover:text-primary-color `}>IT Staff Augmentation Services</p>
                 </Link>
                 <Link href="/service/hire-overseas-development-team">
-                  <p className={`${router.pathname === '/hire-overseas-development-team' ? 'text-primary-color' : 'text-gray-700'} block px-4 py-2 text-sm hover:text-primary-color `}>Hire Overseas Development Team</p>
+                  <p className={`${router.pathname === '/service/hire-overseas-development-team' ? 'text-primary-color' : 'text-gray-700'} block px-4 py-2 text-sm hover:text-primary-color `}>Hire Overseas Development Team</p>
                 </Link>
                 <Link href="/service/desktop-software-development">
                   <p className={`${router.pathname === '/service/desktop-software-development' ? 'text-primary-color' : 'text-gray-700'} block px-4 py-2 text-sm hover:text-primary-color `}>Desktop Software Development</p>
