@@ -168,42 +168,42 @@ function HomePage({ galleryImages }) {
         <section>
           <Slider itemsInMobileView={6} itemsInDesktopView={6}>
             <Image
-              src="/images/Client1.png"
+              src="/images/askari bank.png"
               className="sm:h-[70px] h-[30px] w-auto block mx-auto"
               width="100"
               height="100"
               alt="Description of the image"
             />
             <Image
-              src="/images/Client2.webp"
+              src="/images/brain span.webp"
               className="sm:h-[70px] h-[30px] w-auto block mx-auto"
               width="100"
               height="100"
               alt="Description of the image"
             />
             <Image
-              src="/images/Client3.png"
+              src="/images/cardinal.png"
               className="sm:h-[70px] h-[30px] w-auto block mx-auto"
               width="100"
               height="100"
               alt="Description of the image"
             />
             <Image
-              src="/images/Client4.png"
+              src="/images/newsconn.png"
               className="sm:h-[70px] h-[30px] w-auto block mx-auto"
               width="100"
               height="100"
               alt="Description of the image"
             />
             <Image
-              src="/images/Client5.svg"
+              src="/images/play-travel-horizontal.svg"
               className="sm:h-[70px] h-[30px] w-auto block mx-auto"
               width="100"
               height="100"
               alt="Description of the image"
             />
             <Image
-              src="/images/Client6.png"
+              src="/images/THRIGGLE1633091642.png"
               className="sm:h-[70px] h-[30px] w-auto block mx-auto"
               width="100"
               height="100"
