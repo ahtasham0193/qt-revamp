@@ -66,9 +66,9 @@ const OurClients = () => {
                             <div className="grid grid-cols-2 md:grid-cols-6  gap-4">
                                 {
                                     clients?.map((data, index) => {
-                                        return   <div className="w-full h-[120px]" key={index}>
+                                        return   <div className="w-full h-[150px]" key={index}>
                                             <Image src={data?.image} alt="Profile Picture" width="150"
-                                                height="150" className=' w-full h-full object-contain' />
+                                                height="150" className=' w-full h-full object-contain grayscale hover:grayscale-0 transition-transform duration-300' />
                                         </div>
                                     })
                                 }

@@ -10,7 +10,8 @@ import Layout from "@/components/Layout";
 import Link from "next/link";
 import { IoIosArrowDroprightCircle } from 'react-icons/io'
 import Head from "next/head";
-function HomePage() {
+import GallerySlider from "@/components/GallerySlider";
+function HomePage({ galleryImages }) {
   const [servicesCard, setServicesCard] = useState([
     {
       image: "/images/books.svg",
@@ -74,6 +75,7 @@ function HomePage() {
       video: "/videos/saima.mp4",
     },
   ]);
+
   const [currentVideoIndex, setCurrentVideoIndex] = useState(null);
   const handleVideoPlay = (index) => {
     if (currentVideoIndex !== null && currentVideoIndex !== index) {
@@ -84,6 +86,32 @@ function HomePage() {
     }
     setCurrentVideoIndex(index);
   };
+  const [isSliderOpen, setIsSliderOpen] = useState(false);
+  const [sliderIndex, setSliderIndex] = useState(0);
+
+  const openSlider = (index) => {
+    setIsSliderOpen(true);
+    setSliderIndex(index);
+  };
+
+  const closeSlider = () => {
+    setIsSliderOpen(false);
+  };
+
+  const nextSlide = () => {
+    if (sliderIndex < galleryImages.length - 1) {
+      setSliderIndex(sliderIndex + 1);
+    }
+  };
+
+  const previousSlide = () => {
+    if (sliderIndex > 0) {
+      setSliderIndex(sliderIndex - 1);
+    }
+  };
+
+
+
   return (
 
     <>
@@ -139,42 +167,42 @@ function HomePage() {
         <section>
           <Slider itemsInMobileView={6} itemsInDesktopView={6}>
             <Image
-              src="/images/client1.png"
+              src="/images/Client1.png"
               className="sm:h-[70px] h-[30px] w-auto block mx-auto"
               width="100"
               height="100"
               alt="Description of the image"
             />
             <Image
-              src="/images/client2.png"
+              src="/images/Client2.webp"
               className="sm:h-[70px] h-[30px] w-auto block mx-auto"
               width="100"
               height="100"
               alt="Description of the image"
             />
             <Image
-              src="/images/client3.png"
+              src="/images/Client3.png"
               className="sm:h-[70px] h-[30px] w-auto block mx-auto"
               width="100"
               height="100"
               alt="Description of the image"
             />
             <Image
-              src="/images/client4.png"
+              src="/images/Client4.png"
               className="sm:h-[70px] h-[30px] w-auto block mx-auto"
               width="100"
               height="100"
               alt="Description of the image"
             />
             <Image
-              src="/images/client5.png"
+              src="/images/Client5.svg"
               className="sm:h-[70px] h-[30px] w-auto block mx-auto"
               width="100"
               height="100"
               alt="Description of the image"
             />
             <Image
-              src="/images/client6.png"
+              src="/images/Client6.png"
               className="sm:h-[70px] h-[30px] w-auto block mx-auto"
               width="100"
               height="100"
@@ -304,9 +332,81 @@ function HomePage() {
             <ContactUsForm />
           </div>
         </section>
+
+
+
+        <section>
+          <div className="w-full mt-16">
+            <div className="container">
+            <h1 className="section-heading  text-4xl leading-normal font-bold text-center ">
+                Life @ QuaidTech
+              </h1>
+              <Carousel itemsToShowDesktop={4} itemsToShowMobile={2} margin={30} speed={2000}>
+                {galleryImages?.map((item, index) => {
+                  return (
+                    <div className="sm:w-full w-[95%] h-[200px] rounded-lg overflow-hidden shadow-md" key={index}  onClick={() => openSlider(index)}>
+                      <div className="w-full h-full">
+                        <div className="w-full h-full bg-white flex items-center justify-center">
+                          <Image
+                            src={item.image}
+                            className="w-full h-full md:h-full object-cover"
+                            width="200"
+                            height="200"
+                            alt="Description of the image"
+                            quality='100'
+                          />
+                        </div>
+                        
+                      </div>
+                    </div>
+                  );
+                })}
+              </Carousel>
+
+              {isSliderOpen && (
+                <GallerySlider
+                  galleryImages={galleryImages}
+                  currentIndex={sliderIndex}
+                  onClose={closeSlider}
+                  onNext={nextSlide}
+                  onPrevious={previousSlide}
+                />
+              )}
+            </div>
+          </div>
+          {/* </div> */}
+        </section>
       </Layout>
     </>
   );
 }
 
 export default HomePage;
+
+export async function getServerSideProps(context) {
+  // Fetch data from an API, database or just hard code it.
+  // The data should come as props to the Services component.
+
+  const galleryImages = [
+    { image: "/images/gallery/gallery1.png" },
+    { image: "/images/gallery/gallery2.png" },
+    { image: "/images/gallery/gallery3.jpg" },
+    { image: "/images/gallery/gallery4.jpg" },
+    { image: "/images/gallery/gallery5.jpg" },
+    { image: "/images/gallery/gallery6.png" },
+    { image: "/images/gallery/gallery7.jpg" },
+    { image: "/images/gallery/gallery8.JPG" },
+    { image: "/images/gallery/gallery9.png" },
+    { image: "/images/gallery/gallery10.webp" },
+    { image: "/images/gallery/gallery11.webp" },
+    { image: "/images/gallery/gallery12.jpg" },
+
+  ]
+
+
+  // By returning { props: servicesCard }, the Services component
+  // will receive `servicesCard` as a prop at build time
+  return {
+    props: { galleryImages },
+  }
+}

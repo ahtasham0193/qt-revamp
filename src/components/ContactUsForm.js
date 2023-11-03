@@ -99,7 +99,7 @@ const ContactUsForm = () => {
             <div className="mt-5">
               <b className="block mb-3">Address</b>
 
-              <span className="flex gap-2 mb-2"><GoLocation className="text-xl text-primary-color" /> House# 72, Khursheed Alam Road, Westridge I, Opposite McDonald's, 46000, Rawalpindi</span>
+              <span className="flex gap-2 mb-2"><GoLocation className="text-xl text-primary-color" />72, Khursheed Alam Road, Westridge I, Opposite McDonald's, 46000, Rawalpindi</span>
               <span className="flex gap-2 mb-2"><FiPhoneCall className="text-xl text-primary-color" /><b>Telephone: </b>+92 51 8448182</span>
               <span className="flex gap-2 mb-2"><AiOutlineMail className="text-xl text-primary-color" /><b>Email: </b>info@quaidtech.com</span>
               <span className="flex gap-2 mb-2"><BsWhatsapp className="text-xl text-primary-color" /><b>Whatsapp: </b>+92 3000 66 2512</span>
