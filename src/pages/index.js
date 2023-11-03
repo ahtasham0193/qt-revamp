@@ -166,47 +166,47 @@ function HomePage({ galleryImages }) {
         </div>
 
         <section>
-          <Slider itemsInMobileView={6} itemsInDesktopView={6}>
+          <Slider itemsInMobileView={3} itemsInDesktopView={6}>
             <Image
               src="/images/askari bank.png"
               className="sm:h-[70px] h-[30px] w-auto block mx-auto"
-              width="100"
-              height="100"
+              width="500"
+              height="300"
               alt="Description of the image"
             />
             <Image
               src="/images/brain span.webp"
               className="sm:h-[70px] h-[30px] w-auto block mx-auto"
-              width="100"
-              height="100"
+              width="500"
+              height="300"
               alt="Description of the image"
             />
             <Image
               src="/images/cardinal.png"
               className="sm:h-[70px] h-[30px] w-auto block mx-auto"
-              width="100"
-              height="100"
+              width="500"
+              height="300"
               alt="Description of the image"
             />
             <Image
               src="/images/newsconn.png"
               className="sm:h-[70px] h-[30px] w-auto block mx-auto"
-              width="100"
-              height="100"
+              width="500"
+              height="300"
               alt="Description of the image"
             />
             <Image
               src="/images/play-travel-horizontal.svg"
               className="sm:h-[70px] h-[30px] w-auto block mx-auto"
-              width="100"
-              height="100"
+              width="500"
+              height="300"
               alt="Description of the image"
             />
             <Image
               src="/images/THRIGGLE1633091642.png"
               className="sm:h-[70px] h-[30px] w-auto block mx-auto"
-              width="100"
-              height="100"
+              width="500"
+              height="300"
               alt="Description of the image"
             />
           </Slider>
@@ -276,7 +276,7 @@ function HomePage({ galleryImages }) {
                   <Carousel itemsToShowDesktop={2} itemsToShowMobile={1} margin={30} speed={2000}>
                     {portfolioCard?.map((item, index) => {
                       return (
-                        <div className="sm:w-full w-[95%] h-[500px] rounded-lg overflow-hidden shadow-md" key={index}>
+                        <div className="sm:w-full w-[95%] sm:h-[500px] rounded-lg overflow-hidden shadow-md" key={index}>
                           <div className="w-full h-auto">
                             <div className="w-full p-3 bg-white flex items-center justify-center">
                               <Image
@@ -342,7 +342,7 @@ function HomePage({ galleryImages }) {
             <h1 className="section-heading  text-4xl leading-normal font-bold text-center ">
                 Life @ QuaidTech
               </h1>
-              <Carousel itemsToShowDesktop={4} itemsToShowMobile={2} margin={20} speed={2000}>
+              <Carousel itemsToShowDesktop={4} itemsToShowMobile={1.5} margin={20} speed={2000}>
                 {galleryImages?.map((item, index) => {
                   return (
                     <div className="sm:w-full w-[95%] h-[200px] rounded-lg overflow-hidden shadow-md" key={index}  onClick={() => openSlider(index)}>

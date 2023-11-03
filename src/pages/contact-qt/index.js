@@ -26,15 +26,17 @@ const ContactUs = () => {
         </section>
         <section>
           <div className="w-full my-8 max-w-[1200px] m-auto">
+            <div className="container">
             <div className="w-full flex justify-between items-center my-7">
               <div className="w-full">
-                <h1 className="hero-heading text-2xl  sm:text-5xl leading-normal mt-2 ">Say Hello,</h1>
-                <p className='text-sm sm:text-lg mt-5'>Our team is glad to assist you.</p>
+                <h1 className="hero-heading text-xl  sm:text-5xl leading-normal mt-2 ">Say Hello,</h1>
+                <p className=' text-xs sm:text-lg sm:mt-5 mt-3'>Our team is glad to assist you.</p>
               </div>
-              <div className="w-full h-96 flex justify-end">
+              <div className="w-full sm:h-96 h-44 flex justify-end">
                 <Image src="/images/contact-main-img.png" alt="Profile Picture" width="500"
                   height="300" className=' w-auto h-full object-contain' />
               </div>
+            </div>
             </div>
           </div>
         </section>

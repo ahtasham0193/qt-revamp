@@ -7,11 +7,13 @@ import { FiPhoneCall, FiClock } from 'react-icons/fi';
 import { AiOutlineMail } from 'react-icons/ai';
 import { BsWhatsapp } from 'react-icons/bs';
 import { FaViber } from 'react-icons/fa';
+import { ReCAPTCHA } from "react-google-recaptcha";
 
 const ContactUsForm = () => {
   const dispatch = useDispatch();
   const alertStatus = useSelector((state) => state.globalItem?.contactAlert);
   const [submitted, setSubmitted] = useState(alertStatus);
+  
 
   const initialFormData = {
     name: '',
@@ -99,24 +101,24 @@ const ContactUsForm = () => {
             <div className="mt-5">
               <b className="block mb-3">Address</b>
 
-              <span className="flex gap-2 mb-2"><GoLocation className="text-xl text-primary-color" />72, Khursheed Alam Road, Westridge I, Opposite McDonald's, 46000, Rawalpindi</span>
-              <span className="flex gap-2 mb-2"><FiPhoneCall className="text-xl text-primary-color" /><b>Telephone: </b>+92 51 8448182</span>
-              <span className="flex gap-2 mb-2"><AiOutlineMail className="text-xl text-primary-color" /><b>Email: </b>info@quaidtech.com</span>
-              <span className="flex gap-2 mb-2"><BsWhatsapp className="text-xl text-primary-color" /><b>Whatsapp: </b>+92 3000 66 2512</span>
-              <span className="flex gap-2 mb-2"><FaViber className="text-xl text-primary-color" /><b>Viber: </b>+92 3000 66 2512</span>
+              <span className="sm:flex gap-2 block sm:mb-2 mb-4 sm:text-base text-sm"><GoLocation className="text-xl text-primary-color sm:mb-0 mb-2" />72, Khursheed Alam Road, Westridge I, Opposite McDonald's, 46000, Rawalpindi</span>
+              <span className="sm:flex gap-2 block sm:mb-2 mb-4 sm:text-base text-sm"><FiPhoneCall className="text-xl text-primary-color sm:mb-0 mb-2" /><b>Telephone: </b>+92 51 8448182</span>
+              <span className="sm:flex gap-2 block sm:mb-2 mb-4 sm:text-base text-sm"><AiOutlineMail className="text-xl text-primary-color sm:mb-0 mb-2" /><b>Email: </b>info@quaidtech.com</span>
+              <span className="sm:flex gap-2 block sm:mb-2 mb-4 sm:text-base text-sm"><BsWhatsapp className="text-xl text-primary-color sm:mb-0 mb-2" /><b>Whatsapp: </b>+92 3000 66 2512</span>
+              <span className="sm:flex gap-2 block sm:mb-2 mb-4 sm:text-base text-sm"><FaViber className="text-xl text-primary-color sm:mb-0 mb-2" /><b>Viber: </b>+92 3000 66 2512</span>
             </div>
 
             <div>
               <b className="block mb-3">HR</b>
-              <span className="flex gap-2 mb-2"><FiPhoneCall className="text-xl text-primary-color" /><b>Phone: </b>+92 3000 66 2512 | +92 51 271 5101</span>
-              <span className="flex gap-2 mb-2"><AiOutlineMail className="text-xl text-primary-color" /><b>Email: </b>hr@quaidtech.com</span>
+              <span className="sm:flex gap-2 block sm:mb-2 mb-4 sm:text-base text-sm"><FiPhoneCall className="text-xl text-primary-color sm:mb-0 mb-2" /><b>Phone: </b>+92 3000 66 2512 | +92 51 271 5101</span>
+              <span className="sm:flex gap-2 block sm:mb-2 mb-4 sm:text-base text-sm"><AiOutlineMail className="text-xl text-primary-color sm:mb-0 mb-2" /><b>Email: </b>hr@quaidtech.com</span>
             </div>
 
             <div>
               <b className="block mb-3">Accounts</b>
-              <span className="flex gap-2 mb-2"><FiPhoneCall className="text-xl text-primary-color" /><b>Phone: </b>+92 51 2715101</span>
-              <span className="flex gap-2 mb-2"><AiOutlineMail className="text-xl text-primary-color" /><b>Email: </b>accounts@quaidtech.com</span>
-              <span className="flex gap-2 mb-2"><FiClock className="text-xl text-primary-color" /><b>0ffice Timings: </b>7:00am - 8:00pm PKT (In Two Shifts)</span>
+              <span className="sm:flex gap-2 block sm:mb-2 mb-4 sm:text-base text-sm"><FiPhoneCall className="text-xl text-primary-color sm:mb-0 mb-2" /><b>Phone: </b>+92 51 2715101</span>
+              <span className="sm:flex gap-2 block sm:mb-2 mb-4 sm:text-base text-sm"><AiOutlineMail className="text-xl text-primary-color sm:mb-0 mb-2" /><b>Email: </b>accounts@quaidtech.com</span>
+              <span className="sm:flex gap-2 block sm:mb-2 mb-4 sm:text-base text-sm"><FiClock className="text-xl text-primary-color sm:mb-0 mb-2" /><b>0ffice Timings: </b>7:00am - 8:00pm PKT (In Two Shifts)</span>
             </div>
           </div>
         </div>
@@ -170,6 +172,12 @@ const ContactUsForm = () => {
           {formErrors.message && (
             <p className="text-red-500 ml-[14px] mt-2">{formErrors.message}</p>
           )}
+
+          <ReCAPTCHA
+            size="normal"
+            sitekey="6LfRM_AoAAAAAElFZMdwZr0DlDrOPiUnJ4oYfJcN" // Replace with your reCAPTCHA site key
+            onChange={(value) => setRecaptchaValue(value)}
+          />
           <Button variant="primary" classes="w-full mt-6" onClick={handleSubmit}>
             Submit
           </Button>

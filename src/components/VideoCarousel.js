@@ -40,16 +40,16 @@ function VideoCarousel({ children, speed = 2000, fractionOfNext = 0.2, margin = 
     };
   }, [itemsToShowDesktop, itemsToShowMobile]);
 
-  // useEffect(() => {
-  //   setItemsToShow(window.innerWidth < 768 ? itemsToShowMobile : itemsToShowDesktop);
+  useEffect(() => {
+    setItemsToShow(window.innerWidth < 768 ? itemsToShowMobile : itemsToShowDesktop);
 
-  //   const interval = setInterval(() => {
-  //     if (!isPaused) {
-  //       setCurrent((current) => (current + 1) % totalItems);
-  //     }
-  //   }, speed);
-  //   return () => clearInterval(interval);
-  // }, [totalItems, speed, itemsToShowDesktop, itemsToShowMobile, isPaused]);
+    // const interval = setInterval(() => {
+    //   if (!isPaused) {
+    //     setCurrent((current) => (current + 1) % totalItems);
+    //   }
+    // }, speed);
+    // return () => clearInterval(interval);
+  }, [totalItems, speed, itemsToShowDesktop, itemsToShowMobile, isPaused]);
 
   // Function to pause the carousel on mouse enter
   const handleMouseEnter = () => {
