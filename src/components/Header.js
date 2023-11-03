@@ -48,6 +48,7 @@ const Header = () => {
         }`}
     >
       <nav className="max-w-[1400px] m-auto flex justify-between items-center">
+        <Link href="/">
         <Image
           src="/images/logo.png"
           className="h-[70px] w-auto"
@@ -55,6 +56,7 @@ const Header = () => {
           width={500}
           alt="Company logo"
         />
+        </Link>
         {isOpen ? null : (
           <Image
             src="/images/hamburger.svg"

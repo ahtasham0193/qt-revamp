@@ -11,6 +11,7 @@ import Link from "next/link";
 import { IoIosArrowDroprightCircle } from 'react-icons/io'
 import Head from "next/head";
 import GallerySlider from "@/components/GallerySlider";
+import VideoCarousel from "@/components/VideoCarousel";
 function HomePage({ galleryImages }) {
   const [servicesCard, setServicesCard] = useState([
     {
@@ -313,7 +314,7 @@ function HomePage({ galleryImages }) {
                 Our satisfied clients are a testament to our commitment to excellence. Their success is our greatest achievement.
               </p>
 
-              <Carousel itemsToShowDesktop={1.7} itemsToShowMobile={1} margin={30} speed={2000}>
+              <VideoCarousel itemsToShowDesktop={1.7} itemsToShowMobile={1} margin={30} speed={2000}>
                 {clients?.map((item, index) => (
                   <div key={index} className="w-full sm:h-[500px] h-[250px] rounded-lg overflow-hidden shadow-md">
                     <video
@@ -327,7 +328,7 @@ function HomePage({ galleryImages }) {
                     />
                   </div>
                 ))}
-              </Carousel>
+              </VideoCarousel>
             </div>
             <ContactUsForm />
           </div>
@@ -341,23 +342,20 @@ function HomePage({ galleryImages }) {
             <h1 className="section-heading  text-4xl leading-normal font-bold text-center ">
                 Life @ QuaidTech
               </h1>
-              <Carousel itemsToShowDesktop={4} itemsToShowMobile={2} margin={30} speed={2000}>
+              <Carousel itemsToShowDesktop={4} itemsToShowMobile={2} margin={20} speed={2000}>
                 {galleryImages?.map((item, index) => {
                   return (
                     <div className="sm:w-full w-[95%] h-[200px] rounded-lg overflow-hidden shadow-md" key={index}  onClick={() => openSlider(index)}>
-                      <div className="w-full h-full">
                         <div className="w-full h-full bg-white flex items-center justify-center">
                           <Image
                             src={item.image}
-                            className="w-full h-full md:h-full object-cover"
-                            width="200"
-                            height="200"
+                            className="w-full h-full object-cover"
+                            width="500"
+                            height="300"
                             alt="Description of the image"
                             quality='100'
                           />
                         </div>
-                        
-                      </div>
                     </div>
                   );
                 })}
