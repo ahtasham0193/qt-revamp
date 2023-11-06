@@ -175,7 +175,7 @@ const ContactUsForm = () => {
 
           <ReCAPTCHA
             size="normal"
-            sitekey="6LfRM_AoAAAAAElFZMdwZr0DlDrOPiUnJ4oYfJcN" // Replace with your reCAPTCHA site key
+            sitekey="6Lc6qvsoAAAAAOpO_53Biuilg57Vgm23f9a7zh2s" // Replace with your reCAPTCHA site key
             onChange={(value) => setRecaptchaValue(value)}
           />
           <Button variant="primary" classes="w-full mt-6" onClick={handleSubmit}>
