@@ -15,7 +15,6 @@ const Post = () =>
   let  {slug}  = router.query;
   const blogDetails = useSelector((state) => state.globalItem?.blogDetail);
   const relBlogs = useSelector((state) => state.globalItem?.relatedBlogs);
-  console.log("relBlogs", relBlogs)
   useEffect(() => {
     dispatch(fetchBlogDetail(slug));
     dispatch(fetchRelatedBlogData(slug))

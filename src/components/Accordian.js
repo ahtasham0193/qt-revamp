@@ -14,7 +14,7 @@ const Accordion = ({ title, children }) => {
         className={`px-6 py-4 flex justify-between items-center cursor-pointer ${isOpen ? "bg-gray-200" : "bg-white"}`}
         onClick={toggleAccordion}
       >
-        <span className="text-lg">{title}</span>
+        <span className="text-lg max-w-[80%] sm:w-auto">{title}</span>
         {isOpen ? <BsDash className="text-xl"/> : <BsPlus className="text-xl" />}
       </div>
       <div className={`${isOpen ? ' max-h-[700px] ' : 'max-h-0'} transition-all duration-700 overflow-hidden`}>

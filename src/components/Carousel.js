@@ -25,7 +25,7 @@ function Carousel({ children, speed = 2000, fractionOfNext = 0.2, margin = 0, it
     };
   }, [isMobileInitialized]);
 
-  const marginn = isMobile ? 10 : 30;
+  const marginn = isMobile ? 0 : 30;
 
   // Update the state on window resize
   useEffect(() => {

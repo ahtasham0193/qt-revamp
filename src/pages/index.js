@@ -276,7 +276,7 @@ function HomePage({ galleryImages }) {
                   <Carousel itemsToShowDesktop={2} itemsToShowMobile={1} margin={30} speed={2000}>
                     {portfolioCard?.map((item, index) => {
                       return (
-                        <div className="sm:w-full w-[95%] sm:h-[500px] rounded-lg overflow-hidden shadow-md" key={index}>
+                        <div className="sm:w-full w-[95%] sm:h-[500px] rounded-lg overflow-hidden shadow-md mb-5" key={index}>
                           <div className="w-full h-auto">
                             <div className="w-full p-3 bg-white flex items-center justify-center">
                               <Image
@@ -342,7 +342,7 @@ function HomePage({ galleryImages }) {
             <h1 className="section-heading  text-4xl leading-normal font-bold text-center ">
                 Life @ QuaidTech
               </h1>
-              <Carousel itemsToShowDesktop={4} itemsToShowMobile={1.5} margin={20} speed={2000}>
+              <Carousel itemsToShowDesktop={4} itemsToShowMobile={1} margin={20} speed={2000}>
                 {galleryImages?.map((item, index) => {
                   return (
                     <div className="sm:w-full w-[95%] h-[200px] rounded-lg overflow-hidden shadow-md" key={index}  onClick={() => openSlider(index)}>

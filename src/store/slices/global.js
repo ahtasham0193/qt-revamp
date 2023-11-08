@@ -11,16 +11,18 @@ const initialState = {
     relatedBlogs: [],
     loading: false,
     contactAlert: false,
-    portflioAlert: false
+    portflioAlert: false,
+    hideBtn: false
 }
 
 
 export const fetchBlogsData = createAsyncThunk('fetchBlogsData',
     async (offset) => {
         return await api.get(`blog?offset=${offset}`).then(res => {
-            if(!res.hasErrors()) {
+           if(!res.hasErrors() && res.data.length > 0) {
                 return res.data
             }
+         
             else {
                 throw res.errors[0].err?.text
             }
@@ -103,6 +105,9 @@ const global_items = createSlice({
         },
         hidePortfolioAlert : (state, action) => {
             state.portflioAlert = false;
+        },
+        hideButtonCondition : (state) => {
+            state.hideBtn = true
         }
     },
     extraReducers: (builder) =>
@@ -153,5 +158,5 @@ const global_items = createSlice({
 })
 
 
-export const { hideContactAlert , hidePortfolioAlert} = global_items.actions;
+export const { hideContactAlert , hidePortfolioAlert, hideButtonCondition} = global_items.actions;
 export default global_items;

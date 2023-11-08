@@ -44,6 +44,12 @@ const ContactUsForm = () => {
     if (!formData.name.trim()) {
       errors.name = 'Name is required';
       isValid = false;
+    } else if (formData.name.length > 25) {
+      errors.name = 'Name should not be greater than 25 characters';
+      isValid = false;
+    } else if (/\d/.test(formData.name)) {
+      errors.name = 'Name should not contain numbers';
+      isValid = false;
     }
 
      if (!formData.email.trim()) {

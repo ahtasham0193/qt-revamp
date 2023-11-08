@@ -119,10 +119,10 @@ const ItStaffAugmented = ({ processCards, clients, servicesCard }) => {
             For IT staff Augmentation
           </h2>
           <div className="w-full mt-10">
-            <Carousel itemsToShowDesktop={2.7} itemsToShowMobile={1.2} margin={20} speed={5000}>
+            <Carousel itemsToShowDesktop={2.7} itemsToShowMobile={1} margin={20} speed={5000}>
               {clients?.map((item) => {
                 return (
-                  <div className=" overflow-hidden my-4 border border-slate-200 rounded h-full">
+                  <div className="sm:w-full w-[95%] sm:h-[500px] rounded-lg overflow-hidden shadow-md mb-5">
                     <div className="w-full h-62 bg-white flex items-center justify-center">
                       <Image
                         src={item.image}

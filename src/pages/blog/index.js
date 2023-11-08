@@ -5,19 +5,30 @@ import CallToAction from "@/components/CallToAction";
 import Link from "next/link";
 import Head from "next/head";
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchBlogsData, fetchTrendBlogData } from "@/store/slices/global";
+import { fetchBlogsData, fetchTrendBlogData, hideButtonCondition } from "@/store/slices/global";
 
 const Blogs = () => {
   const dispatch = useDispatch();
   const blogListing = useSelector((state) => state.globalItem?.blogsData);
   const trendBlog = useSelector((state) => state.globalItem?.trendingBlog);
+  const hideButton = useSelector((state) => state.globalItem?.hideBtn) || false;
   const [currentPage, setCurrentPage] = useState(1);
   const [offset, setOffset] = useState(1); 
+
 
   useEffect(() => {
     dispatch(fetchBlogsData(offset));
     dispatch(fetchTrendBlogData());
   }, [dispatch, offset]);
+
+
+
+  useEffect(() => {
+    if(blogListing.length === 0)
+    {
+      dispatch(hideButtonCondition())
+    }
+  }, [blogListing]);
 
 
   const goToNextPage = () => {
@@ -121,10 +132,14 @@ const Blogs = () => {
             {currentPage > 1 && (
               <button onClick={goToPreviousPage} className=" bg-gray-500 hover:bg-primary-hover text-white font-bold py-2 px-6 rounded mr-5">Previous</button>
             )}
-            {
-              
-              <button onClick={goToNextPage} className="bg-primary-color hover:bg-secondary-hover text-white font-bold py-2 px-6 rounded">Next</button>
-            }
+           {hideButton === false  && (
+          <button
+            onClick={goToNextPage}
+            className="bg-primary-color hover-bg-secondary-hover text-white font-bold py-2 px-6 rounded"
+          >
+            Next
+          </button>
+        )}
           </div>
         </div>
       </section>
