@@ -5,26 +5,28 @@ import Head from "next/head"
 import Image from "next/image"
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from "react-redux"
-
+import ReCAPTCHA from "react-google-recaptcha";
 
 const Portfolio = () => {
     const alertStatus = useSelector((state) => state.globalItem?.portflioAlert);
     const [showPopup, setShowPopup] = useState(false);
     const [submitted, setSubmitted] = useState(alertStatus);
+    const [isRecaptchaVerified, setIsRecaptchaVerified] = useState(false);
     const dispatch = useDispatch();
     const initialFormData = {
         name: '',
         email: '',
         message: '',
-      };
+    };
     const [formData, setFormData] = useState({
-        ...initialFormData 
+        ...initialFormData
     });
 
     const [formErrors, setFormErrors] = useState({
         name: '',
         email: '',
         message: '',
+        recaptcha : ''
     });
 
     const handleInputChange = (e) => {
@@ -40,13 +42,13 @@ const Portfolio = () => {
         if (!formData.name.trim()) {
             errors.name = 'Name is required';
             isValid = false;
-          } else if (formData.name.length > 25) {
+        } else if (formData.name.length > 25) {
             errors.name = 'Name should not be greater than 25 characters';
             isValid = false;
-          } else if (/\d/.test(formData.name)) {
+        } else if (/\d/.test(formData.name)) {
             errors.name = 'Name should not contain numbers';
             isValid = false;
-          }
+        }
 
         if (!formData.email.trim()) {
             errors.email = 'Email is required';
@@ -60,6 +62,10 @@ const Portfolio = () => {
             errors.message = 'Message is required';
             isValid = false;
         }
+        if (!isRecaptchaVerified) {
+            errors.recaptcha = "Please complete the reCAPTCHA";
+            isValid = false;
+          }
 
         setFormErrors(errors);
 
@@ -69,21 +75,30 @@ const Portfolio = () => {
     useEffect(() => {
         setSubmitted(alertStatus)
         if (submitted) {
-          const timer = setTimeout(() => {
-           dispatch(hidePortfolioAlert())
-          }, 5000);
-    
-          return () => clearTimeout(timer);
-        }
-      }, [submitted , alertStatus]);
+            const timer = setTimeout(() => {
+                dispatch(hidePortfolioAlert())
+            }, 5000);
 
-    const handleSubmit = () => {
-        if (validateForm()) {
-            dispatch(postPortfolioForm(formData))
-            setFormData({ ...initialFormData });
-            setShowPopup(false);
+            return () => clearTimeout(timer);
         }
-    };
+    }, [submitted, alertStatus]);
+
+
+    const handleRecaptchaChange = () => {
+        setIsRecaptchaVerified(true);
+      };
+    
+    
+      const handleSubmit = () => {
+        const isFormValid = validateForm();
+    
+        if (isFormValid) {
+          dispatch(postContactusForm(formData))
+          setFormData({ ...initialFormData });
+        }
+      };
+
+
     const openPopup = () => {
         setShowPopup(true);
     };
@@ -158,6 +173,14 @@ const Portfolio = () => {
                                                     {formErrors.message && (
                                                         <p className="text-red-500 ml-[14px] mt-2">{formErrors.message}</p>
                                                     )}
+                                                    <ReCAPTCHA
+                                                        sitekey="6LcU7AQpAAAAAM_y1dQFhFCmuG3NFX_0Z0xOipTz"
+                                                        className="mt-6"
+                                                        onChange={handleRecaptchaChange}
+                                                    />
+                                                    {formErrors.recaptcha && (
+                                                        <p className="text-red-500 ml-[14px] mt-2">{formErrors.recaptcha}</p>
+                                                    )}
                                                     <div className="flex justify-end mt-5">
                                                         <button
                                                             onClick={handleSubmit}
@@ -172,29 +195,29 @@ const Portfolio = () => {
                                                             Cancel
                                                         </button>
                                                     </div>
-                                                    
+
                                                 </div>
                                             </div>
                                         )}
                                         {submitted && (
-                                                        <div className="bg-green-500 text-white py-2 px-4 rounded-lg fixed bottom-16 left-9 transform translate-x-2 translate-y-2">
-                                                            <svg
-                                                                xmlns="http://www.w3.org/2000/svg"
-                                                                className="h-6 w-6 inline-block mr-2"
-                                                                fill="none"
-                                                                viewBox="0 0 24 24"
-                                                                stroke="currentColor"
-                                                            >
-                                                                <path
-                                                                    strokeLinecap="round"
-                                                                    strokeLinejoin="round"
-                                                                    strokeWidth="2"
-                                                                    d="M5 13l4 4L19 7"
-                                                                />
-                                                            </svg>
-                                                            Email sent successfully
-                                                        </div>
-                                                    )}
+                                            <div className="bg-green-500 text-white py-2 px-4 rounded-lg fixed bottom-16 left-9 transform translate-x-2 translate-y-2">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    className="h-6 w-6 inline-block mr-2"
+                                                    fill="none"
+                                                    viewBox="0 0 24 24"
+                                                    stroke="currentColor"
+                                                >
+                                                    <path
+                                                        strokeLinecap="round"
+                                                        strokeLinejoin="round"
+                                                        strokeWidth="2"
+                                                        d="M5 13l4 4L19 7"
+                                                    />
+                                                </svg>
+                                                Email sent successfully
+                                            </div>
+                                        )}
                                     </div>
 
                                     <h2 className="text-[22px] leading-6 font-normal my-4 text-center mt-7">Download Our Extended Portfolio By Clicking Link Above</h2>

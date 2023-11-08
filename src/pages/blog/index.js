@@ -11,24 +11,13 @@ const Blogs = () => {
   const dispatch = useDispatch();
   const blogListing = useSelector((state) => state.globalItem?.blogsData);
   const trendBlog = useSelector((state) => state.globalItem?.trendingBlog);
-  const hideButton = useSelector((state) => state.globalItem?.hideBtn) || false;
   const [currentPage, setCurrentPage] = useState(1);
   const [offset, setOffset] = useState(1); 
-
 
   useEffect(() => {
     dispatch(fetchBlogsData(offset));
     dispatch(fetchTrendBlogData());
   }, [dispatch, offset]);
-
-
-
-  useEffect(() => {
-    if(blogListing.length === 0)
-    {
-      dispatch(hideButtonCondition())
-    }
-  }, [blogListing]);
 
 
   const goToNextPage = () => {
@@ -101,7 +90,7 @@ const Blogs = () => {
           </h2>
 
           <div class="grid grid-cols-1 md:grid-cols-3  gap-8 mt-16">
-            {blogListing && blogListing?.map((item, index) => {
+            {blogListing?.blogs && blogListing?.blogs?.map((item, index) => {
               return (
             <Link href={`blog/${item.slug}`}>
             <div class="w-full" key={index}>
@@ -132,7 +121,7 @@ const Blogs = () => {
             {currentPage > 1 && (
               <button onClick={goToPreviousPage} className=" bg-gray-500 hover:bg-primary-hover text-white font-bold py-2 px-6 rounded mr-5">Previous</button>
             )}
-           {hideButton === false  && (
+           {!blogListing.is_last && (
           <button
             onClick={goToNextPage}
             className="bg-primary-color hover-bg-secondary-hover text-white font-bold py-2 px-6 rounded"

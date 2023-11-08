@@ -13,7 +13,7 @@ const ContactUsForm = () => {
   const dispatch = useDispatch();
   const alertStatus = useSelector((state) => state.globalItem?.contactAlert);
   const [submitted, setSubmitted] = useState(alertStatus);
-
+  const [isRecaptchaVerified, setIsRecaptchaVerified] = useState(false);
 
   const initialFormData = {
     name: '',
@@ -29,6 +29,7 @@ const ContactUsForm = () => {
     email: '',
     phone: '',
     message: '',
+    recaptcha : ''
   });
 
   const handleInputChange = (e) => {
@@ -64,13 +65,18 @@ const ContactUsForm = () => {
       errors.phone = 'Phone is required';
       isValid = false;
     }
-    else if (!/^\d{20}$/.test(formData.phone)) {
-      errors.phone = 'Number should be less than 20 digits';
+    else if (!/^\d{1,19}$/.test(formData.phone)) {
+      errors.phone = 'Phone number should contain 1 to 19 digits';
       isValid = false;
     }
 
     if (!formData.message.trim()) {
       errors.message = 'Message is required';
+      isValid = false;
+    }
+
+    if (!isRecaptchaVerified) {
+      errors.recaptcha = "Please complete the reCAPTCHA";
       isValid = false;
     }
 
@@ -89,18 +95,20 @@ const ContactUsForm = () => {
     }
   }, [submitted, alertStatus]);
 
+  const handleRecaptchaChange = () => {
+    setIsRecaptchaVerified(true);
+  };
+
+
   const handleSubmit = () => {
-    if (validateForm()) {
+    const isFormValid = validateForm();
+
+    if (isFormValid) {
       dispatch(postContactusForm(formData))
       setFormData({ ...initialFormData });
     }
   };
 
-  const handleRecaptchaChange = (value) => {
-    // This function will be called when the reCAPTCHA is completed
-    console.log("reCAPTCHA value:", value);
-    // You can store the reCAPTCHA value in your state or perform additional validation
-  };
 
   return (
     <div className="w-full p-8 px-6 mt-8 bg-white max-w-[1200px] m-auto">
@@ -185,10 +193,13 @@ const ContactUsForm = () => {
             <p className="text-red-500 ml-[14px] mt-2">{formErrors.message}</p>
           )}
           <ReCAPTCHA
-            sitekey="6Lc6qvsoAAAAAOpO_53Biuilg57Vgm23f9a7zh2s"
+            sitekey="6LcU7AQpAAAAAM_y1dQFhFCmuG3NFX_0Z0xOipTz"
+            className="mt-6 sm:w-full w-3/4"
             onChange={handleRecaptchaChange}
-            className="mt-6" // Add appropriate styling here
           />
+           {formErrors.recaptcha && (
+            <p className="text-red-500 ml-[14px] mt-2">{formErrors.recaptcha}</p>
+          )}
           <Button variant="primary" classes="w-full mt-6" onClick={handleSubmit}>
             Submit
           </Button>

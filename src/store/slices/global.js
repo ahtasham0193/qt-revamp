@@ -5,21 +5,20 @@ import Api_Service from "../../api-handling/api-service"
 const api = new Api_Service();
 
 const initialState = {
-    blogsData: [],
+    blogsData: {},
     trendingBlog: {},
     blogDetail: {},
     relatedBlogs: [],
     loading: false,
     contactAlert: false,
     portflioAlert: false,
-    hideBtn: false
 }
 
 
 export const fetchBlogsData = createAsyncThunk('fetchBlogsData',
     async (offset) => {
         return await api.get(`blog?offset=${offset}`).then(res => {
-           if(!res.hasErrors() && res.data.length > 0) {
+           if(!res.hasErrors()) {
                 return res.data
             }
          
@@ -105,9 +104,6 @@ const global_items = createSlice({
         },
         hidePortfolioAlert : (state, action) => {
             state.portflioAlert = false;
-        },
-        hideButtonCondition : (state) => {
-            state.hideBtn = true
         }
     },
     extraReducers: (builder) =>
@@ -158,5 +154,5 @@ const global_items = createSlice({
 })
 
 
-export const { hideContactAlert , hidePortfolioAlert, hideButtonCondition} = global_items.actions;
+export const { hideContactAlert , hidePortfolioAlert} = global_items.actions;
 export default global_items;
