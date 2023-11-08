@@ -7,13 +7,13 @@ import { FiPhoneCall, FiClock } from 'react-icons/fi';
 import { AiOutlineMail } from 'react-icons/ai';
 import { BsWhatsapp } from 'react-icons/bs';
 import { FaViber } from 'react-icons/fa';
-import { ReCAPTCHA } from "react-google-recaptcha";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const ContactUsForm = () => {
   const dispatch = useDispatch();
   const alertStatus = useSelector((state) => state.globalItem?.contactAlert);
   const [submitted, setSubmitted] = useState(alertStatus);
-  
+
 
   const initialFormData = {
     name: '',
@@ -52,7 +52,7 @@ const ContactUsForm = () => {
       isValid = false;
     }
 
-     if (!formData.email.trim()) {
+    if (!formData.email.trim()) {
       errors.email = 'Email is required';
       isValid = false;
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
@@ -63,11 +63,11 @@ const ContactUsForm = () => {
     if (!formData.phone.trim()) {
       errors.phone = 'Phone is required';
       isValid = false;
-    } 
-    // else if (!/^\d{11}$/.test(formData.phone)) {
-    //   errors.phone = 'Number must be 11 digits';
-    //   isValid = false;
-    // }
+    }
+    else if (!/^\d{20}$/.test(formData.phone)) {
+      errors.phone = 'Number should be less than 20 digits';
+      isValid = false;
+    }
 
     if (!formData.message.trim()) {
       errors.message = 'Message is required';
@@ -82,18 +82,24 @@ const ContactUsForm = () => {
     setSubmitted(alertStatus)
     if (submitted) {
       const timer = setTimeout(() => {
-       dispatch(hideContactAlert())
+        dispatch(hideContactAlert())
       }, 5000);
 
       return () => clearTimeout(timer);
     }
-  }, [submitted , alertStatus]);
+  }, [submitted, alertStatus]);
 
   const handleSubmit = () => {
     if (validateForm()) {
-      dispatch(postContactusForm(formData))  
+      dispatch(postContactusForm(formData))
       setFormData({ ...initialFormData });
     }
+  };
+
+  const handleRecaptchaChange = (value) => {
+    // This function will be called when the reCAPTCHA is completed
+    console.log("reCAPTCHA value:", value);
+    // You can store the reCAPTCHA value in your state or perform additional validation
   };
 
   return (
@@ -178,11 +184,10 @@ const ContactUsForm = () => {
           {formErrors.message && (
             <p className="text-red-500 ml-[14px] mt-2">{formErrors.message}</p>
           )}
-
           <ReCAPTCHA
-            size="normal"
-            sitekey="6Lc6qvsoAAAAAOpO_53Biuilg57Vgm23f9a7zh2s" // Replace with your reCAPTCHA site key
-            onChange={(value) => setRecaptchaValue(value)}
+            sitekey="6Lc6qvsoAAAAAOpO_53Biuilg57Vgm23f9a7zh2s"
+            onChange={handleRecaptchaChange}
+            className="mt-6" // Add appropriate styling here
           />
           <Button variant="primary" classes="w-full mt-6" onClick={handleSubmit}>
             Submit
@@ -190,26 +195,26 @@ const ContactUsForm = () => {
         </div>
       </div>
       {submitted && (
-            <div className="bg-green-500 text-white py-2 px-4 rounded-lg fixed bottom-16 left-9 transform translate-x-2 translate-y-2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 inline-block mr-2"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M5 13l4 4L19 7"
-                />
-              </svg>
-              Email sent successfully
-            </div>
-          )}
+        <div className="bg-green-500 text-white py-2 px-4 rounded-lg fixed bottom-16 left-9 transform translate-x-2 translate-y-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6 inline-block mr-2"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M5 13l4 4L19 7"
+            />
+          </svg>
+          Email sent successfully
+        </div>
+      )}
     </div>
-    
+
   );
 };
 
