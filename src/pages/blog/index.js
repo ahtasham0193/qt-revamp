@@ -52,23 +52,27 @@ const Blogs = () => {
             Catch up on all you need to know about the industry, and keep yourself updated all at once!
             </p>
           </div>
-          <Link href={`blog/${trendBlog.slug}`}>
+         
           <div className="w-full rounded-lg border-2 border-light-gray-color mt-6 sm:mt-16 sm:p-12 p-4">
             <div class="flex flex-wrap">
               <div class="w-full md:w-1/2 p-4">
                 <h3 className="font-semibold text-2xl">Trending Post</h3>
-                <h2 className="mt-4 font-bold text-4xl">
+                <Link href={`blog/${trendBlog.slug}`}>
+                <h2 className="mt-4 font-bold text-4xl hover:text-primary-color">
                   {
                     trendBlog.title
                   }
                 </h2>
+                </Link>
                 <p className="mt-4" dangerouslySetInnerHTML={{ __html: trendBlog.brief_content }} />
                 <p className="mt-6 font-semibold text-lg">
-                  <span>{trendBlog.name}</span> | <span>{trendBlog.publish_date}</span> | <span>{trendBlog.readingtime} min read</span>
+                <Link href={`blog/author/`}> <span className="hover:text-primary-color">{trendBlog.name}</span>  </Link> | <span>{trendBlog.publish_date}</span> | <span>{trendBlog.readingtime} min read</span>
                   
                 </p>
               </div>
+          
               <div class="w-full md:w-1/2 p-4">
+              <Link href={`blog/${trendBlog.slug}`}>
                 <Image
                   src={trendBlog.image_url}
                   className="w-full max-w-[100%] m-auto"
@@ -76,10 +80,12 @@ const Blogs = () => {
                   height="300"
                   alt={trendBlog.publish_date}
                 />
+                 </Link>
               </div>
+             
             </div>
           </div>
-          </Link>
+        
         </div>
       </section>
 
@@ -92,9 +98,10 @@ const Blogs = () => {
           <div class="grid grid-cols-1 md:grid-cols-3  gap-8 mt-16">
             {blogListing?.blogs && blogListing?.blogs?.map((item, index) => {
               return (
-            <Link href={`blog/${item.slug}`}>
+        
             <div class="w-full" key={index}>
                 <div className="w-full h-[240px] overflow-hidden">
+                <Link href={`blog/${item.slug}`}>
                 <Image
                     src={item.image_url}
                     className="w-full max-w-[100%] h-full object-cover m-auto"
@@ -102,18 +109,21 @@ const Blogs = () => {
                     height="300"
                     alt={item.image_caption}
                   />
+                    </Link>
                 </div>
                 <div className="w-full py-5">
-                    <h3 className="font-bold text-xl">
+                <Link href={`blog/${item.slug}`}>
+                    <h3 className="font-bold text-xl hover:text-primary-color">
                         {item.title}
                     </h3>
+                    </Link>
                     <p className="mt-4" dangerouslySetInnerHTML={{ __html: item.brief_content }} />
                     <p className="mt-4">
-                        <span>{item.name}</span> | <span>{item.publish_date}</span>
+                    <Link href={`blog/${item.slug}`}> <span className="hover:text-primary-color">{item.name}</span>  </Link> | <span>{item.publish_date}</span>
                     </p>
                 </div>  
                 </div>
-            </Link>
+          
               );
             })}
           </div>

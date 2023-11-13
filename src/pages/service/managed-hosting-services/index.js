@@ -1,3 +1,4 @@
+import CallToAction from "@/components/CallToAction"
 import ContactUsForm from "@/components/ContactUsForm"
 import Layout from "@/components/Layout"
 import OtherServices from "@/components/OtherServices"
@@ -82,6 +83,9 @@ const CloudBasedHosting = ({servicesCard}) => {
                     </div>
                 </div>
             </div>
+            </section>
+            <section className="mt-10"> 
+            <CallToAction />
             </section>
         </Layout>
         </>

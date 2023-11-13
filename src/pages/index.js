@@ -2,7 +2,7 @@
 import Button from "@/components/Button";
 import Slider from "@/components/Slider";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Carousel from "../components/Carousel";
 import Video from "@/components/Video";
 import ContactUsForm from "@/components/ContactUsForm";
@@ -12,7 +12,9 @@ import { IoIosArrowDroprightCircle } from 'react-icons/io'
 import Head from "next/head";
 import GallerySlider from "@/components/GallerySlider";
 import VideoCarousel from "@/components/VideoCarousel";
-function HomePage({ galleryImages }) {
+
+
+function HomePage() {
   const [servicesCard, setServicesCard] = useState([
     {
       image: "/images/books.svg",
@@ -76,6 +78,23 @@ function HomePage({ galleryImages }) {
       video: "/videos/saima.mp4",
     },
   ]);
+
+  const [galleryImages , setGalleryImages] = useState([
+    { image: "/images/gallery/gallery1.png" },
+    { image: "/images/gallery/gallery2.png" },
+    { image: "/images/gallery/gallery3.jpg" },
+    { image: "/images/gallery/gallery4.jpg" },
+    { image: "/images/gallery/gallery5.jpg" },
+    { image: "/images/gallery/gallery6.png" },
+    { image: "/images/gallery/gallery7.jpg" },
+    { image: "/images/gallery/gallery8.JPG" },
+    { image: "/images/gallery/gallery9.png" },
+    { image: "/images/gallery/gallery10.webp" },
+    { image: "/images/gallery/gallery11.webp" },
+    { image: "/images/gallery/gallery12.jpg" },
+  
+  ])
+
 
   const [currentVideoIndex, setCurrentVideoIndex] = useState(null);
   const handleVideoPlay = (index) => {
@@ -380,31 +399,3 @@ function HomePage({ galleryImages }) {
 }
 
 export default HomePage;
-
-export async function getServerSideProps(context) {
-  // Fetch data from an API, database or just hard code it.
-  // The data should come as props to the Services component.
-
-  const galleryImages = [
-    { image: "/images/gallery/gallery1.png" },
-    { image: "/images/gallery/gallery2.png" },
-    { image: "/images/gallery/gallery3.jpg" },
-    { image: "/images/gallery/gallery4.jpg" },
-    { image: "/images/gallery/gallery5.jpg" },
-    { image: "/images/gallery/gallery6.png" },
-    { image: "/images/gallery/gallery7.jpg" },
-    { image: "/images/gallery/gallery8.JPG" },
-    { image: "/images/gallery/gallery9.png" },
-    { image: "/images/gallery/gallery10.webp" },
-    { image: "/images/gallery/gallery11.webp" },
-    { image: "/images/gallery/gallery12.jpg" },
-
-  ]
-
-
-  // By returning { props: servicesCard }, the Services component
-  // will receive `servicesCard` as a prop at build time
-  return {
-    props: { galleryImages },
-  }
-}

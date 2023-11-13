@@ -9,6 +9,7 @@ import ContactUsForm from "@/components/ContactUsForm";
 import Link from "next/link";
 import { IoIosArrowDroprightCircle } from 'react-icons/io'
 import Head from "next/head";
+import CallToAction from "@/components/CallToAction";
 
 const ItStaffAugmented = ({ processCards, clients, servicesCard }) => {
     return(
@@ -187,6 +188,9 @@ const ItStaffAugmented = ({ processCards, clients, servicesCard }) => {
                 </div>
             </div>
         </section>
+        <section className="mt-10"> 
+            <CallToAction />
+            </section>
     </Layout>
     </>
     )

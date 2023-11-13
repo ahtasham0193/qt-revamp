@@ -1,4 +1,5 @@
 import Accordion from "@/components/Accordian"
+import CallToAction from "@/components/CallToAction"
 import ContactUsForm from "@/components/ContactUsForm"
 import ImageAccordion from "@/components/ImageAccordian"
 import Layout from "@/components/Layout"
@@ -64,7 +65,7 @@ const BrandingAndDesigning = ({servicesCard}) => {
                 <div className="w-full">
                    <ImageAccordion/>
                 </div>
-                <div className="w-full px-4 py-12 bg-light-primary-color">
+                <div className="w-full px-4 py-12 bg-light-primary-color mt-10">
                 <div className="container">
                     <h2 className="section-heading font-bold text-4xl text-center">
                         Other Services
@@ -105,7 +106,9 @@ const BrandingAndDesigning = ({servicesCard}) => {
                 </div>
             </div>
             </section>
-
+            <section className="mt-10"> 
+            <CallToAction />
+            </section>
         </Layout>
         </>
     )
