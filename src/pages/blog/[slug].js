@@ -15,6 +15,7 @@ const Post = () =>
   let  {slug}  = router.query;
   const blogDetails = useSelector((state) => state.globalItem?.blogDetail);
   const relBlogs = useSelector((state) => state.globalItem?.relatedBlogs);
+  const modifiedContent = blogDetails.detailed_content.replace(/font-family:\s*['"][^'"]*['"]\s*;/gi, '');
   useEffect(() => {
     dispatch(fetchBlogDetail(slug));
     dispatch(fetchRelatedBlogData(slug))
@@ -42,15 +43,15 @@ const Post = () =>
           <div className="w-full max-w-[1100px] rounded-md overflow-hidden m-auto">
             <Image
               src={blogDetails.image_url}
-              className="w-full  m-auto mt-10"
-              width="300"
-              height="300"
+              className="w-full h-80 m-auto mt-10 object-cover"
+              width="800"
+              height="500"
               alt={blogDetails.detailedpg_imgcaption}
             />
           </div>
 
           <div className="w-full max-w-[1000px] m-auto text-justify mt-8">
-          <div className="mt-4" dangerouslySetInnerHTML={{ __html: blogDetails.detailed_content }} />
+          <div className="mt-4" dangerouslySetInnerHTML={{ __html: modifiedContent }} />
           </div>
         </div>
       </section>
