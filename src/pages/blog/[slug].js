@@ -15,7 +15,6 @@ const Post = () =>
   let  {slug}  = router.query;
   const blogDetails = useSelector((state) => state.globalItem?.blogDetail);
   const relBlogs = useSelector((state) => state.globalItem?.relatedBlogs);
-  const modifiedContent = blogDetails.detailed_content.replace(/font-family:\s*['"][^'"]*['"]\s*;/gi, '');
   useEffect(() => {
     dispatch(fetchBlogDetail(slug));
     dispatch(fetchRelatedBlogData(slug))
@@ -51,7 +50,7 @@ const Post = () =>
           </div>
 
           <div className="w-full max-w-[1000px] m-auto text-justify mt-8">
-          <div className="mt-4" dangerouslySetInnerHTML={{ __html: modifiedContent }} />
+          <div className="mt-4" dangerouslySetInnerHTML={{ __html: blogDetails.detailed_content }} />
           </div>
         </div>
       </section>

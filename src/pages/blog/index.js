@@ -66,7 +66,7 @@ const Blogs = () => {
                 </Link>
                 <p className="mt-4" dangerouslySetInnerHTML={{ __html: trendBlog.brief_content }} />
                 <p className="mt-6 font-semibold text-lg">
-                <Link href={`blog/author/`}> <span className="hover:text-primary-color">{trendBlog.name}</span>  </Link> | <span>{trendBlog.publish_date}</span> | <span>{trendBlog.readingtime} min read</span>
+                <Link href={`blog/author/${trendBlog.author_slug}`}> <span className="hover:text-primary-color">{trendBlog.name}</span>  </Link> | <span>{trendBlog.publish_date}</span> | <span>{trendBlog.readingtime} min read</span>
                   
                 </p>
               </div>
@@ -119,7 +119,7 @@ const Blogs = () => {
                     </Link>
                     <p className="mt-4" dangerouslySetInnerHTML={{ __html: item.brief_content }} />
                     <p className="mt-4">
-                    <Link href={`blog/${item.slug}`}> <span className="hover:text-primary-color">{item.name}</span>  </Link> | <span>{item.publish_date}</span>
+                    <Link href={`blog/author/${item.author_slug}`}> <span className="hover:text-primary-color">{item.name}</span>  </Link> | <span>{item.publish_date}</span>
                     </p>
                 </div>  
                 </div>

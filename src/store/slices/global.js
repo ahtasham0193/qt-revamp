@@ -12,6 +12,7 @@ const initialState = {
     loading: false,
     contactAlert: false,
     portflioAlert: false,
+    authorData: []
 }
 
 
@@ -94,6 +95,19 @@ export const fetchRelatedBlogData = createAsyncThunk('fetchRelatedBlogData',
     }
 );
 
+export const fetchAuthorsData = createAsyncThunk('fetchAuthorsData',
+    async (slug) => {
+        return await api.get(`blog/author/${slug}`).then(res => {
+            if(!res.hasErrors()) {
+                return res.data
+            }
+            else {
+                throw res.errors[0].err?.text
+            }
+        })
+    }
+);
+
 const global_items = createSlice({
     name : 'globalItem',
     initialState,
@@ -148,6 +162,13 @@ const global_items = createSlice({
         })
         builder.addCase(postPortfolioForm.fulfilled, (state, action) => {
             state.portflioAlert = true;
+            state.loading = false;
+        })
+        builder.addCase(fetchAuthorsData.pending, (state, action) => {
+            state.loading = true;
+        })
+        builder.addCase(fetchAuthorsData.fulfilled, (state, action) => {
+            state.authorData = action.payload;
             state.loading = false;
         })
     }

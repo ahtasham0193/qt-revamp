@@ -9,7 +9,7 @@ const GallerySlider = ({ galleryImages, currentIndex, onClose, onNext, onPreviou
     <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center z-50 bg-black bg-opacity-90">
       <div className="max-w-full max-h-full relative">
         <button
-          className="absolute sm:-top-[5rem] -top-52 sm:-right-[14rem] right-4 text-black text-4xl w-6 h-6 rounded-full bg-white flex justify-center items-center"
+          className="absolute sm:-top-[2rem] -top-52 sm:-right-[2rem] right-4 text-black text-4xl w-6 h-6 rounded-full bg-white flex justify-center items-center"
           onClick={onClose}
         >
           <MdClear />
@@ -32,8 +32,8 @@ const GallerySlider = ({ galleryImages, currentIndex, onClose, onNext, onPreviou
           src={image.image}
           alt="Description of the image"
           className=" sm:w-[900px] sm:h-[600px] sm:m-0 w-3/4 m-auto object-cover"
-          width={500}
-          height={300}
+          width={900}
+          height={700}
         />
       </div>
     </div>
